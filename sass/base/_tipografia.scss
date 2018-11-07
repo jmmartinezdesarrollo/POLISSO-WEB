@@ -1,0 +1,19 @@
+// **************************************
+//+++++++++++  $tipografia  ++++++++++++++
+//****************************************
+
+@font-face{
+    font-family: 'CourierNew';
+
+    src: local('CourierNew'), 
+    url(../fonts/tipografia/CourierNew.woff) format(woff);
+}
+
+
+html{
+    font-family: 'CourierNew', sans-serif;
+    font-size: 16px;
+    color: map-get($colores, blanco);
+    // se coge BACKG-COLOR por variable por si cambiasemos el color blanco.
+    //background-color: darken(map-get($colores, blanco), 5%);
+}

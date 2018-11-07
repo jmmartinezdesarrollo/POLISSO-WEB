@@ -1,0 +1,47 @@
+// **********************************
+//+++++++++++    SASS  ++++++++++++++
+//***********************************
+
+
+// el orden de los imports es IMPORTANTE para no pisar los archivos
+// ZONA DE RESET
+@import "resetear/reset";
+    // si estamos utilizando navegadores antiguos como IE, para otros no es tan necesario
+    @import "resetear/normalize";
+
+
+    // VARIABLES
+// meter el nombre de los archivos sin extension, porque necesito el contenido del archivo
+@import "lib/variables";
+
+
+
+// TIPOGRAFIA
+@import "base/tipografia";
+
+
+
+// LIBRERIAS: LIB
+@import "lib/mixins";
+@import "lib/playholders";
+
+
+// LINKS
+@import "base/botones";
+@import "base/enlaces";
+@import "base/menus";
+
+
+// FORMULARIOS
+@import "base/formularios";
+
+
+// LAYOUTS
+@import "layout/banners";
+@import "layout/grids";
+@import "layout/layouts";
+
+
+// FOOTER
+@import "base/footer"
+

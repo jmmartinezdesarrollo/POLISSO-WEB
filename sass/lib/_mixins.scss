@@ -1,0 +1,54 @@
+// **********************************
+//+++++++++++  $MIXINS ++++++++++++++
+//***********************************
+
+// mixin para centrar cajas
+
+@mixin centrarCaja ($ancho:90%, $mtop:0, $mbottom:0){
+    width: $ancho;
+    margin-top: $mtop;
+    margin-bottom: $mbottom;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// mixin para realizar un flexBox
+@mixin flexbox($jc:space-between, $ai:center, $fd:row){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction:$fd;
+}
+
+
+/*
+// mixin para realizar un grid layout
+@mixin gridLayout ($gtrow:repeat(4, 1fr), 
+            $gtcolumn: repeat (3, 1fr),
+            $gapC:10px, $gapR:10PX) {
+    display: grid;
+    grid-template-rows: $gtcolumn; 
+    grid-template-columns: $gtrow; 
+    grid-row-gap: $gapR;
+    grid-column-gap: $gapC;
+   
+}
+
+*/
+
+//mixin medias 
+@mixin media($media) { //así gracias a esta variable solo tenemos que poner las letritas al llamarla y no todas las variables 
+    @if $media==m {
+        @media only screen and (min-width: $breakpoint-movil){
+           @content; //gracia a esto dentro le podemos poner código al llamarlo con el include.
+        }
+    }
+
+    @else if $media==e {
+        @media only screen and (min-width: $breakpoint-desktop){
+           @content;
+        }
+    
+    }
+};
+
