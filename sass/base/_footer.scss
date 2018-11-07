@@ -8,6 +8,7 @@ footer {
     //GENERAL
     height: 380px;
     background-color: black;
+    margin-top: 40px;
 
     a{
         text-decoration: none;
@@ -78,9 +79,8 @@ footer {
 
     }
 
-    a.footer__enlaces--blog{
-     
-       
+    li.footer__enlaces--blog{
+     text-align: right;
     }
 
     span.footer__linea {

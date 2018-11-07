@@ -606,7 +606,8 @@ header {
 
 footer {
   height: 380px;
-  background-color: black; }
+  background-color: black;
+  margin-top: 40px; }
   footer a {
     text-decoration: none;
     color: white; }
@@ -679,6 +680,8 @@ footer {
     margin-right: auto; }
     footer div.footer__enlaces li {
       margin-top: 10px; }
+  footer li.footer__enlaces--blog {
+    text-align: right; }
   footer span.footer__linea {
     width: 2px;
     height: 60px;
