@@ -1,0 +1,40 @@
+// ***************************************
+//+++++++++++ $PLAYHOLDERS +++++++++++++++
+//****************************************
+
+%btn{
+    text-decoration: none;
+    text-align: center;
+    color: get-map($colores,negro);
+    padding: 1rem 0.5rem;
+    background-color: get-map($colores,blanco);
+    border: 1px solid map-get($colores,gris);
+    border-radius: 4px;
+        :hover{
+            background-color: map-get($colores,gris);
+            color: map-get($colores, blanco)
+        }
+
+        :visited{
+            color: map-get($colores, blanco)
+        }
+}
+
+// para llmarlo: @extend btn-more
+
+//flexbox para centrar objetos:
+%flexCentrar{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    }
+
+// Para centrar uconos background
+
+%icon-background{
+            background-size: 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 10px;
+            border-radius: 20%;
+}

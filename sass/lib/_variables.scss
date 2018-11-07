@@ -1,0 +1,29 @@
+// *************************************
+//+++++++++++  $VARIABLES ++++++++++++++
+//**************************************
+
+//variable de colores generales de la pagina
+$colores: (
+        blanco: #fff,
+        negro: #000,
+        gris: #DBDBDB,
+        gris_Info: #B7ADAB,
+        gris_redes: #aaaaaa,
+);
+
+// variable tamaño global de las letras.
+$hrem: 18px;
+//Tipografia , mediante un mapa
+$hs: (
+    h1: $hrem * 1, //Tamaño titulo:
+    h2: $hrem * 6, //Tamaño subtitulo 
+    h3: $hrem * 1.7, //Tamaño --
+    h4: $hrem * 0.9, // 
+    h5: $hrem * 0.7, // 
+    h6: $hrem * 2 // texto para ....
+);
+
+//meter los breakpoint de media query
+//Variables para el tamaño de los medias
+$breakpoint-movil: 320px; //m
+$breakpoint-desktop: 1200px; //e
