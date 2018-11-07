@@ -1,0 +1,23 @@
+// **********************************
+//+++++++++++ $BOTONES +++++++++++++++
+//***********************************
+
+// CREACION DE BOTONES: ejemplo
+
+.boton {
+    display: block;
+  width: 300px;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: rgb(136, 7, 7);
+    border-radius: 3px;
+    text-align: center;
+
+    // esto es ANIDACION. SE RECOMIENDA UTILIZAR POCAS
+    // (MAX 3)
+
+    .boton__icon{
+        font-size: 3rem;
+    }
+
+}
