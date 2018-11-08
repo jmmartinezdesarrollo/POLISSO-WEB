@@ -382,7 +382,7 @@ html {
   -ms-flex-align: center;
   align-items: center; }
 
-footer div.footer__redessociales__fb, footer div.footer__redessociales__tw, footer div.footer__redessociales__insta {
+section.descubrenos div.descubrenos__evento__pastel, section.descubrenos div.descubrenos__evento__boda, footer div.footer__redessociales__fb, footer div.footer__redessociales__tw, footer div.footer__redessociales__insta {
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -523,6 +523,9 @@ header {
     flex-direction: column;
     align-items: center; }
 
+body {
+  background-color: #E4DFDD; }
+
 .video_banner_humo {
   width: 100%; }
 
@@ -603,6 +606,87 @@ header {
   .slider #diapostiva-2:checked ~ .control-2 ~ .diapostiva-indicatores li:nth-child(2) .diapostiva-circulo,
   .slider #diapostiva-3:checked ~ .control-3 ~ .diapostiva-indicatores li:nth-child(3) .diapostiva-circulo {
     color: #428bca; }
+
+section.descubrenos a {
+  text-decoration: none;
+  color: white; }
+
+section.descubrenos h3 {
+  text-align: center;
+  color: black;
+  font-weight: bold; }
+
+section.descubrenos div.descubrenos__evento {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  section.descubrenos div.descubrenos__evento__pastel {
+    width: 120px;
+    height: 120px;
+    background-image: url("../fonts/iconos/birthday.svg"); }
+  section.descubrenos div.descubrenos__evento__boda {
+    width: 120px;
+    height: 120px;
+    background-image: url("../fonts/iconos/boda.svg"); }
+
+section.descubrenos div.descubrenos__contacto {
+  width: 100%;
+  height: 40px;
+  background: black;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px; }
+
+section.quienessomos {
+  width: 100%; }
+  section.quienessomos figure {
+    text-align: center; }
+    section.quienessomos figure a {
+      text-decoration: none; }
+    section.quienessomos figure img {
+      width: 175px;
+      height: 230px;
+      border: 1px solid black;
+      margin-bottom: 20px; }
+    section.quienessomos figure figcaption {
+      width: 90%;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      color: black;
+      margin-bottom: 50px; }
+
+section.googlemaps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  section.googlemaps iframe {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; }
 
 footer {
   height: 380px;
