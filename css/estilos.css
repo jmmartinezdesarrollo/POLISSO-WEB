@@ -350,12 +350,19 @@ template {
 
 @font-face {
   font-family: 'CourierNew';
-  src: local("CourierNew"), url(../fonts/tipografia/CourierNew.woff) format(woff); }
+  src: local("CourierNew"), url(../fonts/tipografia/courier-new-webfont.woff) format(woff); }
+
+@font-face {
+  font-family: 'CourierNewBold';
+  src: local("CourierNewBold"), url(../fonts/tipografia/CourierNewBold.ttf) format(ttf); }
 
 html {
   font-family: 'CourierNew', sans-serif;
   font-size: 16px;
   color: #fff; }
+
+section {
+  background-color: #DBDBDB; }
 
 /*
 // mixin para realizar un grid layout
@@ -371,6 +378,20 @@ html {
 }
 
 */
+.btn_productos {
+  text-decoration: none;
+  text-align: center;
+  color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa), negro);
+  padding: 1rem 0.5rem;
+  background-color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa), negro);
+  border-radius: 0px; }
+  .btn_productos:hover {
+    background-color: #414141;
+    color: #fff;
+    font-weight: bold; }
+  .btn_productos:visited {
+    color: #fff; }
+
 .cajaCentral__eslogan, footer div.footer__redessociales {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,11 +415,16 @@ footer div.footer__redessociales__fb, footer div.footer__redessociales__tw, foot
   width: 300px;
   padding: 1rem 2rem;
   color: white;
-  background-color: #880707;
+  background-color: black;
   border-radius: 3px;
   text-align: center; }
   .boton .boton__icon {
     font-size: 3rem; }
+
+.btn_productos {
+  display: block;
+  margin-top: -4px;
+  background-color: black; }
 
 header {
   background-color: #000; }
@@ -437,9 +463,8 @@ header {
       background-repeat: no-repeat;
       display: inline-block;
       color: #fff;
-      width: 70px;
-      height: 70px;
-      border: 2 px solid red; }
+      width: 80px;
+      height: 80px; }
     .cajaCentral__cont-LogoMenu__inputlabel__hamburger-menu__icono {
       background-image: url("../fonts/iconos/menu.svg");
       background-position: center;
@@ -459,8 +484,8 @@ header {
       margin-right: 10px;
       display: none;
       position: fixed;
-      right: 7.5%;
-      top: 80px;
+      right: 5%;
+      top: 100px;
       /*        &__link-inicio{
                 display: none;
             }*/ }
@@ -526,12 +551,9 @@ header {
 .video_banner_humo {
   width: 100%; }
 
-/*.contenedor_slider{
-    position: relative;
-      */
+/* ---------------- SLIDER ---------------*/
 .slider {
-  position: relative;
- }
+  position: relative; }
   .slider__contenedor {
     position: relative;
     overflow: hidden;
@@ -540,7 +562,7 @@ header {
     /* Propiedades de las flechas antes de pasar el raton */
     /* posicion de las flechas en los laterales del banner */
     /* propiedades al hacer click sobre las flechas, se cambia el color */ }
-    .slider__contenedor__diapostiva-open:checked + .diapostiva-item {
+    .slider__contenedor__diapostiva-open:checked + .slider__contenedor__diapostiva-item {
       position: static;
       opacity: 100; }
     .slider__contenedor__diapostiva-item {
@@ -552,7 +574,8 @@ header {
     .slider__contenedor__diapostiva-item source {
       display: block;
       height: 250px;
-      max-width: 100%; }
+      max-width: 100%;
+      border: 1px solid red; }
     .slider__contenedor__diapostiva-control {
       background: rgba(0, 0, 0, 0.28);
       border-radius: 50%;

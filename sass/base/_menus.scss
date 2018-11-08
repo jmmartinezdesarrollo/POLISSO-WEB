@@ -6,7 +6,6 @@
 header {
 
     background-color: map-get($colores, negro);
-
 }
 
 .cajaCentral {
@@ -26,12 +25,10 @@ header {
             background-repeat: no-repeat;
             display: inline-block;
             color: map-get($colores, blanco);
-            width: 70px;
-            height: 70px;
-            border: 2 px solid red;
-
+            width: 80px;
+            height: 80px;        
         }
-
+        
         //----------------ICONO Hamburger Menu--------------------
         &__inputlabel__hamburger-menu__icono {
             background-image: url('../fonts/iconos/menu.svg');
@@ -42,7 +39,6 @@ header {
             width: 50px;
             height: 50px;
         }
-
     }
     /*--------------------------------------------------------------*/
     /*---------------- Menu Principal desplegable--------------------*/
@@ -59,8 +55,8 @@ header {
             
             display: none;
             position: fixed;
-            right: 7.5%;
-            top: 80px;
+            right: 5%;
+            top: 100px;
   
             a {
                 @include  flexbox($jc: center, $ai:end, $fd:column);

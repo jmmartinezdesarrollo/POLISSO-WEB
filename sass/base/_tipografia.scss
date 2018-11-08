@@ -21,9 +21,9 @@ html{
     // se coge BACKG-COLOR por variable por si cambiasemos el color blanco.
     //background-color: darken(map-get($colores, blanco), 5%);
 
-    background-color: red;
 }
 
-body{
-    background-color: red;
+section{
+    background-color: map-get($colores, gris);
 }
+
