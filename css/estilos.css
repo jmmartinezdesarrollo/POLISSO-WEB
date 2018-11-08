@@ -531,7 +531,7 @@ header {
       */
 .slider {
   position: relative;
-  height: 350px; }
+ }
   .slider__contenedor {
     position: relative;
     overflow: hidden;
@@ -551,7 +551,7 @@ header {
       transition: opacity 0.6s ease-out; }
     .slider__contenedor__diapostiva-item source {
       display: block;
-      height: auto;
+      height: 250px;
       max-width: 100%; }
     .slider__contenedor__diapostiva-control {
       background: rgba(0, 0, 0, 0.28);
