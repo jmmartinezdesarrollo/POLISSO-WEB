@@ -606,7 +606,11 @@ header {
 
 footer {
   height: 380px;
-  background-color: black; }
+  background-color: black;
+  margin-top: 20px; }
+  footer a {
+    text-decoration: none;
+    color: white; }
   footer div.footer__datos {
     width: 90%;
     margin-top: 0;
@@ -626,10 +630,12 @@ footer {
     -ms-flex-direction: column;
     flex-direction: column; }
     footer div.footer__datos h6 {
-      margin-bottom: 20px; }
+      margin-top: 20px;
+      margin-bottom: 10px; }
     footer div.footer__datos h4 {
       margin-top: 40px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      text-align: center; }
   footer div.footer__redessociales {
     width: 90%;
     margin-top: 0;
@@ -674,6 +680,8 @@ footer {
     margin-right: auto; }
     footer div.footer__enlaces li {
       margin-top: 10px; }
+  footer li.footer__enlaces--blog {
+    text-align: right; }
   footer span.footer__linea {
     width: 2px;
     height: 60px;

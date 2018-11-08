@@ -8,6 +8,12 @@ footer {
     //GENERAL
     height: 380px;
     background-color: black;
+    margin-top: 20px;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
 
 
     // DIRECCION Y DATOS
@@ -15,11 +21,13 @@ footer {
         @include centrarCaja ($ancho:90%, $mtop:0, $mbottom:0);
         @include flexbox($jc: space-around, $ai:left, $fd:column);
         h6{
-            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
         h4 {
             margin-top: 40px;
             margin-bottom: 20px;
+            text-align: center;
         }
 
     }
@@ -71,9 +79,8 @@ footer {
 
     }
 
-    a.footer__enlaces--blog{
-     
-       
+    li.footer__enlaces--blog{
+     text-align: right;
     }
 
     span.footer__linea {
