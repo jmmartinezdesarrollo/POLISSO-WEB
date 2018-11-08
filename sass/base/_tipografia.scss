@@ -4,11 +4,15 @@
 
 @font-face{
     font-family: 'CourierNew';
-
     src: local('CourierNew'), 
-    url(../fonts/tipografia/CourierNew.woff) format(woff);
+    url(../fonts/tipografia/courier-new-webfont.woff) format(woff);
 }
 
+@font-face{
+    font-family: 'CourierNewBold';
+    src: local('CourierNewBold'), 
+    url(../fonts/tipografia/CourierNewBold.ttf) format(ttf);
+}
 
 html{
     font-family: 'CourierNew', sans-serif;
@@ -16,4 +20,10 @@ html{
     color: map-get($colores, blanco);
     // se coge BACKG-COLOR por variable por si cambiasemos el color blanco.
     //background-color: darken(map-get($colores, blanco), 5%);
+
+    background-color: red;
+}
+
+body{
+    background-color: red;
 }

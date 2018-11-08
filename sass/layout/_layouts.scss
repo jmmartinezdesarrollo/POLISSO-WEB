@@ -9,19 +9,10 @@
     width: 100%;
 }
 
-
-
-
-//SLIDER
-/*.contenedor_slider{
-    position: relative;
-      */
-
+/* ---------------- SLIDER ---------------*/
 
 .slider {
     position: relative;
-
-    height: 350px;
 
     &__contenedor {
         position: relative;
@@ -30,7 +21,7 @@
 
         /* esto al hacer click se abrir una imagen hermana de input que se ha clickeado  */
 
-        &__diapostiva-open:checked+.diapostiva-item {
+        &__diapostiva-open:checked+&__diapostiva-item {
             position: static;
             opacity: 100;
         }
@@ -39,12 +30,14 @@
             position: absolute;
             opacity: 0;
             transition: opacity 0.6s ease-out;
+
         }
 
         &__diapostiva-item source {
             display: block;
-            height: auto;
+            height: 250px;
             max-width: 100%;
+            border: 1px solid red;
         }
 
         /* Propiedades de las flechas antes de pasar el raton */
