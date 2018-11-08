@@ -1,0 +1,93 @@
+// <!--****************************************** 
+// ********** Bloque DESCUBRENOS*****************
+// **********************************************-->
+section.descubrenos {
+    a{
+        text-decoration: none;
+        color:  white;
+    }
+   
+    h3 {    
+        text-align: center;
+        color: black;
+        font-weight: bold;
+    }
+
+    div.descubrenos__evento {
+       
+        @include flexbox($jc: center, $ai:center, $fd:row);
+        &__pastel{
+            width: 120px;
+            height: 120px;
+            background-image: url('../fonts/iconos/birthday.svg');
+            @extend %icon-background;
+
+        }
+        &__boda{
+            width: 120px;
+            height: 120px;
+            background-image: url('../fonts/iconos/boda.svg');
+            @extend %icon-background;
+        }
+    }
+
+    div.descubrenos__contacto {
+        width: 100%;
+        height: 40px;
+        background: black;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+// <!--****************************************** 
+// ********** Bloque SECCION QUIENES SOMOS*****************
+// **********************************************-->
+
+section.quienessomos {
+    width: 100%;
+
+
+    figure {
+        text-align: center;
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 175px;
+            height: 230px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        figcaption {
+            @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
+            color: black;
+            margin-bottom: 50px;
+
+            h1 {}
+        }
+
+
+    }
+}
+
+// <!--****************************************** 
+// ********** Bloque GOOGLE MAPS*****************
+// **********************************************-->
+
+section.googlemaps {
+    @include flexbox;
+
+    iframe {
+        @include centrarCaja ($ancho: 100%, $mtop:0, $mbottom:0);
+
+    }
+
+}
