@@ -1,0 +1,17 @@
+%btn-more{
+    text-decoration: none;
+    text-align: center;
+    color: get-map($colores, negro);
+    padding: 1rem 0.5rem;
+    background-color: get-map($colores,blanco);
+    border: 1px solid map-get($colores,gris);
+    border-radius: 4px;
+        &:hover{
+            background-color: map-get($colores, azul-oscuro);
+            color: map-get($colores, blanco)
+        }
+
+        &:visited{
+            color: get-map($colores, negro);
+        }
+}

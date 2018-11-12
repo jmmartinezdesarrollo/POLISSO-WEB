@@ -37,18 +37,23 @@
 */
 
 //mixin medias 
-@mixin media($media) { //así gracias a esta variable solo tenemos que poner las letritas al llamarla y no todas las variables 
-    @if $media==m {
-        @media only screen and (min-width: $breakpoint-movil){
-           @content; //gracia a esto dentro le podemos poner código al llamarlo con el include.
+@mixin media($device) {
+    @if $device==movil {
+        @media (min-width: $breakpoint-movil) {
+            @content;
+        }
+    }
+    @else if $device==tablet {
+        @media (min-width: $tablet){
+            @content;
+        }
+    }
+    @else if $device==escritorio {
+        @media (min-width: $breakpoint-desktop){
+            @content;
         }
     }
 
-    @else if $media==e {
-        @media only screen and (min-width: $breakpoint-desktop){
-           @content;
-        }
-    
-    }
-};
+}
+
 

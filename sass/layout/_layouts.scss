@@ -1,8 +1,8 @@
 // **********************************
 //+++++++++++ $LAYOUTS +++++++++++++++
 //**********************************
-body{
-    background-color: #E4DFDD;
+body {
+    background-color: map-get($colores, gris);
 }
 
 
@@ -11,8 +11,9 @@ body{
     width: 100%;
 }
 
+/* ----------------------------------------*/
 /* ---------------- SLIDER ---------------*/
-
+/* ----------------------------------------*/
 .slider {
     position: relative;
 
@@ -33,27 +34,29 @@ body{
             opacity: 0;
             transition: opacity 0.6s ease-out;
 
+            source,
+            img {
+                display: block;
+                height: auto;
+                width: 100%;
+                max-width: 100%;
+            }
+
         }
 
-        &__diapostiva-item source {
-            display: block;
-            height: 250px;
-            max-width: 100%;
-            border: 1px solid red;
-        }
 
         /* Propiedades de las flechas antes de pasar el raton */
         &__diapostiva-control {
             background: rgba(0, 0, 0, 0.28);
             border-radius: 50%;
-            color: #fff;
+            color: map-get($colores, blanco);
             cursor: pointer;
             display: none;
             font-size: 40px;
             height: 40px;
             line-height: 35px;
             position: absolute;
-            top: 50%;
+            top: 40%;
 
             text-align: center;
             width: 40px;
@@ -69,10 +72,11 @@ body{
             right: 2%;
         }
 
+
         /* propiedades al hacer click sobre las flechas, se cambia el color */
         &__diapostiva-control:hover {
             background: rgba(0, 0, 0, 0.8);
-            color: #aaaaaa;
+            color: map-get($colores, gris_redes);
         }
 
         &__diapostiva-indicatores {
@@ -92,35 +96,85 @@ body{
             }
 
             /*  color por defecto de indicadores */
-        &__diapostiva-circulo {
-            color: #fff;
-            cursor: pointer;
-            display: block;
-            font-size: 35px;
+            &__diapostiva-circulo {
+                color: map-get($colores, blanco);
+                cursor: pointer;
+                display: block;
+                font-size: 35px;
+
+                &:hover {
+                    color: map-get($colores, gris_redes);
+                }
+            }
+
         }
 
-        &__diapostiva-circulo:hover {
-            color: #aaaaaa;
-        }
+    }
+}
+
+#diapostiva-1:checked~.control-1,
+#diapostiva-2:checked~.control-2,
+#diapostiva-3:checked~.control-3 {
+    display: block;
+}
+
+
+/*  color de la posicion actual en los indicadores circulares*/
+#diapostiva-1:checked~.control-1~.slider__contenedor__diapostiva-indicatores li:nth-child(1) .slider__contenedor__diapostiva-indicatores__diapostiva-circulo,
+#diapostiva-2:checked~.control-2~.slider__contenedor__diapostiva-indicatores li:nth-child(2) .slider__contenedor__diapostiva-indicatores__diapostiva-circulo,
+#diapostiva-3:checked~.control-3~.slider__contenedor__diapostiva-indicatores li:nth-child(3) .slider__contenedor__diapostiva-indicatores__diapostiva-circulo {
+    color: #428bca;
+}
+
+// fin estilo SLIDER
+
+
+//************ pagina eventos.html ***************
+//************************************************
+// ********** Bloque SECCION Descubrenos**********
+
+.eventos {
+    @include centrarCaja ($ancho: 90%, $mtop:50, $mbottom:0);
+    margin-top: 50px;
+
+    color: map-get($colores, negro);
+
+    @each $icono in $iconos {
+        &__svg {
+            @include centrarCaja ($ancho: 80%, $mtop:0, $mbottom:25px);
+            @include flexbox($jc: space-between, $ai:center, $fd:row);
+
+            &__#{$icono} {
+                /*propiedes de los iconos principales de las cajas*/
+                background-image: url(../fonts/iconos/svg/#{$icono}.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 160px;
+                width: 160px;
+
+            }
         }
 
-        
+        &__texto {
+            text-align: justify;
+            line-height: 25px;
+
+        }
+
+        &__contacto {
+            ul {
+                @include flexbox($jc: left, $ai:center, $fd:column);
+
+                li {
+                    list-style-type: square;
+                    max-width: 500px;
+
+                }
+            }
+        }
 
     }
 
 
-
-    #diapostiva-1:checked~.control-1,
-    #diapostiva-2:checked~.control-2,
-    #diapostiva-3:checked~.control-3 {
-        display: block;
-    }
-
-
-
-    #diapostiva-1:checked~.control-1~.diapostiva-indicatores li:nth-child(1) .diapostiva-circulo,
-    #diapostiva-2:checked~.control-2~.diapostiva-indicatores li:nth-child(2) .diapostiva-circulo,
-    #diapostiva-3:checked~.control-3~.diapostiva-indicatores li:nth-child(3) .diapostiva-circulo {
-        color: #428bca;
-    }
 }

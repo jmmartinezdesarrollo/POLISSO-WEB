@@ -1,0 +1,112 @@
+/* ------------------***---------------------*/
+/*             CSS de Youssef AHM            */
+/*-------------------------------------------*/
+
+/* modificado de https://codepen.io/koheishingai/pen/uKvJF?editors=1100 */
+
+
+
+.diapostivas {
+    position: relative;
+}
+
+.diapostiva-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* esto al hacer click se abrir una imagen hermana de input que se ha clickeado  */
+
+.diapostiva-open:checked + .diapostiva-item {
+    position: static;
+    opacity: 100;
+}
+
+.diapostiva-item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.diapostiva-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Propiedades de las flechas antes de pasar el raton */
+.diapostiva-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+/* posicion de las flechas en los laterales del banner */
+.diapostiva-control.prev {
+    left: 2%;
+}
+
+.diapostiva-control.next {
+    right: 2%;
+}
+
+/* propiedades al hacer click sobre las flechas, se cambia el color */
+.diapostiva-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#diapostiva-1:checked ~ .control-1,
+#diapostiva-2:checked ~ .control-2,
+#diapostiva-3:checked ~ .control-3 {
+    display: block;
+}
+
+.diapostiva-indicatores {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.diapostiva-indicatores li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/*  color por defecto de indicadores */
+.diapostiva-circulo {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.diapostiva-circulo:hover {
+    color: #aaaaaa;
+}
+
+#diapostiva-1:checked ~ .control-1 ~ .diapostiva-indicatores li:nth-child(1) .diapostiva-circulo,
+#diapostiva-2:checked ~ .control-2 ~ .diapostiva-indicatores li:nth-child(2) .diapostiva-circulo,
+#diapostiva-3:checked ~ .control-3 ~ .diapostiva-indicatores li:nth-child(3) .diapostiva-circulo {
+    color: #428bca;
+}
+
+

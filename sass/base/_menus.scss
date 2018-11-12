@@ -11,6 +11,11 @@ header {
 .cajaCentral {
     @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
     padding-top: 20px;
+
+    @include media(escritorio) {
+        @include flexbox($jc:space-between, $ai:center, $fd:row);
+      }
+
     /*--------------------------------------------------------------*/
     /*--------------- seccion del logo y menu hamburguesa------------*/
     /*--------------------------------------------------------------*/
@@ -38,6 +43,11 @@ header {
             color: map-get($colores, blanco);
             width: 50px;
             height: 50px;
+                @include media(escritorio) {
+                    display: none;
+                  }
+            
+            
         }
     }
     /*--------------------------------------------------------------*/
@@ -45,6 +55,12 @@ header {
      /*--------------------------------------------------------------*/
     &__cont-nav {
         position: absolute;
+        @include media(escritorio) {
+            width: 90%;
+            justify-self: end;
+          }
+        
+  
         /* al activar el menu, el menu se colocara en columnas, en vez de una unica fila */
         &__menuPrincipal {
             width: 250px;
@@ -57,9 +73,20 @@ header {
             position: fixed;
             right: 5%;
             top: 100px;
+            z-index: 100;
+
+            @include media(escritorio) {
+                @include flexbox($jc:space-between, $ai:center, $fd:row);
+                position: relative;
+                right: 0px;
+                top: 0px;
+                width: 70%;
+
+                justify-self: end;
+              }
   
             a {
-                @include  flexbox($jc: center, $ai:end, $fd:column);
+                @include  flexbox($jc: center, $ai:center, $fd:row);
                 text-transform: uppercase;
                 text-decoration: none;
                 color: map-get($colores, blanco);
@@ -76,6 +103,16 @@ header {
                 border: 1px solid black;
 
                 background-color:  rgb(49, 49, 49);
+
+                @include media(escritorio) {
+                    @include flexbox($jc:space-between, $ai:center, $fd:row);
+                    position: relative;
+                    right: 0px;
+                    top: 0px;
+                    width: 70%;
+
+                    //background-color: black;
+                  }
             }
 
     /*        &__link-inicio{
@@ -96,18 +133,6 @@ header {
 
     }
 
-    &__eslogan {
-        height: 200px;
-        font-size: 22px;
-        line-height: 35px;
-        text-align: center;
-    
-        margin: 0px;
-    
-        @extend %flexCentrar;
-    }
-
-
 }
 
 // desactivar el icono checkbox
@@ -117,7 +142,6 @@ header {
     /* al activar el menu, el menu se colocara en columnas, en vez de una unica fila */
     &:checked~.cajaCentral__cont-nav__menuPrincipal {
         @include  flexbox($jc: center, $ai:center, $fd:column);
-        //flex-wrap: wrap;
 
         flex-direction: column;
         //margin: 5%;
@@ -125,6 +149,23 @@ header {
         
     }
 
+}
+
+.eslogan {
+    @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
+    height: 200px;
+    font-size: 22px;
+    line-height: 35px;
+    text-align: center;
+
+    @extend %flexCentrar;
+
+    @include media(escritorio) {
+        //flex-wrap: wrap;
+       width: 100%;
+
+       font-size: 30px;
+      }
 }
 
 

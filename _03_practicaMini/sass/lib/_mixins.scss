@@ -1,0 +1,31 @@
+// **********************************
+//+++++++++++  $MIXINS ++++++++++++++
+//***********************************
+
+@mixin centrarCaja ($ancho: 85%, $mtop: 0, $mbottom:0){
+    width: $ancho;
+    margin-top: $mtop; 
+    margin-left: auto; 
+    margin-bottom: $mbottom;
+    margin-right: auto;
+}
+
+@mixin flexbox($jc:space-between, $ai:center, $fd:row){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction:$fd;
+}
+
+
+@mixin gridlayout ($gtrow:repeat(4, 1fr), 
+            $gtcolumn: repeat (3, 1fr),
+            $gapC:20px, $gapR: 0px) {
+    display: grid;
+    grid-template-rows: $gtrow; 
+    grid-template-columns: $gtcolumn; 
+    grid-column-gap: $gapC;
+    grid-row-gap: $gapR;
+            
+
+}
