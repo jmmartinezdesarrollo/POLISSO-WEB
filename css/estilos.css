@@ -361,13 +361,10 @@ html {
   font-size: 16px;
   color: #fff; }
 
-<<<<<<< HEAD
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-=======
->>>>>>> e5a62c6c8a607e21902ebbf807e5fc8633ef54b0
 section {
   background-color: #DBDBDB; }
 
@@ -385,28 +382,13 @@ section {
 }
 
 */
-<<<<<<< HEAD
-.btn_productos {
-=======
 .btn_productos, .descubrenos__contacto {
->>>>>>> e5a62c6c8a607e21902ebbf807e5fc8633ef54b0
   text-decoration: none;
   text-align: center;
   color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa), negro);
   padding: 1rem 0.5rem;
   background-color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa), negro);
   border-radius: 0px; }
-<<<<<<< HEAD
-  .btn_productos:hover {
-    background-color: #414141;
-    color: #fff;
-    font-weight: bold; }
-  .btn_productos:visited {
-    color: #fff; }
-
-.eslogan, .eventos__formulario input,
-.eventos__formulario textarea, footer div.footer__redessociales {
-=======
   .btn_productos:hover, .descubrenos__contacto:hover {
     background-color: #414141;
     color: #fff;
@@ -414,8 +396,8 @@ section {
   .btn_productos:visited, .descubrenos__contacto:visited {
     color: #fff; }
 
-.cajaCentral__eslogan, footer div.footer__redessociales {
->>>>>>> e5a62c6c8a607e21902ebbf807e5fc8633ef54b0
+.eslogan, .eventos__formulario input,
+.eventos__formulario textarea, footer div.footer__redessociales {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,18 +426,11 @@ section.descubrenos div.descubrenos__evento__pastel, section.descubrenos div.des
   .boton .boton__icon {
     font-size: 3rem; }
 
-<<<<<<< HEAD
-.btn_productos {
-  display: block;
-  margin-top: -4px;
-  background-color: black; }
-=======
 .btn_productos, .descubrenos__contacto {
   display: block;
   margin-top: -4px;
   background-color: black;
   margin-bottom: 20px; }
->>>>>>> e5a62c6c8a607e21902ebbf807e5fc8633ef54b0
 
 header {
   background-color: #000; }
@@ -539,10 +514,7 @@ header {
       position: fixed;
       right: 5%;
       top: 100px;
-<<<<<<< HEAD
       z-index: 100;
-=======
->>>>>>> e5a62c6c8a607e21902ebbf807e5fc8633ef54b0
       /*        &__link-inicio{
                 display: none;
             }*/ }
@@ -806,13 +778,9 @@ body {
 .video_banner_humo {
   width: 100%; }
 
-<<<<<<< HEAD
 /* ----------------------------------------*/
 /* ---------------- SLIDER ---------------*/
 /* ----------------------------------------*/
-=======
-/* ---------------- SLIDER ---------------*/
->>>>>>> e5a62c6c8a607e21902ebbf807e5fc8633ef54b0
 .slider {
   position: relative; }
   .slider__contenedor {
@@ -832,20 +800,12 @@ body {
       -webkit-transition: opacity 0.6s ease-out;
       -o-transition: opacity 0.6s ease-out;
       transition: opacity 0.6s ease-out; }
-<<<<<<< HEAD
       .slider__contenedor__diapostiva-item source,
       .slider__contenedor__diapostiva-item img {
         display: block;
         height: auto;
         width: 100%;
         max-width: 100%; }
-=======
-    .slider__contenedor__diapostiva-item source {
-      display: block;
-      height: 250px;
-      max-width: 100%;
-      border: 1px solid red; }
->>>>>>> e5a62c6c8a607e21902ebbf807e5fc8633ef54b0
     .slider__contenedor__diapostiva-control {
       background: rgba(0, 0, 0, 0.28);
       border-radius: 50%;
