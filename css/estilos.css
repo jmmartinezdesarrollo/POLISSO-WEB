@@ -778,9 +778,6 @@ body {
 .video_banner_humo {
   width: 100%; }
 
-/* ----------------------------------------*/
-/* ---------------- SLIDER ---------------*/
-/* ----------------------------------------*/
 .slider {
   position: relative; }
   .slider__contenedor {
@@ -1130,7 +1127,7 @@ section.descubrenos div.descubrenos__evento {
   section.descubrenos div.descubrenos__evento__pastel {
     width: 120px;
     height: 120px;
-    background-image: url("../fonts/iconos/birthday.svg"); }
+    background-image: url("../fonts/iconos/pastel.svg"); }
   section.descubrenos div.descubrenos__evento__boda {
     width: 120px;
     height: 120px;
@@ -1165,7 +1162,7 @@ section.quienessomos {
       color: black;
       margin-bottom: 50px; }
 
-section.googlemaps {
+section.googlemaps__pequeno {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1179,12 +1176,128 @@ section.googlemaps {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row; }
-  section.googlemaps iframe {
+  section.googlemaps__pequeno iframe {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto; }
+
+section.googlemaps__grande {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  section.googlemaps__grande iframe {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; }
+
+section.productos {
+  width: 90%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black; }
+  section.productos h2 {
+    text-align: center;
+    margin: 20px;
+    font-weight: bold; }
+  section.productos figure {
+    text-align: center; }
+  section.productos figcaption {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  section.productos div.productos__producto {
+    padding: 20px;
+    background-color: #B7ADAB; }
+  @media (min-width: 1200px) {
+    section.productos {
+      width: 90%;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto; } }
+
+section.sobrenosotros {
+  color: #000;
+  text-align: center; }
+  section.sobrenosotros h2 {
+    margin: 20px 0;
+    font-weight: bold; }
+  section.sobrenosotros figcaption {
+    color: black;
+    padding: 20px 0; }
+  section.sobrenosotros .sobrenosotros--fondo {
+    background-color: #B7ADAB; }
+  section.sobrenosotros .sobrenosotros__pau {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto; }
+    section.sobrenosotros .sobrenosotros__pau--img {
+      margin-top: 40px;
+      width: 200px;
+      height: 280px;
+      border: 1px solid black;
+      margin-top: 20px; }
+  section.sobrenosotros .sobrenosotros__cocina {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 250px;
+    height: 230px;
+    border: 1px solid black; }
+  @media (min-width: 1200px) {
+    section.sobrenosotros figure {
+      width: 90%;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    section.sobrenosotros figcaption {
+      text-align: left;
+      padding: 40px; } }
+
+@media (min-width: 1200px) {
+  section.googlemaps__pequeno {
+    display: none; } }
+
+@media (min-width: 320px) {
+  section.googlemaps__grande {
+    display: none; } }
+
+@media (min-width: 1200px) {
+  section.googlemaps__grande {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
 
 footer {
   height: 380px;

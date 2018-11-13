@@ -2,28 +2,30 @@
 // ********** Bloque DESCUBRENOS*****************
 // **********************************************-->
 section.descubrenos {
-    a{
+    a {
         text-decoration: none;
-        color:  white;
+        color: white;
     }
-   
-    h3 {    
+
+    h3 {
         text-align: center;
         color: black;
         font-weight: bold;
     }
 
     div.descubrenos__evento {
-       
+
         @include flexbox($jc: center, $ai:center, $fd:row);
-        &__pastel{
+
+        &__pastel {
             width: 120px;
             height: 120px;
-            background-image: url('../fonts/iconos/birthday.svg');
+            background-image: url('../fonts/iconos/pastel.svg');
             @extend %icon-background;
 
         }
-        &__boda{
+
+        &__boda {
             width: 120px;
             height: 120px;
             background-image: url('../fonts/iconos/boda.svg');
@@ -49,12 +51,12 @@ section.descubrenos {
 // **********************************************-->
 
 section.quienessomos {
-    
+
     width: 100%;
 
 
     figure {
-       
+
         text-align: center;
 
         a {
@@ -82,10 +84,11 @@ section.quienessomos {
 }
 
 // <!--****************************************** 
-// ********** Bloque GOOGLE MAPS*****************
+// ********** Bloque GOOGLE MAPS PEQUEÑO*****************
 // **********************************************-->
 
-section.googlemaps {
+section.googlemaps__pequeno {
+
     @include flexbox;
 
     iframe {
@@ -93,4 +96,133 @@ section.googlemaps {
 
     }
 
+}
+
+// <!--****************************************** 
+// ********** Bloque GOOGLE MAPS GRANDE*****************
+// **********************************************-->
+
+section.googlemaps__grande {
+
+    @include flexbox;
+
+    iframe {
+        @include centrarCaja ($ancho: 100%, $mtop:0, $mbottom:0);
+
+    }
+}
+
+// <!--****************************************** 
+// ********** Bloque SECTION PRODUCTOS*****************
+// **********************************************-->
+section.productos {
+    @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
+    color: black;
+
+    h2 {
+        text-align: center;
+        margin: 20px;
+        font-weight: bold;
+    }
+
+    figure {
+        text-align: center;
+    }
+
+    figcaption {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+    }
+    div.productos__producto{
+        padding: 20px;
+        background-color: #B7ADAB;
+    }
+
+    @include media(escritorio){
+        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
+       
+       }
+       
+}
+
+
+
+// <!--****************************************** 
+// ********** Bloque SECTION SOBRE NOSOTROS*****************
+// **********************************************-->
+section.sobrenosotros {
+    color: #000;
+    text-align: center;
+
+    h2 {
+        margin: 20px 0;
+        font-weight: bold;
+    }
+
+    figcaption {
+        color: black;
+        padding: 20px 0;
+
+    }
+
+    .sobrenosotros--fondo {
+        background-color: #B7ADAB;
+    }
+
+    .sobrenosotros__pau {
+        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
+
+        &--img {
+            margin-top: 40px;
+            width: 200px;
+            height: 280px;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+    }
+
+    .sobrenosotros__cocina {
+        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
+        margin-top: 40px;
+        width: 250px;
+        height: 230px;
+        border: 1px solid black;
+    }
+
+
+    //Version escritorio
+    @include media(escritorio) {
+        figure {
+            @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
+            padding: 40px;
+            display: flex;
+        }
+
+        figcaption {
+            text-align: left;
+            padding: 40px;
+        }
+
+    }
+
+    // SECTION GOOGLE MAPS
+}
+
+section.googlemaps__pequeno {
+    @include media(escritorio) {
+        display: none;
+    }
+}
+
+section.googlemaps__grande {
+    @include media(movil) {
+        display: none;
+    }
+
+    @include media(escritorio) {
+        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
+        display: flex;
+    }
 }
