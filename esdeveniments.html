@@ -48,40 +48,36 @@
     <!--****************************************** 
         ********** Bloque HEADER *****************
     **********************************************-->
-    <header>
-        <!-- caja para centrar el menu -->
-        <div class="cajaCentral">
+    <header class="header__humo">
+            <!-- MENU HAMBURGUESA -->
 
-            <div class="cajaCentral__cont-LogoMenu">
-                <a href="#" class="cajaCentral__cont-LogoMenu__logoIcon">
-                    <!-- meter aqui el svg -->
-                </a>
+            <nav class="menu">
+                <div class="menu__logo"></div>
+                <div class="menu__desplegable">
+                    <label class="menu__desplegable__icono" for="click">
+                        <div></div>
+                    </label>
+                    <input type="checkbox" id="click">
+                    <ul class="menu__desplegable__lista">
+                        <li class="menu__desplegable__lista__link1">
+                            <a href="index.html" class="menu__desplegable__lista__link1__inicio">inici</a>
+                        </li>
+                        <li class="menu__desplegable__lista__link2">
+                            <a href="productes.html" class="menu__desplegable__lista__link__productos">products</a>
+                        </li>
+                        <li class="menu__desplegable__lista__link3">
+                            <a href="esdeveniments.html" class="menu__desplegable__lista__link__eventos">esdeveniments</a>
+                        </li>
+                        <li class="menu__desplegable__lista__link4">
+                            <a href="sobre_noltros.html" class="menu__desplegable__lista__link__nosotros">sobre noltros</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-                <!-- Icono del boton menu de 3 barras -->
-                <label class='cajaCentral__cont-LogoMenu__inputlabel' for='activar'>
-                    <div class="cajaCentral__cont-LogoMenu__inputlabel__hamburger-menu__icono">
-                    </div><!-- .hamburger-menu -->
-                </label>
-                <!-- Fin icono de menu de 3 barras -->
-            </div>
-            <div class="cajaCentral__cont-nav">
-                <input id='activar' type='checkbox'>
+        
 
-                <!-- enlaces de navegacion del menu -->
-
-                <nav class='cajaCentral__cont-nav__menuPrincipal'>
-                    <a href="" class="cajaCentral__cont-nav__menuPrincipal__link-inicio">inici</a>
-                    <a href="" class="cajaCentral__cont-nav__menuPrincipal__link-productos">products</a>
-                    <a href="eventos.html" class="cajaCentral__cont-nav__menuPrincipal__link-eventos">esdeveniments</a>
-                    <a href="" class="cajaCentral__cont-nav__menuPrincipal__link-info">sobre noltros</a>
-                </nav>
-            </div>
-
-        </div> <!-- fin caja central del header -->
-        <!-- eslogan -->
-        <h1 class="eslogan">Polissó, el teu concepte de gelat de qualitat.</h1>
-
-    </header>
+        </header>
     <!--****************************************** 
         ********** Bloque SECCION Descubrenos**********
     **********************************************-->
