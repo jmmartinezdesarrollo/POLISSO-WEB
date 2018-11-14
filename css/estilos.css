@@ -1313,7 +1313,6 @@ section.productos {
   section.productos figure {
     text-align: center; }
   section.productos figcaption {
-    text-align: center;
     margin-top: 20px;
     margin-bottom: 10px; }
   section.productos div.productos__producto {
@@ -1334,6 +1333,8 @@ section.sobrenosotros {
     margin: 20px 0;
     font-weight: bold; }
   section.sobrenosotros figcaption {
+    margin: 20px;
+    text-align: center;
     color: black;
     padding: 20px 0; }
   section.sobrenosotros .sobrenosotros--fondo {
@@ -1344,10 +1345,8 @@ section.sobrenosotros {
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto; }
-    section.sobrenosotros .sobrenosotros__pau--img {
+    section.sobrenosotros .sobrenosotros__pau img {
       margin-top: 40px;
-      width: 200px;
-      height: 280px;
       border: 1px solid black;
       margin-top: 20px; }
   section.sobrenosotros .sobrenosotros__cocina {

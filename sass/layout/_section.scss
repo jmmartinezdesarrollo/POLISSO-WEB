@@ -219,7 +219,6 @@ section.productos {
     }
 
     figcaption {
-        text-align: center;
         margin-top: 20px;
         margin-bottom: 10px;
 
@@ -237,7 +236,6 @@ section.productos {
 
 }
 
-
 // <!--****************************************** 
 // ********** Bloque SECTION SOBRE NOSOTROS*****************
 // **********************************************-->
@@ -251,6 +249,8 @@ section.sobrenosotros {
     }
 
     figcaption {
+        margin: 20px;
+        text-align: center;
         color: black;
         padding: 20px 0;
 
@@ -263,10 +263,8 @@ section.sobrenosotros {
     .sobrenosotros__pau {
         @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
 
-        &--img {
+         img {
             margin-top: 40px;
-            width: 200px;
-            height: 280px;
             border: 1px solid black;
             margin-top: 20px;
         }
