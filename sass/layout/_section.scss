@@ -52,6 +52,8 @@ section.contenido__descubrenos {
        }
        @include media(escritorio){
         @include flexbox($jc:center, $ai:center, $fd:row);
+        margin: 80px;
+        text-align: center;
        }
        
 
@@ -119,17 +121,17 @@ section.contenido__quienessomos {
 
         img {
             margin-top: 20px;
-            width: 175px;
-            height: 230px;
-            border: 1px solid black;
             margin-bottom: 20px;
-           
+            border: 1px solid black;
+            
         }
 
         figcaption {
             @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
             color: black;
             margin-bottom: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 40px;
 
             h1 {}
         }
@@ -137,25 +139,29 @@ section.contenido__quienessomos {
 
     }
     @include media(escritorio){
-        grid-column: 1/3;
+            grid-column: 1/3;
             grid: 1/3;
            
+
             @include flexbox;
-            @include centrarCaja ($ancho: 50%, $mtop:0, $mbottom:0);
+            @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
             figure{
                 display: flex;
                 flex-direction: row;
-               
             }
             figcaption{
-                padding-left: 20px;
-                padding-top: 10px;
+                padding-left: 100px;
+                text-align: center;
                 color: black;
                 a.descubrenos__contacto{
-                margin-top: 20px;
-                margin-left: 20px;
-                margin-right: 20px;
+                margin-top: 40px;
+                margin-left: 120px;
+                margin-right: 120px;
+                
                 }
+                p{
+                    padding: 0 50px;
+                   }
             }
     }
 }
