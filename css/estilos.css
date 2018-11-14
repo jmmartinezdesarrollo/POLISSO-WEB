@@ -385,9 +385,9 @@ section {
 .btn_productos, .descubrenos__contacto {
   text-decoration: none;
   text-align: center;
-  color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa), negro);
+  color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa, redes_sociales: rgba(0, 205, 241, 0.356)), negro);
   padding: 1rem 0.5rem;
-  background-color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa), negro);
+  background-color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa, redes_sociales: rgba(0, 205, 241, 0.356)), negro);
   border-radius: 0px; }
   .btn_productos:hover, .descubrenos__contacto:hover {
     background-color: #414141;
@@ -1344,16 +1344,22 @@ footer {
       border: 1px solid white;
       background-image: url("../fonts/iconos/facebook.svg");
       background-size: 35%; }
+      footer div.footer__redessociales__fb:hover {
+        background-color: rgba(0, 205, 241, 0.356); }
     footer div.footer__redessociales__tw {
       width: 50px;
       height: 50px;
       border: 1px solid white;
       background-image: url("../fonts/iconos/twitter.svg"); }
+      footer div.footer__redessociales__tw:hover {
+        background-color: rgba(0, 205, 241, 0.356); }
     footer div.footer__redessociales__insta {
       width: 50px;
       height: 50px;
       border: 1px solid white;
       background-image: url("../fonts/iconos/instagram.svg"); }
+      footer div.footer__redessociales__insta:hover {
+        background-color: rgba(0, 205, 241, 0.356); }
   footer div.footer__enlaces {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1375,9 +1381,29 @@ footer {
     margin-right: auto; }
     footer div.footer__enlaces li {
       margin-top: 10px; }
+    @media (min-width: 1200px) {
+      footer div.footer__enlaces {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; } }
   footer li.footer__enlaces--blog {
     text-align: right; }
   footer span.footer__linea {
     width: 2px;
     height: 60px;
     background-color: white; }
+    @media (min-width: 1200px) {
+      footer span.footer__linea {
+        width: 2px;
+        height: 60px;
+        margin: 0 50px; } }

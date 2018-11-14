@@ -29,7 +29,7 @@ footer {
             margin-bottom: 20px;
             text-align: center;
         }
-
+       
     }
 
     
@@ -47,7 +47,12 @@ footer {
             background-image: url('../fonts/iconos/facebook.svg');
             background-size: 35%;
             @extend %icon-background;
+
+            &:hover{
+            background-color: map-get($colores, redes_sociales);
+            }
         }
+
 
         &__tw {
             width: 50px;
@@ -55,6 +60,9 @@ footer {
             border: 1px solid white;
             background-image: url('../fonts/iconos/twitter.svg');
             @extend %icon-background;
+            &:hover{
+                background-color: map-get($colores, redes_sociales);
+                }
         }
 
         &__insta {
@@ -63,6 +71,9 @@ footer {
             border: 1px solid white;
             background-image: url('../fonts/iconos/instagram.svg');
             @extend %icon-background;
+            &:hover{
+                background-color: map-get($colores, redes_sociales);
+                }
         }
 
     }
@@ -75,7 +86,10 @@ footer {
         li {
             margin-top: 10px;
         }
-
+        @include media(escritorio) {
+            @include flexbox($jc: center, $ai:center, $fd:row);
+            
+        }
 
     }
 
@@ -87,7 +101,13 @@ footer {
         width: 2px;
         height: 60px;
         background-color: white;
+        @include media(escritorio) {
+            width: 2px;
+            height: 60px;
+            margin: 0 50px;
+            
+        }
      
-
     }
+    
 }
