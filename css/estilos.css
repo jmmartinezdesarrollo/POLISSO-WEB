@@ -408,7 +408,7 @@ section {
   -ms-flex-align: center;
   align-items: center; }
 
-section.descubrenos div.descubrenos__evento__pastel, section.descubrenos div.descubrenos__evento__boda, footer div.footer__redessociales__fb, footer div.footer__redessociales__tw, footer div.footer__redessociales__insta {
+section.contenido__descubrenos div.descubrenos__evento__pastel, section.contenido__descubrenos div.descubrenos__evento__boda, footer div.footer__redessociales__fb, footer div.footer__redessociales__tw, footer div.footer__redessociales__insta {
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1101,16 +1101,55 @@ body {
       list-style-type: square;
       max-width: 500px; }
 
-section.descubrenos a {
+section.contenido a {
+  text-decoration: none; }
+
+@media (min-width: 1200px) {
+  section.contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1.2em; } }
+
+section.contenido__descubrenos a {
   text-decoration: none;
   color: white; }
 
-section.descubrenos h3 {
+section.contenido__descubrenos h3 {
+  font-weight: bold;
+  padding-top: 40px;
   text-align: center;
   color: black;
   font-weight: bold; }
+  @media (min-width: 1200px) {
+    section.contenido__descubrenos h3 {
+      display: none; } }
 
-section.descubrenos div.descubrenos__evento {
+section.contenido__descubrenos p {
+  display: none; }
+  @media (min-width: 1200px) {
+    section.contenido__descubrenos p {
+      display: block;
+      margin-bottom: 25px;
+      color: black; } }
+
+@media (min-width: 1200px) {
+  section.contenido__descubrenos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
+
+section.contenido__descubrenos div.descubrenos__evento {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1124,36 +1163,47 @@ section.descubrenos div.descubrenos__evento {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row; }
-  section.descubrenos div.descubrenos__evento__pastel {
+  section.contenido__descubrenos div.descubrenos__evento__pastel {
     width: 120px;
     height: 120px;
     background-image: url("../fonts/iconos/pastel.svg"); }
-  section.descubrenos div.descubrenos__evento__boda {
+    @media (min-width: 1200px) {
+      section.contenido__descubrenos div.descubrenos__evento__pastel {
+        width: 150px;
+        height: 150px; } }
+  section.contenido__descubrenos div.descubrenos__evento__boda {
     width: 120px;
     height: 120px;
     background-image: url("../fonts/iconos/boda.svg"); }
+    @media (min-width: 1200px) {
+      section.contenido__descubrenos div.descubrenos__evento__boda {
+        width: 150px;
+        height: 150px; } }
 
-section.descubrenos div.descubrenos__contacto {
+section.contenido__descubrenos div.descubrenos__contacto {
   width: 100%;
   height: 40px;
   background: black;
   text-align: center;
   padding: 20px;
   margin-bottom: 40px; }
+  @media (min-width: 1200px) {
+    section.contenido__descubrenos div.descubrenos__contacto {
+      width: 50%; } }
 
-section.quienessomos {
+section.contenido__quienessomos {
   width: 100%; }
-  section.quienessomos figure {
+  section.contenido__quienessomos figure {
     text-align: center; }
-    section.quienessomos figure a {
+    section.contenido__quienessomos figure a {
       text-decoration: none; }
-    section.quienessomos figure img {
+    section.contenido__quienessomos figure img {
       margin-top: 20px;
       width: 175px;
       height: 230px;
       border: 1px solid black;
       margin-bottom: 20px; }
-    section.quienessomos figure figcaption {
+    section.contenido__quienessomos figure figcaption {
       width: 90%;
       margin-top: 0;
       margin-bottom: 0;
@@ -1161,6 +1211,68 @@ section.quienessomos {
       margin-right: auto;
       color: black;
       margin-bottom: 50px; }
+  @media (min-width: 1200px) {
+    section.contenido__quienessomos {
+      grid-column: 1/3;
+      grid: 1/3;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      width: 50%;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto; }
+      section.contenido__quienessomos figure {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+      section.contenido__quienessomos figcaption {
+        padding-left: 20px;
+        padding-top: 10px;
+        color: black; }
+        section.contenido__quienessomos figcaption a.descubrenos__contacto {
+          margin-top: 20px;
+          margin-left: 20px;
+          margin-right: 20px; } }
+
+section.googlemaps__grande {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  @media (min-width: 1200px) {
+    section.googlemaps__grande {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+      section.googlemaps__grande h3 {
+        margin-bottom: 40px;
+        color: black;
+        font-weight: bold;
+        font-size: 1.2em; } }
 
 section.googlemaps__pequeno {
   display: -webkit-box;
@@ -1177,27 +1289,6 @@ section.googlemaps__pequeno {
   -ms-flex-direction: row;
   flex-direction: row; }
   section.googlemaps__pequeno iframe {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto; }
-
-section.googlemaps__grande {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row; }
-  section.googlemaps__grande iframe {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;

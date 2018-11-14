@@ -1,17 +1,59 @@
+
 // <!--****************************************** 
-// ********** Bloque DESCUBRENOS*****************
+// ********** INICIO SECTION INDEX.html*****************
+
+//CAJA PRINCIPAL
+section.contenido {
+    a {
+        text-decoration: none;
+    }
+    @include media(escritorio) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        font-size: 1.2em;
+        &__descubrenos {
+           
+        }
+
+    }
+   
+}
+
+// <!--****************************************** 
+// ********** Bloque DESCUBRENOS  -INDEX-*****************
 // **********************************************-->
-section.descubrenos {
+
+
+section.contenido__descubrenos {
     a {
         text-decoration: none;
         color: white;
     }
 
     h3 {
+        font-weight: bold;
+        padding-top: 40px;
         text-align: center;
         color: black;
         font-weight: bold;
+        @include media(escritorio) {
+         display: none;
+        }
     }
+       
+       p{
+           display: none;
+           @include media(escritorio) {
+               display: block;
+               margin-bottom: 25px;
+               color: black;
+           }
+       }
+       @include media(escritorio){
+        @include flexbox($jc:center, $ai:center, $fd:row);
+       }
+       
 
     div.descubrenos__evento {
 
@@ -22,6 +64,10 @@ section.descubrenos {
             height: 120px;
             background-image: url('../fonts/iconos/pastel.svg');
             @extend %icon-background;
+            @include media(escritorio) {
+                width: 150px;
+                height: 150px;
+            }
 
         }
 
@@ -30,7 +76,13 @@ section.descubrenos {
             height: 120px;
             background-image: url('../fonts/iconos/boda.svg');
             @extend %icon-background;
+            @include media(escritorio) {
+                width: 150px;
+                height: 150px;
+            }
         }
+
+
     }
 
     div.descubrenos__contacto {
@@ -40,20 +92,22 @@ section.descubrenos {
         text-align: center;
         padding: 20px;
         margin-bottom: 40px;
+        @include media(escritorio){
+         width: 50%
+        
+        }
+       
     }
 }
 
 
-
-
 // <!--****************************************** 
-// ********** Bloque SECCION QUIENES SOMOS*****************
+// ********** Bloque SECCION QUIENES SOMOS -INDEX-*****************
 // **********************************************-->
 
-section.quienessomos {
+section.contenido__quienessomos {
 
     width: 100%;
-
 
     figure {
 
@@ -69,6 +123,7 @@ section.quienessomos {
             height: 230px;
             border: 1px solid black;
             margin-bottom: 20px;
+           
         }
 
         figcaption {
@@ -81,12 +136,48 @@ section.quienessomos {
 
 
     }
+    @include media(escritorio){
+        grid-column: 1/3;
+            grid: 1/3;
+           
+            @include flexbox;
+            @include centrarCaja ($ancho: 50%, $mtop:0, $mbottom:0);
+            figure{
+                display: flex;
+                flex-direction: row;
+               
+            }
+            figcaption{
+                padding-left: 20px;
+                padding-top: 10px;
+                color: black;
+                a.descubrenos__contacto{
+                margin-top: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+                }
+            }
+    }
+}
+// GOOGLE MAPS GRANDE
+section.googlemaps__grande{
+ @include flexbox($jc:center, $ai:center, $fd:column);
+    @include media(escritorio){
+    grid-column: 2/3;
+    grid-row: 1/2;
+  
+    h3{
+        margin-bottom: 40px;
+        color: black;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
 }
 
-// <!--****************************************** 
-// ********** Bloque GOOGLE MAPS PEQUEÑO*****************
-// **********************************************-->
 
+
+// GOOGLE MAPS PEQUEÑO
 section.googlemaps__pequeno {
 
     @include flexbox;
@@ -98,19 +189,11 @@ section.googlemaps__pequeno {
 
 }
 
+
+
+// ********** FIN SECTION INDEX.html*****************
 // <!--****************************************** 
-// ********** Bloque GOOGLE MAPS GRANDE*****************
-// **********************************************-->
 
-section.googlemaps__grande {
-
-    @include flexbox;
-
-    iframe {
-        @include centrarCaja ($ancho: 100%, $mtop:0, $mbottom:0);
-
-    }
-}
 
 // <!--****************************************** 
 // ********** Bloque SECTION PRODUCTOS*****************
@@ -135,18 +218,18 @@ section.productos {
         margin-bottom: 10px;
 
     }
-    div.productos__producto{
+
+    div.productos__producto {
         padding: 20px;
         background-color: #B7ADAB;
     }
 
-    @include media(escritorio){
+    @include media(escritorio) {
         @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
-       
-       }
-       
-}
 
+    }
+
+}
 
 
 // <!--****************************************** 
