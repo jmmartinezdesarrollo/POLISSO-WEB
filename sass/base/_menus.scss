@@ -2,154 +2,166 @@
 //+++++++++++ $MENUS+++++++++++++++*
 //**********************************
 
+// por defecto las propiedades van asignadas al movil
 
 header {
 
     background-color: map-get($colores, negro);
 }
 
-.cajaCentral {
-    @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
-    padding-top: 20px;
+.menu {
+    @include flexbox($jc: space-between, $ai:null, $fd:row);
+    padding: 30px;
+    //position: absolute;
 
-    @include media(escritorio) {
-        @include flexbox($jc:space-between, $ai:center, $fd:row);
-      }
+    //------logo-------
+    &__logo {
+        background-image: url('../fonts/iconos/logo_polisso.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: inline-block;
+        // color: map-get($colores, blanco);
+        width: 80px;
+        height: 80px;
+    }
 
-    /*--------------------------------------------------------------*/
-    /*--------------- seccion del logo y menu hamburguesa------------*/
-    /*--------------------------------------------------------------*/
-    &__cont-LogoMenu {
-        @include flexbox($jc: space-between, $ai:center, $fd: row);
+    &__desplegable {
+        text-align: right;
 
-        //-----------ICONO del logotipo
-        &__logoIcon {
-            background-image: url('../fonts/iconos/logo_polisso.svg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: inline-block;
-            color: map-get($colores, blanco);
-            width: 80px;
-            height: 80px;        
+        /*- representacion en el escritorio */
+        @include media(escritorio) {
+            @include flexbox($jc: space-between, $ai:center, $fd:row);
+            width: 70%;
         }
-        
-        //----------------ICONO Hamburger Menu--------------------
-        &__inputlabel__hamburger-menu__icono {
-            background-image: url('../fonts/iconos/menu.svg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            color: map-get($colores, blanco);
-            width: 50px;
-            height: 50px;
+
+
+        /*------LABEL: icono menu hamburguesa------*/
+
+        &__icono {
+            div {
+                background-image: url('../fonts/iconos/menu.svg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                //color: map-get($colores, blanco);
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+
+
+                /* estilos para escritorio*/
+                /* Desktop elimar el Label*/
+
                 @include media(escritorio) {
                     display: none;
-                  }
-            
-            
+                }
+            }
         }
-    }
-    /*--------------------------------------------------------------*/
-    /*---------------- Menu Principal desplegable--------------------*/
-     /*--------------------------------------------------------------*/
-    &__cont-nav {
-        position: absolute;
-        @include media(escritorio) {
-            width: 90%;
-            justify-self: end;
-          }
-        
-  
-        /* al activar el menu, el menu se colocara en columnas, en vez de una unica fila */
-        &__menuPrincipal {
-            width: 250px;
-            margin-top: 0;
-            margin-bottom: 0;
-            margin-left: auto;
-            margin-right: 10px;
-            
+
+
+
+        /* ---estilos de los enlaces del menu */
+        &__lista {
             display: none;
-            position: fixed;
-            right: 5%;
-            top: 100px;
-            z-index: 100;
+            padding-top: 15px;
 
+            /* Desktop Flexbox ----*/
             @include media(escritorio) {
-                @include flexbox($jc:space-between, $ai:center, $fd:row);
-                position: relative;
-                right: 0px;
-                top: 0px;
-                width: 70%;
-
-                justify-self: end;
-              }
-  
-            a {
-                @include  flexbox($jc: center, $ai:center, $fd:row);
-                text-transform: uppercase;
-                text-decoration: none;
-                color: map-get($colores, blanco);
+                @include flexbox($jc: space-between, $ai:center, $fd:row);
                 width: 100%;
-                height: 60px;
 
-                font-family: 'CourierNewBold', sans-serif;
-            
-                padding-right: 50px;
-                font-size: 16px;
-                font-weight: 400;
-                letter-spacing: 3px;
+                & li:nth-child(1) {
+                    width: 100px;
+                }
+    
+                & li:nth-child(2) {
+                    width: 180px;
+                }
+    
+                & li:nth-child(3) {
+                    width: 220px;
+                }
+    
+                & li:nth-child(4) {
+                    width: 220px;
+                }
+    
+            }
 
-                border: 1px solid black;
+            /* --- */
 
-                background-color:  rgb(49, 49, 49);
+            &__link1,
+            &__link2,
+            &__link3,
+            &__link4 {
+                border: solid 2px map-get($colores, blanco);
+                border-bottom: none;
+                height: 50px;
+                width: 250px;
+                background-color: map-get($colores, gris_oscuro);
+
+                @include flexbox($jc: center, $ai:center, $fd:row);
 
                 @include media(escritorio) {
-                    @include flexbox($jc:space-between, $ai:center, $fd:row);
-                    position: relative;
-                    right: 0px;
-                    top: 0px;
-                    width: 70%;
+                    background-color: map-get($colores, negro);
+                    border: none;
 
-                    //background-color: black;
-                  }
+                    & li:nth-child(1) {
+                        width: 100px;
+                        border: 2px solid red;
+                    }
+
+                }
+
+                & a {
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: map-get($colores, blanco);
+                    text-transform: uppercase;
+
+                    @include media(escritorio) {
+                        font-size: 22px;
+                    }
+
+                }
             }
 
-    /*        &__link-inicio{
-                display: none;
-            }*/
 
-            a:focus,
-            a:hover {
-                //-webkit-transition-duration: .5s;
-                text-decoration: none;
-                outline: 0;
-                font-size: 16px;
-                font-weight: 600;
+            & li:nth-last-child(1) {
+                border-bottom: solid 2px map-get($colores, blanco);
+
+                @include media(escritorio) {
+                    border: none;
+
+                }
             }
-
-        
         }
+
 
     }
 
 }
 
+
 // desactivar el icono checkbox
-#activar {
+#click {
     display: none;
 
     /* al activar el menu, el menu se colocara en columnas, en vez de una unica fila */
-    &:checked~.cajaCentral__cont-nav__menuPrincipal {
-        @include  flexbox($jc: center, $ai:center, $fd:column);
+    &:checked+.menu__desplegable__lista {
+        @include flexbox($jc: center, $ai:center, $fd:column);
+        //position: relative;
 
         flex-direction: column;
         //margin: 5%;
         align-items: center;
-        
+
     }
 
 }
+
+
 
 .eslogan {
     @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
@@ -160,13 +172,14 @@ header {
 
     @extend %flexCentrar;
 
+
+
     @include media(escritorio) {
         //flex-wrap: wrap;
-       width: 100%;
+        width: 100%;
 
-       font-size: 30px;
-      }
+        font-size: 30px;
+    }
 }
-
 
  

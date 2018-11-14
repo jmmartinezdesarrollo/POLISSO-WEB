@@ -435,91 +435,67 @@ section.contenido__descubrenos div.descubrenos__evento__pastel, section.contenid
 header {
   background-color: #000; }
 
-.cajaCentral {
-  width: 90%;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  /*--------------------------------------------------------------*/
-  /*--------------- seccion del logo y menu hamburguesa------------*/
-  /*--------------------------------------------------------------*/
-  /*--------------------------------------------------------------*/
-  /*---------------- Menu Principal desplegable--------------------*/
-  /*--------------------------------------------------------------*/ }
-  @media (min-width: 1200px) {
-    .cajaCentral {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row; } }
-  .cajaCentral__cont-LogoMenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row; }
-    .cajaCentral__cont-LogoMenu__logoIcon {
-      background-image: url("../fonts/iconos/logo_polisso.svg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      display: inline-block;
-      color: #fff;
-      width: 80px;
-      height: 80px; }
-    .cajaCentral__cont-LogoMenu__inputlabel__hamburger-menu__icono {
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 30px; }
+  .menu__logo {
+    background-image: url("../fonts/iconos/logo_polisso.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 80px;
+    height: 80px; }
+  .menu__desplegable {
+    text-align: right;
+    /*- representacion en el escritorio */
+    /*------LABEL: icono menu hamburguesa------*/
+    /* ---estilos de los enlaces del menu */ }
+    @media (min-width: 1200px) {
+      .menu__desplegable {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        width: 70%; } }
+    .menu__desplegable__icono div {
       background-image: url("../fonts/iconos/menu.svg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      color: #fff;
       width: 50px;
-      height: 50px; }
+      height: 50px;
+      display: inline-block;
+      /* estilos para escritorio*/
+      /* Desktop elimar el Label*/ }
       @media (min-width: 1200px) {
-        .cajaCentral__cont-LogoMenu__inputlabel__hamburger-menu__icono {
+        .menu__desplegable__icono div {
           display: none; } }
-  .cajaCentral__cont-nav {
-    position: absolute;
-    /* al activar el menu, el menu se colocara en columnas, en vez de una unica fila */ }
-    @media (min-width: 1200px) {
-      .cajaCentral__cont-nav {
-        width: 90%;
-        justify-self: end; } }
-    .cajaCentral__cont-nav__menuPrincipal {
-      width: 250px;
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: auto;
-      margin-right: 10px;
+    .menu__desplegable__lista {
       display: none;
-      position: fixed;
-      right: 5%;
-      top: 100px;
-      z-index: 100;
-      /*        &__link-inicio{
-                display: none;
-            }*/ }
+      padding-top: 15px;
+      /* Desktop Flexbox ----*/
+      /* --- */ }
       @media (min-width: 1200px) {
-        .cajaCentral__cont-nav__menuPrincipal {
+        .menu__desplegable__lista {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -533,12 +509,21 @@ header {
           -webkit-box-direction: normal;
           -ms-flex-direction: row;
           flex-direction: row;
-          position: relative;
-          right: 0px;
-          top: 0px;
-          width: 70%;
-          justify-self: end; } }
-      .cajaCentral__cont-nav__menuPrincipal a {
+          width: 100%; }
+          .menu__desplegable__lista li:nth-child(1) {
+            width: 100px; }
+          .menu__desplegable__lista li:nth-child(2) {
+            width: 180px; }
+          .menu__desplegable__lista li:nth-child(3) {
+            width: 220px; }
+          .menu__desplegable__lista li:nth-child(4) {
+            width: 220px; } }
+      .menu__desplegable__lista__link1, .menu__desplegable__lista__link2, .menu__desplegable__lista__link3, .menu__desplegable__lista__link4 {
+        border: solid 2px #fff;
+        border-bottom: none;
+        height: 50px;
+        width: 250px;
+        background-color: #414141;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -551,49 +536,32 @@ header {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
-        flex-direction: row;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #fff;
-        width: 100%;
-        height: 60px;
-        font-family: 'CourierNewBold', sans-serif;
-        padding-right: 50px;
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 3px;
-        border: 1px solid black;
-        background-color: #313131; }
+        flex-direction: row; }
         @media (min-width: 1200px) {
-          .cajaCentral__cont-nav__menuPrincipal a {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-            flex-direction: row;
-            position: relative;
-            right: 0px;
-            top: 0px;
-            width: 70%; } }
-      .cajaCentral__cont-nav__menuPrincipal a:focus,
-      .cajaCentral__cont-nav__menuPrincipal a:hover {
-        text-decoration: none;
-        outline: 0;
-        font-size: 16px;
-        font-weight: 600; }
+          .menu__desplegable__lista__link1, .menu__desplegable__lista__link2, .menu__desplegable__lista__link3, .menu__desplegable__lista__link4 {
+            background-color: #000;
+            border: none; }
+            .menu__desplegable__lista__link1 li:nth-child(1), .menu__desplegable__lista__link2 li:nth-child(1), .menu__desplegable__lista__link3 li:nth-child(1), .menu__desplegable__lista__link4 li:nth-child(1) {
+              width: 100px;
+              border: 2px solid red; } }
+        .menu__desplegable__lista__link1 a, .menu__desplegable__lista__link2 a, .menu__desplegable__lista__link3 a, .menu__desplegable__lista__link4 a {
+          font-size: 18px;
+          text-decoration: none;
+          color: #fff;
+          text-transform: uppercase; }
+          @media (min-width: 1200px) {
+            .menu__desplegable__lista__link1 a, .menu__desplegable__lista__link2 a, .menu__desplegable__lista__link3 a, .menu__desplegable__lista__link4 a {
+              font-size: 22px; } }
+      .menu__desplegable__lista li:nth-last-child(1) {
+        border-bottom: solid 2px #fff; }
+        @media (min-width: 1200px) {
+          .menu__desplegable__lista li:nth-last-child(1) {
+            border: none; } }
 
-#activar {
+#click {
   display: none;
   /* al activar el menu, el menu se colocara en columnas, en vez de una unica fila */ }
-  #activar:checked ~ .cajaCentral__cont-nav__menuPrincipal {
+  #click:checked + .menu__desplegable__lista {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -775,8 +743,43 @@ header {
 body {
   background-color: #DBDBDB; }
 
-.video_banner_humo {
+div.fondo__humo {
+  height: 100vh; }
+
+header.header__humo {
+  height: 20vh; }
+
+section.banner__humo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  background-color: black;
+  height: 80vh; }
+  @media (min-width: 1200px) {
+    section.banner__humo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      width: auto; } }
+
+video.video__banner__humo {
   width: 100%; }
+  @media (min-width: 1200px) {
+    video.video__banner__humo {
+      width: auto; } }
 
 .slider {
   position: relative; }
