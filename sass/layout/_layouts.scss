@@ -5,22 +5,26 @@ body {
     background-color: map-get($colores, gris);
 }
 
+
+//VIDEO HUMO
+
 div.fondo__humo{
     height: 100vh;
+    @include media(escritorio){
+        height: 100vh;
+     
+    }
 }
 
 header.header__humo{
     height: 20vh;
     }
+ 
 section.banner__humo {
-    display: flex;
-    align-items: flex-end;
+    @include flexbox($jc:flex-end, $ai:center, $fd:column);
     background-color: black;
     height: 80vh;
-    @include media(escritorio){
-        @include flexbox($jc:center, $ai:flex-end, $fd:row);
-        width: auto;
-    }
+
 }
 
 
@@ -28,7 +32,7 @@ section.banner__humo {
 video.video__banner__humo{
     width: 100%;
     @include media(escritorio){
-        width: auto;
+        height: 50vh;
     }
     
 }
