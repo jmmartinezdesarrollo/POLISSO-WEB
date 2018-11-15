@@ -428,7 +428,6 @@ section.contenido__descubrenos div.descubrenos__evento__pastel, section.contenid
 
 .btn_productos, .descubrenos__contacto {
   display: block;
-  margin-top: -4px;
   background-color: black;
   margin-bottom: 20px; }
 
@@ -1108,30 +1107,45 @@ section.contenido a {
     grid-template-rows: 1fr 1fr;
     font-size: 1.2em; } }
 
-section.contenido__descubrenos a {
-  text-decoration: none;
-  color: white; }
-
-section.contenido__descubrenos h3 {
-  font-weight: bold;
-  padding-top: 40px;
-  text-align: center;
-  color: black;
-  font-weight: bold; }
+section.contenido__descubrenos {
+  margin-top: 40px; }
+  section.contenido__descubrenos a {
+    text-decoration: none;
+    color: white; }
+  section.contenido__descubrenos h3 {
+    font-weight: bold;
+    padding-top: 40px;
+    text-align: center;
+    color: black;
+    font-weight: bold; }
+    @media (min-width: 1200px) {
+      section.contenido__descubrenos h3 {
+        display: none; } }
+  section.contenido__descubrenos p {
+    display: none; }
+    @media (min-width: 1200px) {
+      section.contenido__descubrenos p {
+        display: block;
+        margin-bottom: 25px;
+        color: black; } }
   @media (min-width: 1200px) {
-    section.contenido__descubrenos h3 {
-      display: none; } }
-
-section.contenido__descubrenos p {
-  display: none; }
-  @media (min-width: 1200px) {
-    section.contenido__descubrenos p {
-      display: block;
-      margin-bottom: 25px;
-      color: black; } }
-
-@media (min-width: 1200px) {
-  section.contenido__descubrenos {
+    section.contenido__descubrenos {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      margin: 80px;
+      text-align: center; } }
+  section.contenido__descubrenos div.descubrenos__evento {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1144,51 +1158,33 @@ section.contenido__descubrenos p {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row;
-    margin: 80px;
-    text-align: center; } }
-
-section.contenido__descubrenos div.descubrenos__evento {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row; }
-  section.contenido__descubrenos div.descubrenos__evento__pastel {
-    width: 120px;
-    height: 120px;
-    background-image: url("../fonts/iconos/pastel.svg"); }
+    flex-direction: row; }
+    section.contenido__descubrenos div.descubrenos__evento__pastel {
+      width: 120px;
+      height: 120px;
+      background-image: url("../fonts/iconos/pastel.svg"); }
+      @media (min-width: 1200px) {
+        section.contenido__descubrenos div.descubrenos__evento__pastel {
+          width: 150px;
+          height: 150px; } }
+    section.contenido__descubrenos div.descubrenos__evento__boda {
+      width: 120px;
+      height: 120px;
+      background-image: url("../fonts/iconos/boda.svg"); }
+      @media (min-width: 1200px) {
+        section.contenido__descubrenos div.descubrenos__evento__boda {
+          width: 150px;
+          height: 150px; } }
+  section.contenido__descubrenos div.descubrenos__contacto {
+    width: 100%;
+    height: 0px;
+    background: black;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px; }
     @media (min-width: 1200px) {
-      section.contenido__descubrenos div.descubrenos__evento__pastel {
-        width: 150px;
-        height: 150px; } }
-  section.contenido__descubrenos div.descubrenos__evento__boda {
-    width: 120px;
-    height: 120px;
-    background-image: url("../fonts/iconos/boda.svg"); }
-    @media (min-width: 1200px) {
-      section.contenido__descubrenos div.descubrenos__evento__boda {
-        width: 150px;
-        height: 150px; } }
-
-section.contenido__descubrenos div.descubrenos__contacto {
-  width: 100%;
-  height: 40px;
-  background: black;
-  text-align: center;
-  padding: 20px;
-  margin-bottom: 40px; }
-  @media (min-width: 1200px) {
-    section.contenido__descubrenos div.descubrenos__contacto {
-      width: 50%; } }
+      section.contenido__descubrenos div.descubrenos__contacto {
+        width: 50%; } }
 
 section.contenido__quienessomos {
   width: 100%; }
@@ -1199,7 +1195,8 @@ section.contenido__quienessomos {
     section.contenido__quienessomos figure img {
       margin-top: 20px;
       margin-bottom: 20px;
-      border: 1px solid black; }
+      border: 1px solid black;
+      height: 200px; }
     section.contenido__quienessomos figure figcaption {
       width: 90%;
       margin-top: 0;
@@ -1337,7 +1334,7 @@ section.sobrenosotros {
   section.sobrenosotros .sobrenosotros--fondo {
     background-color: #B7ADAB; }
   section.sobrenosotros .sobrenosotros__pau {
-    width: 90%;
+    width: 80%;
     margin-top: 40px;
     margin-bottom: 40px;
     margin-left: auto;
@@ -1346,19 +1343,12 @@ section.sobrenosotros {
       margin-top: 40px;
       border: 1px solid black;
       margin-top: 20px; }
-  section.sobrenosotros .sobrenosotros__cocina {
-    width: 90%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    width: 250px;
-    height: 230px;
-    border: 1px solid black; }
+  @media (min-width: 1200px) {
+    section.sobrenosotros .sobrenosotros__cocina {
+      border: 2px solid black; } }
   @media (min-width: 1200px) {
     section.sobrenosotros figure {
-      width: 90%;
+      width: 80%;
       margin-top: 40px;
       margin-bottom: 40px;
       margin-left: auto;
@@ -1369,11 +1359,13 @@ section.sobrenosotros {
       display: flex; }
     section.sobrenosotros figcaption {
       text-align: left;
-      padding: 40px; } }
+      padding: 0 40px; } }
 
-@media (min-width: 1200px) {
-  section.googlemaps__pequeno {
-    display: none; } }
+section.googlemaps__pequeno {
+  margin-bottom: 40px; }
+  @media (min-width: 1200px) {
+    section.googlemaps__pequeno {
+      display: none; } }
 
 @media (min-width: 320px) {
   section.googlemaps__grande {
@@ -1383,7 +1375,7 @@ section.sobrenosotros {
   section.googlemaps__grande {
     width: 90%;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
     display: -webkit-box;

@@ -25,6 +25,7 @@ section.contenido {
 
 
 section.contenido__descubrenos {
+    margin-top: 40px;
     a {
         text-decoration: none;
         color: white;
@@ -59,8 +60,9 @@ section.contenido__descubrenos {
     div.descubrenos__evento {
 
         @include flexbox($jc: center, $ai:center, $fd:row);
-
+      
         &__pastel {
+           
             width: 120px;
             height: 120px;
             background-image: url('../fonts/iconos/pastel.svg');
@@ -88,7 +90,7 @@ section.contenido__descubrenos {
 
     div.descubrenos__contacto {
         width: 100%;
-        height: 40px;
+        height: 0px;
         background: black;
         text-align: center;
         padding: 20px;
@@ -97,9 +99,13 @@ section.contenido__descubrenos {
          width: 50%
         
         }
-       
+      a.descubrenos__contacto{
+          
+      } 
     }
-}
+    
+    }
+
 
 
 
@@ -122,6 +128,7 @@ section.contenido__quienessomos {
             margin-top: 20px;
             margin-bottom: 20px;
             border: 1px solid black;
+            height: 200px;
             
         }
 
@@ -262,7 +269,7 @@ section.sobrenosotros {
     }
 
     .sobrenosotros__pau {
-        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
+        @include centrarCaja ($ancho: 80%, $mtop:40px, $mbottom:40px);
 
          img {
             margin-top: 40px;
@@ -272,25 +279,24 @@ section.sobrenosotros {
     }
 
     .sobrenosotros__cocina {
-        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
-        margin-top: 40px;
-        width: 250px;
-        height: 230px;
-        border: 1px solid black;
+        @include media(escritorio) {
+        border: 2px solid black;
     }
+}
+
 
 
     //Version escritorio
     @include media(escritorio) {
         figure {
-            @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
-            padding: 40px;
+            @include centrarCaja ($ancho: 80%, $mtop:40px, $mbottom:40px);
+            padding:  40px;
             display: flex;
         }
 
         figcaption {
             text-align: left;
-            padding: 40px;
+            padding: 0 40px ;
         }
 
     }
@@ -299,18 +305,21 @@ section.sobrenosotros {
 }
 
 section.googlemaps__pequeno {
+  
+    margin-bottom: 40px;
     @include media(escritorio) {
         display: none;
     }
 }
 
 section.googlemaps__grande {
+  
     @include media(movil) {
         display: none;
     }
 
     @include media(escritorio) {
-        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
+        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:100px);
         display: flex;
     }
 }
