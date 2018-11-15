@@ -450,7 +450,7 @@ header {
   flex-direction: row;
   padding: 30px; }
   .menu__logo {
-    background-image: url("../fonts/iconos/logo_polisso.svg");
+    background-image: url("../fonts/iconos/logo.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -554,7 +554,7 @@ header {
           text-transform: uppercase; }
           @media (min-width: 1200px) {
             .menu__desplegable__lista__link1 a, .menu__desplegable__lista__link2 a, .menu__desplegable__lista__link3 a, .menu__desplegable__lista__link4 a {
-              font-size: 1em; } }
+              font-size: 0.9em; } }
       .menu__desplegable__lista li:nth-last-child(1) {
         border-bottom: solid 2px #fff; }
         @media (min-width: 1200px) {
@@ -586,7 +586,12 @@ header {
     align-items: center; }
 
 .eslogan {
-  text-align: center; }
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  margin: 0px 0;
+  padding-bottom: 50px; }
 
 .eventos__formulario {
   margin-top: 25px;
