@@ -22,12 +22,31 @@
 
 }
 
-.btn_productos, .descubrenos__contacto{
+.btn_productos, .descubrenos__contacto, .descubrenos__contacto_smarphone, .descubrenos__contacto_contacta{
     display: block;
     //margin-top: -4px;
     @extend %btn;
     background-color: black;
     margin-bottom: 20px;
+    a{
+        text-decoration: none;
+        color: white;
     }
+   
+    }
+
+    .descubrenos__contacto_smarphone{
+        @include media(escritorio){
+            display: none;
+        }
+    }
+     .descubrenos__contacto{
+        display: none;
+        @include media(escritorio){
+            display: block;
+        }
+    }
+
+  
 
     

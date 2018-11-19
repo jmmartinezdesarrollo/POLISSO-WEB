@@ -1,6 +1,10 @@
 
 // <!--****************************************** 
 // ********** INICIO SECTION INDEX.html*****************
+section{
+ max-width: 1366px;
+ margin: 0 auto;
+}
 
 //CAJA PRINCIPAL
 section.contenido {
@@ -113,11 +117,12 @@ section.contenido__descubrenos {
 
 
 section.contenido__quienessomos {
+    @include flexbox($jc: center, $ai:center, $fd:column); 
 
-    width: 100%;
+   // width: 100%;
 
     figure {
-
+        @include flexbox($jc: center, $ai:center, $fd:column); 
         text-align: center;
 
         a {
@@ -128,18 +133,24 @@ section.contenido__quienessomos {
             margin-top: 20px;
             margin-bottom: 20px;
             border: 1px solid black;
-            height: 200px;
+            height: 300px;
             
         }
 
         figcaption {
-            @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
+           // @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
             color: black;
-            margin-bottom: 50px;
+           // margin-bottom: 50px;
             margin-bottom: 20px;
-            padding-bottom: 40px;
-
-            h1 {}
+            padding-left: 40px;
+            padding-right: 40px;
+           //padding-bottom: 40px;
+            width: 100%;
+            @include media(escritorio){
+                width: 50%;   
+                // @include flexbox($jc: center, $ai:center, $fd:column);    
+            }
+           
         }
 
 
@@ -156,6 +167,7 @@ section.contenido__quienessomos {
                 flex-direction: row;
             }
             figcaption{
+               
                 padding-left: 100px;
                 text-align: center;
                 color: black;
@@ -163,11 +175,12 @@ section.contenido__quienessomos {
                 margin-top: 40px;
                 margin-left: 120px;
                 margin-right: 120px;
-                
+                width: 100%;
                 }
                 p{
                     padding: 0 50px;
                    }
+                
             }
     }
 }
@@ -191,6 +204,7 @@ section.googlemaps__grande{
 section.googlemaps__pequeno {
 
     @include flexbox;
+    margin-top: 50px;
 
     iframe {
         @include centrarCaja ($ancho: 100%, $mtop:0, $mbottom:0);

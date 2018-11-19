@@ -15,8 +15,7 @@ header {
     z-index: 10;
     @include flexbox($jc: space-between, $ai:null, $fd:row);
     padding: 30px;
-   
-    
+  
     //position: absolute;
 
     //------logo-------

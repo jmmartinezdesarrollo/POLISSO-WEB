@@ -3,6 +3,7 @@
 //************************************
 body {
     background-color: map-get($colores, gris);
+
 }
 
 
@@ -20,7 +21,7 @@ header.header__humo{
     height: 20vh;
     }
  
-section.banner__humo {
+div.banner__humo {
     @include flexbox($jc:flex-end, $ai:center, $fd:column);
     background-color: black;
     height: 80vh;
@@ -30,6 +31,7 @@ section.banner__humo {
 
 //Tamaño del video
 video.video__banner__humo{
+   // height: 50vh;
     width: 100%;
     @include media(escritorio){
         height: 50vh;
