@@ -13,7 +13,7 @@
 }
 
 // mixin para realizar un flexBox
-@mixin flexbox ($jc:space-between, $ai:center, $fd:row){
+@mixin flexbox($jc:space-between, $ai:center, $fd:row){
     display: flex;
     justify-content: $jc;
     align-items: $ai;

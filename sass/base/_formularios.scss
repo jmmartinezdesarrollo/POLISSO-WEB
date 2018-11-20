@@ -2,144 +2,43 @@
 //+++++++++++ $FORMULARIOS +++++++++++++++
 //***************************************
 
+//************ pagina eventos.html ***************
+//************************************************
+// ********** Bloque SECCION Descubrenos**********
+
 .eventos__formulario {
-
-    @include flexbox($jc: space-between, $ai:center, $fd:row);
-    flex-wrap: wrap;
-
-    @include media(escritorio) {
-        //est6ablece el nombre que se ha asignado en grid-template-areas:  
-        grid-row: 1/2;
-        grid-column: 2/3;
-
-        display: grid;
-        //se empieza con filas rows: asignando los anchos de cada fila
-        grid-template-rows: 50px 50px 50px 50px 1fr 50px; //100px 50px 100px;
-        //grid-template-columns: 50px 50px 50px;
-
-        // tambien se puede meter fraccions_ 1fr = 1 fraccion
-        //grid-template-columns: 1fr 1fr 1fr;
-        grid-template-columns: 100px 1fr; // te  crea 3veces de 1 fr
-
-        //espacios entre columnas
-        grid-column-gap: 30px;
-        //espacio entre filas
-        grid-row-gap: 20px;
-
-        &__label__nom {
-            //width: 40%;
-            //est6ablece el nombre que se ha asignado en grid-template-areas:  
-            grid-row: 1/2;
-            grid-column: 1/2;
-        }
-
-        &__input__nom {
-            //width: 40%;
-            //est6ablece el nombre que se ha asignado en grid-template-areas:  
-            grid-row: 1/2;
-            grid-column: 2/3;
-        }
-
-        &__label__email {
-            //width: 40%;
-            //est6ablece el nombre que se ha asignado en grid-template-areas:  
-            grid-row: 2/3;
-            grid-column: 1/2;
-        }
-
-        &__input__email {
-            //width: 40%;
-            //est6ablece el nombre que se ha asignado en grid-template-areas:  
-            grid-row: 2/3;
-            grid-column: 2/3;
-        }
-
-        &__label__asunto {
-            //width: 40%;
-            //est6ablece el nombre que se ha asignado en grid-template-areas:  
-            grid-row: 3/4;
-            grid-column: 1/2;
-        }
-
-        &__input__asunto {
-            //width: 40%;
-            //est6ablece el nombre que se ha asignado en grid-template-areas:  
-            grid-row: 3/4;
-            grid-column: 2/3;
-        }
-
-        &__label__msj {
-            //width: 40%;
-            //est6ablece el nombre que se ha asignado en grid-template-areas:  
-            grid-row: 4/5;
-            grid-column: 1/2;
-        }
-
-        &__textarea__msj {
-            //width: 40%;
-            //est6ablece el nombre que se ha asignado en grid-template-areas:  
-            grid-row: 4/6;
-            grid-column: 2/3;
-        }
-
-        &__input__btn {
-            //width: 40%;
-            //est6ablece el nombre que se ha asignado en grid-template-areas:  
-            grid-row: 6/7;
-            grid-column: 2/3;
-            background-color: map-get($colores, gris_oscuro);
-            border: solid 2px map-get($colores, negro);
-
-            @include flexbox($jc:space-between, $ai:center, $fd:row);
-
-            &::after {
-                content: "";
-                display: block;       
-                background-image: url('../fonts/iconos/enviar.svg');
-                background-position: center;
-                background-size: 80%;
-                background-repeat: no-repeat;
-                width: 50px;
-                height: 50px;
-               
-            }
-            &:hover {
-                color: map-get($colores, blanco);
-                background-color: map-get($colores, negro);
-            
-            }
-        }
-
-    }
-
+    margin-top: 25px;
+    @include flexbox($jc:space-between, $ai:center, $fd:column);
 
     label {
         display: none;
 
         @include media(escritorio) {
-            display: block;
-            width: 100px;
-            color: map-get($colores, negro);
-        }
+            display: inline;
+            color: black;
+            width: 35%;
+          }
     }
 
     input {
-        //display: inline-block;
+        display: inline-block;
         height: 50px;
+        max-width: 500px;
+
+        //font-family: 'Arial', sans-serif;
+
 
         border: solid 2px map-get($colores, negro);
         border-bottom: none;
-        padding: 0px 15px 0px 15px;
-        // width: 100%;
+
+
     }
 
     textarea {
-        display: block;
         height: 150px;
-        border: solid 2px map-get($colores, negro);
-        padding: 15px;
-        //width: 100%;
 
+        border: solid 2px map-get($colores, negro);
+        padding: 0px 15px 0px 15px;
 
     }
 
@@ -148,13 +47,18 @@
     textarea {
         width: 100%;
         max-width: 500px;
+        font-size: 16px;
+        padding: 0px 15px 0px 15px;
+        outline: none;
+        transition: all 0.3s ease-in-out;
 
-        @include flexbox($jc: space-between, $ai:center, $fd:row);
+        background-color: map-get($colores, gris);
+
+        @extend %flexCentrar;
 
         @include media(escritorio) {
-            width: 100%;
-            border: solid 2px map-get($colores, negro);
-        }
+            width: %;
+          }
 
         /* propiedades al estar sobre un input*/
         &:hover {
@@ -190,16 +94,7 @@
             background-color: map-get($colores, blanco);
         }
     }
-
-    input {
-        align-self: end;
-        justify-self: end;
-    }
 }
-
-
-
-
 
 
 /* propiedades visuales del BOTON ENVIAR*/
@@ -213,8 +108,7 @@
     color: map-get($colores, negro);
     outline: none;
     cursor: pointer;
-    border: solid 0px map-get($colores, negro);
-
+    border: solid 2px map-get($colores, negro);
     //border-top: none;
 }
 
