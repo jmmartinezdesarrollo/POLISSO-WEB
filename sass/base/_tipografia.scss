@@ -2,33 +2,43 @@
 //+++++++++++  $tipografia  ++++++++++++++
 //****************************************
 
-@font-face{
+@font-face {
     font-family: 'CourierNew';
-    src: local('CourierNew'), 
-    url(../fonts/tipografia/courier-new-webfont.woff) format(woff);
+    font-style: normal;
+    font-weight: 400;
+    src: local('CourierNew'),
+        url('../fonts/tipografia/CourierNew.woff2') format('woff2'),
+        url('../fonts/tipografia/CourierNew.woff') format('woff'),
+        url('../fonts/tipografia/CourierNew.ttf') format('truetype'),
+        url('../fonts/tipografia/CourierNew.eot') format('embedded-opentype');
 }
 
-@font-face{
+@font-face {
     font-family: 'CourierNewBold';
-    src: local('CourierNewBold'), 
-    url(../fonts/tipografia/CourierNewBold.ttf) format(ttf);
+    font-style: normal;
+    font-weight: 400;
+    src: local('CourierNewBold'),
+        url('../fonts/tipografia/CourierNewBold.woff2') format('woff2'),
+        url('../fonts/tipografia/CourierNewBold.woff') format('woff'),
+        url('../fonts/tipografia/CourierNewBold.ttf') format('truetype'),
+        url('../fonts/tipografia/CourierNewBold.eot') format('embedded-opentype');
 }
 
-html{
+
+html {
     font-family: 'CourierNew', sans-serif;
     font-size: 16px;
-    color: map-get($colores, blanco);
+    color: map-get($colores, negro);
     // se coge BACKG-COLOR por variable por si cambiasemos el color blanco.
     //background-color: darken(map-get($colores, blanco), 5%);
-
 }
 
-*{
-    box-sizing: border-box;
-}
-
-section{
+section {
+    //background-color: darken(map-get($colores, blanco), 25%);
     background-color: map-get($colores, gris);
 }
 
 
+* {
+    box-sizing: border-box;
+}
