@@ -1,9 +1,8 @@
-
 // <!--****************************************** 
 // ********** INICIO SECTION INDEX.html*****************
-section{
- max-width: 1366px;
- margin: 0 auto;
+section {
+    max-width: 1366px;
+    margin: 0 auto;
 }
 
 //CAJA PRINCIPAL
@@ -11,17 +10,18 @@ section.contenido {
     a {
         text-decoration: none;
     }
+
     @include media(escritorio) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         font-size: 1.2em;
-        &__descubrenos {
-           
-        }
+        height: 1100px;
+
+        &__descubrenos {}
 
     }
-   
+
 }
 
 
@@ -30,6 +30,7 @@ section.contenido {
 
 section.contenido__descubrenos {
     margin-top: 40px;
+
     a {
         text-decoration: none;
         color: white;
@@ -41,36 +42,40 @@ section.contenido__descubrenos {
         text-align: center;
         color: black;
         font-weight: bold;
+
         @include media(escritorio) {
-         display: none;
+            display: none;
         }
     }
-       
-       p{
-           display: none;
-           @include media(escritorio) {
-               display: block;
-               margin-bottom: 25px;
-               color: black;
-           }
-       }
-       @include media(escritorio){
-        @include flexbox($jc:center, $ai:center, $fd:row);
+
+    p {
+        display: none;
+
+        @include media(escritorio) {
+            display: block;
+            margin-bottom: 25px;
+            color: black;
+        }
+    }
+
+    @include media(escritorio) {
+        @include flexbox($jc: center, $ai:center, $fd:row);
         margin: 80px;
         text-align: center;
-       }
-       
+    }
+
 
     div.descubrenos__evento {
 
         @include flexbox($jc: center, $ai:center, $fd:row);
-      
+
         &__pastel {
-           
+
             width: 120px;
             height: 120px;
             background-image: url('../fonts/iconos/pastel.svg');
             @extend %icon-background;
+
             @include media(escritorio) {
                 width: 150px;
                 height: 150px;
@@ -83,6 +88,7 @@ section.contenido__descubrenos {
             height: 120px;
             background-image: url('../fonts/iconos/boda.svg');
             @extend %icon-background;
+
             @include media(escritorio) {
                 width: 150px;
                 height: 150px;
@@ -99,16 +105,15 @@ section.contenido__descubrenos {
         text-align: center;
         padding: 20px;
         margin-bottom: 40px;
-        @include media(escritorio){
-         width: 50%
-        
+
+        @include media(escritorio) {
+            width: 50%
         }
-      a.descubrenos__contacto{
-          
-      } 
+
+        a.descubrenos__contacto {}
     }
-    
-    }
+
+}
 
 
 
@@ -117,12 +122,17 @@ section.contenido__descubrenos {
 
 
 section.contenido__quienessomos {
-    @include flexbox($jc: center, $ai:center, $fd:column); 
+    @include media(escritorio) {
+        height: 400px;
+        // @include flexbox($jc: center, $ai:center, $fd:column);    
+    }
 
-   // width: 100%;
+    @include flexbox($jc: center, $ai:center, $fd:column);
+
+    // width: 100%;
 
     figure {
-        @include flexbox($jc: center, $ai:center, $fd:column); 
+        @include flexbox($jc: center, $ai:center, $fd:column);
         text-align: center;
 
         a {
@@ -130,74 +140,88 @@ section.contenido__quienessomos {
         }
 
         img {
-            margin-top: 20px;
-            margin-bottom: 20px;
+
             border: 1px solid black;
             height: 300px;
-            
+
         }
 
         figcaption {
-           // @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
+            // @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
             color: black;
-           // margin-bottom: 50px;
+            // margin-bottom: 50px;
             margin-bottom: 20px;
-            padding-left: 40px;
-            padding-right: 40px;
-           //padding-bottom: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            //padding-bottom: 40px;
             width: 100%;
-            @include media(escritorio){
-                width: 50%;   
+
+            @include media(escritorio) {
+
+                padding-left: 80px;
+
+                width: 100%;
                 // @include flexbox($jc: center, $ai:center, $fd:column);    
             }
-           
+
         }
 
 
     }
-    @include media(escritorio){
-            grid-column: 1/3;
-            grid: 1/3;
-           
 
-            @include flexbox;
-            @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
-            figure{
-                display: flex;
-                flex-direction: row;
-            }
-            figcaption{
-               
-                padding-left: 100px;
-                text-align: center;
-                color: black;
-                a.descubrenos__contacto{
+    @include media(escritorio) {
+        grid-column: 1/3;
+        grid: 1/3;
+
+        h1 {
+            font-size: 30px;
+            font-family: bold;
+        }
+
+        @include flexbox;
+        @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
+
+        figure {
+            display: flex;
+            flex-direction: row;
+        }
+
+        figcaption {
+
+            padding-left: 100px;
+            text-align: center;
+            color: black;
+
+            a.descubrenos__contacto {
                 margin-top: 40px;
                 margin-left: 120px;
                 margin-right: 120px;
                 width: 100%;
-                }
-                p{
-                    padding: 0 50px;
-                   }
-                
             }
+
+            p {
+                padding: 0 50px;
+            }
+
+        }
     }
 }
+
 // GOOGLE MAPS GRANDE
-section.googlemaps__grande{
- @include flexbox($jc:center, $ai:center, $fd:column);
-    @include media(escritorio){
-    grid-column: 2/3;
-    grid-row: 1/2;
-  
-    h3{
-        margin-bottom: 40px;
-        color: black;
-        font-weight: bold;
-        font-size: 1.2em;
+section.googlemaps__grande {
+    @include flexbox($jc: center, $ai:center, $fd:column);
+
+    @include media(escritorio) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        h3 {
+            margin-bottom: 40px;
+            color: black;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
     }
-}
 }
 
 // GOOGLE MAPS PEQUEÑO
@@ -285,7 +309,7 @@ section.sobrenosotros {
     .sobrenosotros__pau {
         @include centrarCaja ($ancho: 80%, $mtop:40px, $mbottom:40px);
 
-         img {
+        img {
             margin-top: 40px;
             border: 1px solid black;
             margin-top: 20px;
@@ -294,9 +318,9 @@ section.sobrenosotros {
 
     .sobrenosotros__cocina {
         @include media(escritorio) {
-        border: 2px solid black;
+            border: 2px solid black;
+        }
     }
-}
 
 
 
@@ -304,13 +328,13 @@ section.sobrenosotros {
     @include media(escritorio) {
         figure {
             @include centrarCaja ($ancho: 80%, $mtop:40px, $mbottom:40px);
-            padding:  40px;
+            padding: 40px;
             display: flex;
         }
 
         figcaption {
             text-align: left;
-            padding: 0 40px ;
+            padding: 0 40px;
         }
 
     }
@@ -319,15 +343,16 @@ section.sobrenosotros {
 }
 
 section.googlemaps__pequeno {
-  
+
     margin-bottom: 40px;
+
     @include media(escritorio) {
         display: none;
     }
 }
 
 section.googlemaps__grande {
-  
+
     @include media(movil) {
         display: none;
     }

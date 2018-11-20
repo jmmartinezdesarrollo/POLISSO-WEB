@@ -19,13 +19,16 @@ footer {
 
     // DIRECCION Y DATOS
     div.footer__datos {
+        color: white;
         @include centrarCaja ($ancho:90%, $mtop:0, $mbottom:0);
         @include flexbox($jc: space-around, $ai:left, $fd:column);
         h6{
+           
             margin-top: 20px;
             margin-bottom: 10px;
         }
         h4 {
+           
             margin-top: 40px;
             margin-bottom: 20px;
             text-align: center;
@@ -38,7 +41,7 @@ footer {
     div.footer__redessociales {
         @extend %flexCentrar;
         @include centrarCaja ($ancho:90%, $mtop:0, $mbottom:0);
-
+        
         padding-bottom: 50px;
 
         &__fb {
@@ -85,6 +88,7 @@ footer {
         @include centrarCaja ($ancho:90%, $mtop:0, $mbottom:0);
 
         li {
+           
             margin-top: 10px;
         }
         @include media(escritorio) {

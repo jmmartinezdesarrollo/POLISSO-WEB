@@ -80,64 +80,83 @@
                 </ul>
             </div>
         </nav>
-         
+
 
 
     </header>
+
     <!--****************************************** 
         ********** Bloque SECCION Descubrenos**********
     **********************************************-->
     <!-- eslogan -->
     <h1 class="eslogan">Polissó, el teu concepte de gelat de qualitat.</h1>
-    <section class="eventos">
-         
 
-        <div class="eventos__svg">
-            <div class="eventos__svg__pastel"></div>
-            <div class="eventos__svg__boda"></div>
+    <section class="eventos">
+
+        <div class="eventos__info">
+            <div class="eventos__info__svg">
+                <div class="eventos__info__svg__pastel"></div>
+                <div class="eventos__info__svg__boda"></div>
+            </div>
+            <p class="eventos__info__texto">
+                Vols originalitat, espectacle, diversió i gust pes teu esdeveniment? Ho has conseguit, POLISSO NITRE
+                HISSI CREAM te proposa tot això i més. Pots escollir es gusts de sa nostra carta de gelats o
+                dissenyarem junts es que tu desitgis, només has de contactar-mos amb, almanco, una setmana
+                d'anticipació i te convidarem una degustació en es nostro local en ….
+            </p>
         </div>
-        <p class="eventos__texto">
-            ¿Quieres originalidad, show,
-            diversión y sabor para tu evento? Lo has conseguido, POLISSO NITRO ICE CREAM te propone todo eso y más.
-            Puedes escoger los sabores de nuestra carta de helados o diseñaremos juntos el que tú desees, solo tienes
-            que contactarnos con, al menos, una semana de anticipación y te invitaremos a una degustación en nuestro
-            local en ….
-        </p>
         <!-- Formulario de envio de sugerencias y  Contacto -->
 
         <form class="eventos__formulario" action='mensaje.php' method='post'>
 
-            <label for='nombre'>Nom: </label>
-            <input name='nombre' type='text' maxlength='50' placeholder='Nom *' autofocus>
+            <label class="eventos__formulario__label__nom" for='nombre'>Nom: *</label>
+            <input class="eventos__formulario__input__nom" name='nombre' type='text' maxlength='50' placeholder='Nom *'
+                autofocus>
 
-            <label for='email'>Email: * </label>
-            <input name='email' type='email' placeholder='Email *' required>
+            <label class="eventos__formulario__label__email" for='email'>Email: * </label>
+            <input class="eventos__formulario__input__email" name='email' type='email' placeholder='Email *' required>
 
-            <label for='email'>Asumpte: * </label>
-            <input name='asunto' type='text' maxlength='50' placeholder='Asumpte *' required>
+            <label class="eventos__formulario__label__asunto" for='asunto'>Asumpte: * </label>
+            <input class="eventos__formulario__input__asunto" name='asunto' type='text' maxlength='50' placeholder='Asumpte *'
+                required>
 
-            <label for='email'>Messatge * </label>
-            <textarea name='message' type='text' placeholder='Introdueix aqui el mensatge *' rows='10' required></textarea>
+            <label class="eventos__formulario__label__msj" for='mensaje'>Missatge * </label>
+            <textarea class="eventos__formulario__textarea__msj" name='mensaje' placeholder='Introdueix aqui el missatge *'
+                required></textarea>
 
-            <input id="submit" type='submit' value='Enviar'>
+            <div class="eventos__formulario__input__btn">
+                <input class="eventos__formulario__input__btn__btn" id="submit" type='submit' value='Enviar'>
+            </div>
+
         </form>
 
         <!-- Apartado de info. de Contacto -->
         <div class="eventos__contacto">
+            <h4>Info. contacte</h4>
             <ul>
-                <li class="eventos__contacto__dir">ssasas</li>
-                <li class="eventos__contacto__email">sassa</li>
-                <li class="eventos__contacto__telf">asasas</li>
+                <li class="eventos__contacto__dir">Direcció: (calle)</li>
+                <li class="eventos__contacto__email">Email: email.contacto@gmail.com</li>
+                <li class="eventos__contacto__telf">Telèfon: 68522321 | 971 22233</li>
             </ul>
         </div>
+
 
         <!-- mapa de localizacion del local-->
         <div class="eventos__mapa">
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.1144283190924!2d2.6500825153706433!3d39.579571379471226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129792563cfdc695%3A0x338f043e9b713070!2sIbecon+Centro+De+Formaci%C3%B3n.!5e0!3m2!1ses!2ses!4v1541620531166"
-                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 
         </div>
+
+         <section class="googlemaps__pequeno">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.1144283190924!2d2.6500825153706433!3d39.579571379471226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129792563cfdc695%3A0x338f043e9b713070!2sIbecon+Centro+De+Formaci%C3%B3n.!5e0!3m2!1ses!2ses!4v1541620531166"
+                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </section>
+
+
 
     </section>
 
