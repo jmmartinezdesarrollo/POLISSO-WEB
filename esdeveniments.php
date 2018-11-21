@@ -1,3 +1,19 @@
+<?php
+$enviado = -1; // Controla si se envia o no
+if (isset($_POST['nombre'])) { // Verifica si viene desde el formulario o se carga la pagina por primera vez
+$to = 'info@polisso.com'; // Se envia al webmaster la primer copia
+$mensaje = 'El mensaje lo envia ' . $_POST['nombre'] . ' desde su email ' . $_POST['email'] . " \r \r" . $_POST['mensaje'];
+mail($to, $_POST['asunto'], $mensaje); // envio al webmaster
+
+
+$to = $_POST['email']; // SE envia al usuario la segunda copia
+$mensaje = "Mensaje enviado correctamente a Polisso. \r \r"  . $_POST['mensaje'];
+
+mail($to, $_POST['asunto'], $mensaje); // Envio al usuario 
+$enviado = 1; // Marca que se envio OK
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -72,7 +88,7 @@
                         <a href="productes.html" class="menu__desplegable__lista__link__productos">products</a>
                     </li>
                     <li class="menu__desplegable__lista__link3">
-                        <a href="esdeveniments.html" class="menu__desplegable__lista__link__eventos">esdeveniments</a>
+                        <a href="esdeveniments.php" class="menu__desplegable__lista__link__eventos">esdeveniments</a>
                     </li>
                     <li class="menu__desplegable__lista__link4">
                         <a href="sobre_noltros.html" class="menu__desplegable__lista__link__nosotros">sobre noltros</a>
@@ -106,9 +122,16 @@
             </p>
         </div>
         <!-- Formulario de envio de sugerencias y  Contacto -->
+        <?php
+if ($enviado == 1) { // Se envio ??
+?>
+      El mensaje fue enviado con exito !!.
+      <?php
+} else { // No es el envio es la primera vez y pide los datos
+?>
 
-        <form class="eventos__formulario" action='mensaje.php' method='post'>
 
+        <form class="eventos__formulario" action="" method="post" enctype="multipart/form-data" name="form1">
             <label class="eventos__formulario__label__nom" for='nombre'>Nom: *</label>
             <input class="eventos__formulario__input__nom" name='nombre' type='text' maxlength='50' placeholder='Nom *'
                 autofocus>
@@ -129,6 +152,9 @@
             </div>
 
         </form>
+        <?php
+}
+?>
 
         <!-- Apartado de info. de Contacto -->
         <div class="eventos__contacto">
@@ -159,10 +185,6 @@
 
 
     </section>
-
-
-
-
 
 
     <!--****************************************** 
@@ -213,7 +235,7 @@
             <div class="footer__enlaces__izquierda">
                 <ul>
                     <li>
-                        <a href="esdeveniments.html" class="footer__enlaces--about">Esdeveniments</a>
+                        <a href="esdeveniments.php" class="footer__enlaces--about">Esdeveniments</a>
                     </li>
                     <li class="footer__enlaces--blog">
                         <a href="sobre_noltros.html">Sobre noltros</a>
