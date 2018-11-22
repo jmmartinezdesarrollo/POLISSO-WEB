@@ -53,7 +53,9 @@ $enviado = 1; // Marca que se envio OK
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 
-    
+    <!-- Para evitar que solo los rastreadores web de Google indexen una página -->
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
 
 
 </head>
