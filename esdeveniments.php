@@ -1,4 +1,5 @@
 <<<<<<< HEAD:esdeveniments.php
+<<<<<<< HEAD:esdeveniments.php
 <?php
 $enviado = -1; // Controla si se envia o no
 if (isset($_POST['nombre'])) { // Verifica si viene desde el formulario o se carga la pagina por primera vez
@@ -15,6 +16,8 @@ $enviado = 1; // Marca que se envio OK
 }
 ?>
 
+=======
+>>>>>>> parent of adc80eb... seccion productos(+ grid) Youssef:esdeveniments.html
 =======
 >>>>>>> parent of adc80eb... seccion productos(+ grid) Youssef:esdeveniments.html
 <!DOCTYPE html>
