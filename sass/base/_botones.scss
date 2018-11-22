@@ -6,47 +6,54 @@
 
 .boton {
     display: block;
-     width: 300px;
+    width: 300px;
     padding: 1rem 2rem;
     color: white;
-    background-color: black ;
+    background-color: black;
     border-radius: 3px;
     text-align: center;
 
     // esto es ANIDACION. SE RECOMIENDA UTILIZAR POCAS
     // (MAX 3)
 
-    .boton__icon{
+    .boton__icon {
         font-size: 3rem;
     }
 
 }
 
-.btn_productos, .descubrenos__contacto, .descubrenos__contacto_smarphone, .descubrenos__contacto_contacta{
+.btn_productos,
+.descubrenos__contacto,
+.descubrenos__contacto_smarphone,
+.descubrenos__contacto_contacta {
     display: block;
     //margin-top: -4px;
     @extend %btn;
     background-color: black;
     margin-bottom: 20px;
-    a{
+
+    a {
         text-decoration: none;
         color: white;
     }
-   
-    }
 
-    .descubrenos__contacto_smarphone{
-        @include media(escritorio){
-            display: none;
-        }
-    }
-     .descubrenos__contacto{
+}
+
+.descubrenos__contacto_smarphone {
+    @include media(escritorio) {
         display: none;
-        @include media(escritorio){
-            display: block;
-        }
     }
+}
 
-  
+.descubrenos__contacto {
+    display: none;
 
-    
+    @include media(escritorio) {
+        display: block;
+    }
+}
+
+
+.btn_productos{
+    margin-bottom: 0px;
+}

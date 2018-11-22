@@ -386,18 +386,27 @@ section {
 }
 
 */
-.btn_productos, .descubrenos__contacto, .descubrenos__contacto_smarphone, .descubrenos__contacto_contacta {
+.btn_productos,
+.descubrenos__contacto,
+.descubrenos__contacto_smarphone,
+.descubrenos__contacto_contacta {
   text-decoration: none;
   text-align: center;
   color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa, redes_sociales: rgba(0, 205, 241, 0.356)), negro);
   padding: 1rem 0.5rem;
   background-color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa, redes_sociales: rgba(0, 205, 241, 0.356)), negro);
   border-radius: 0px; }
-  .btn_productos:hover, .descubrenos__contacto:hover, .descubrenos__contacto_smarphone:hover, .descubrenos__contacto_contacta:hover {
+  .btn_productos:hover,
+  .descubrenos__contacto:hover,
+  .descubrenos__contacto_smarphone:hover,
+  .descubrenos__contacto_contacta:hover {
     background-color: #414141;
     color: #fff;
     font-weight: bold; }
-  .btn_productos:visited, .descubrenos__contacto:visited, .descubrenos__contacto_smarphone:visited, .descubrenos__contacto_contacta:visited {
+  .btn_productos:visited,
+  .descubrenos__contacto:visited,
+  .descubrenos__contacto_smarphone:visited,
+  .descubrenos__contacto_contacta:visited {
     color: #fff; }
 
 .contenido__descubrenos__info h4, footer div.footer__redessociales {
@@ -429,11 +438,17 @@ section.contenido__descubrenos div.descubrenos__evento__pastel, section.contenid
   .boton .boton__icon {
     font-size: 3rem; }
 
-.btn_productos, .descubrenos__contacto, .descubrenos__contacto_smarphone, .descubrenos__contacto_contacta {
+.btn_productos,
+.descubrenos__contacto,
+.descubrenos__contacto_smarphone,
+.descubrenos__contacto_contacta {
   display: block;
   background-color: black;
   margin-bottom: 20px; }
-  .btn_productos a, .descubrenos__contacto a, .descubrenos__contacto_smarphone a, .descubrenos__contacto_contacta a {
+  .btn_productos a,
+  .descubrenos__contacto a,
+  .descubrenos__contacto_smarphone a,
+  .descubrenos__contacto_contacta a {
     text-decoration: none;
     color: white; }
 
@@ -446,6 +461,9 @@ section.contenido__descubrenos div.descubrenos__evento__pastel, section.contenid
   @media (min-width: 1200px) {
     .descubrenos__contacto {
       display: block; } }
+
+.btn_productos {
+  margin-bottom: 0px; }
 
 header {
   background-color: #000; }
@@ -877,15 +895,20 @@ video.video__banner__humo {
     /* Propiedades de las flechas antes de pasar el raton */
     /* posicion de las flechas en los laterales del banner */
     /* propiedades al hacer click sobre las flechas, se cambia el color */ }
+    @media (min-width: 1200px) {
+      .slider__contenedor {
+        width: 75%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        height: 500px; } }
     .slider__contenedor__diapostiva-open:checked + .slider__contenedor__diapostiva-item {
       position: static;
       opacity: 100; }
     .slider__contenedor__diapostiva-item {
       position: absolute;
-      opacity: 0;
-      -webkit-transition: opacity 0.6s ease-out;
-      -o-transition: opacity 0.6s ease-out;
-      transition: opacity 0.6s ease-out; }
+      opacity: 0; }
       .slider__contenedor__diapostiva-item source,
       .slider__contenedor__diapostiva-item img {
         display: block;
@@ -1443,94 +1466,325 @@ section.googlemaps__pequeno {
     margin-left: auto;
     margin-right: auto; }
 
-section.productos {
+.productos {
   width: 90%;
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
   color: black; }
-  section.productos h2 {
-    text-align: center;
-    margin: 20px;
-    font-weight: bold; }
-  section.productos figure {
+  .productos__p1__caja {
     text-align: center; }
-  section.productos figcaption {
-    margin-top: 20px;
-    margin-bottom: 10px; }
-  section.productos div.productos__producto {
-    padding: 20px;
-    background-color: #B7ADAB; }
-  @media (min-width: 1200px) {
-    section.productos {
-      width: 90%;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      margin-left: auto;
-      margin-right: auto; } }
-
-section.sobrenosotros {
-  color: #000;
-  text-align: center; }
-  section.sobrenosotros h2 {
-    margin: 20px 0;
-    font-weight: bold; }
-  section.sobrenosotros figcaption {
-    margin: 20px;
-    text-align: center;
-    color: black;
-    padding: 20px 0; }
-  section.sobrenosotros .sobrenosotros--fondo {
-    background-color: #B7ADAB; }
-  section.sobrenosotros .sobrenosotros__pau {
-    width: 80%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto; }
-    section.sobrenosotros .sobrenosotros__pau img {
-      margin-top: 40px;
-      border: 1px solid black;
-      margin-top: 20px; }
-  @media (min-width: 1200px) {
-    section.sobrenosotros .sobrenosotros__cocina {
-      border: 2px solid black; } }
-  @media (min-width: 1200px) {
-    section.sobrenosotros figure {
-      width: 80%;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 40px;
+    .productos__p1__caja__foto {
+      width: 100%; }
+      .productos__p1__caja__foto source {
+        width: 100%; }
+      .productos__p1__caja__fotoimg {
+        width: 50%; }
+    .productos__p1__caja__pie {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
-    section.sobrenosotros figcaption {
-      text-align: left;
-      padding: 0 40px; } }
-
-section.googlemaps__pequeno {
-  margin-bottom: 40px; }
-  @media (min-width: 1200px) {
-    section.googlemaps__pequeno {
-      display: none; } }
-
-@media (min-width: 320px) {
-  section.googlemaps__grande {
-    display: none; } }
-
-@media (min-width: 1200px) {
-  section.googlemaps__grande {
-    width: 90%;
-    margin-top: 40px;
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 50px; }
+      .productos__p1__caja__pie__nom {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 25px; }
+      .productos__p1__caja__pie__texto {
+        text-align: justify; }
+      .productos__p1__caja__pie__decor_Abajo {
+        margin-top: 25px;
+        background-image: url(../fonts/iconos/ornament2_abajo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 50px;
+        width: 100%; }
+  .productos__p2__caja {
+    text-align: center; }
+    .productos__p2__caja__foto {
+      width: 100%; }
+      .productos__p2__caja__foto source, .productos__p2__caja__fotoimg {
+        width: 100%; }
+    .productos__p2__caja__pie {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 50px; }
+      .productos__p2__caja__pie__nom {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 25px; }
+      .productos__p2__caja__pie__texto {
+        text-align: justify; }
+      .productos__p2__caja__pie__decor_Abajo {
+        margin-top: 25px;
+        background-image: url(../fonts/iconos/ornament2_abajo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 50px;
+        width: 100%; }
+    .productos__p2__caja__p3__caja {
+      text-align: center; }
+      .productos__p2__caja__p3__caja__foto {
+        width: 100%; }
+        .productos__p2__caja__p3__caja__foto source, .productos__p2__caja__p3__caja__fotoimg {
+          width: 100%; }
+      .productos__p2__caja__p3__caja__pie {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-bottom: 50px; }
+        .productos__p2__caja__p3__caja__pie__nom {
+          margin-top: 25px;
+          margin-bottom: 25px;
+          font-size: 25px; }
+        .productos__p2__caja__p3__caja__pie__texto {
+          text-align: justify; }
+        .productos__p2__caja__p3__caja__pie__decor_Abajo {
+          margin-top: 25px;
+          background-image: url(../fonts/iconos/ornament2_abajo.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          height: 50px;
+          width: 100%; }
+      @media (min-width: 1200px) {
+        .productos__p2__caja__p3__caja {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 330px 330px 330px;
+          grid-row-gap: 80px; }
+          .productos__p2__caja__p3__caja__p1 {
+            grid-column: 1/2;
+            grid-row: 1/2; }
+            .productos__p2__caja__p3__caja__p1__caja {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr;
+              grid-column-gap: 100px; }
+              .productos__p2__caja__p3__caja__p1__caja__foto {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                width: 100%; }
+                .productos__p2__caja__p3__caja__p1__caja__foto source {
+                  width: 100%;
+                  height: 400px; }
+              .productos__p2__caja__p3__caja__p1__caja__pie {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                margin: 0px; }
+                .productos__p2__caja__p3__caja__p1__caja__pie__decor_Arriba {
+                  background-image: url(../fonts/iconos/ornament2_arriba.svg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  height: 35px;
+                  width: 25%; }
+                .productos__p2__caja__p3__caja__p1__caja__pie__decor_Abajo {
+                  margin-top: 25px;
+                  background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  height: 50px;
+                  width: 100%; }
+          .productos__p2__caja__p3__caja__p2 {
+            grid-column: 1/2;
+            grid-row: 2/3; }
+            .productos__p2__caja__p3__caja__p2__caja {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr;
+              grid-column-gap: 100px; }
+              .productos__p2__caja__p3__caja__p2__caja__foto {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                width: 100%; }
+                .productos__p2__caja__p3__caja__p2__caja__foto source {
+                  width: 100%;
+                  height: 400px; }
+              .productos__p2__caja__p3__caja__p2__caja__pie {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                margin-top: 0px; }
+                .productos__p2__caja__p3__caja__p2__caja__pie__decor_Arriba {
+                  background-image: url(../fonts/iconos/ornament2_arriba.svg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  height: 35px;
+                  width: 25%; }
+                .productos__p2__caja__p3__caja__p2__caja__pie__decor_Abajo {
+                  margin-top: 25px;
+                  background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  height: 50px;
+                  width: 100%; }
+          .productos__p2__caja__p3__caja__p3 {
+            grid-column: 1/2;
+            grid-row: 3/4; }
+            .productos__p2__caja__p3__caja__p3__caja {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr;
+              grid-column-gap: 100px; }
+              .productos__p2__caja__p3__caja__p3__caja__foto {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                width: 100%; }
+                .productos__p2__caja__p3__caja__p3__caja__foto source {
+                  width: 100%;
+                  height: 400px; }
+              .productos__p2__caja__p3__caja__p3__caja__pie {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                margin-top: 0px; }
+                .productos__p2__caja__p3__caja__p3__caja__pie__decor_Arriba {
+                  background-image: url(../fonts/iconos/ornament2_arriba.svg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  height: 35px;
+                  width: 25%; }
+                .productos__p2__caja__p3__caja__p3__caja__pie__decor_Abajo {
+                  margin-top: 25px;
+                  background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  height: 50px;
+                  width: 100%; } }
+      .productos__p2__caja__p3__caja section.sobrenosotros {
+        color: #000;
+        text-align: center; }
+        .productos__p2__caja__p3__caja section.sobrenosotros h2 {
+          margin: 20px 0;
+          font-weight: bold; }
+        .productos__p2__caja__p3__caja section.sobrenosotros figcaption {
+          margin: 20px;
+          text-align: center;
+          color: black;
+          padding: 20px 0; }
+        .productos__p2__caja__p3__caja section.sobrenosotros .sobrenosotros--fondo {
+          background-color: #B7ADAB; }
+        .productos__p2__caja__p3__caja section.sobrenosotros .sobrenosotros__pau {
+          width: 80%;
+          margin-top: 40px;
+          margin-bottom: 40px;
+          margin-left: auto;
+          margin-right: auto; }
+          .productos__p2__caja__p3__caja section.sobrenosotros .sobrenosotros__pau img {
+            margin-top: 40px;
+            border: 1px solid black;
+            margin-top: 20px; }
+        @media (min-width: 1200px) {
+          .productos__p2__caja__p3__caja section.sobrenosotros .sobrenosotros__cocina {
+            border: 2px solid black; } }
+        @media (min-width: 1200px) {
+          .productos__p2__caja__p3__caja section.sobrenosotros figure {
+            width: 80%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex; }
+          .productos__p2__caja__p3__caja section.sobrenosotros figcaption {
+            text-align: left;
+            padding: 0 40px; } }
+      .productos__p2__caja__p3__caja section.googlemaps__pequeno {
+        margin-bottom: 40px; }
+        @media (min-width: 1200px) {
+          .productos__p2__caja__p3__caja section.googlemaps__pequeno {
+            display: none; } }
+      @media (min-width: 320px) {
+        .productos__p2__caja__p3__caja section.googlemaps__grande {
+          display: none; } }
+      @media (min-width: 1200px) {
+        .productos__p2__caja__p3__caja section.googlemaps__grande {
+          width: 90%;
+          margin-top: 40px;
+          margin-bottom: 100px;
+          margin-left: auto;
+          margin-right: auto;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; } }
 
 footer {
   height: 380px;
