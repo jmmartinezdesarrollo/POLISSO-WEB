@@ -1,3 +1,18 @@
+<?php
+$enviado = -1; // Controla si se envia o no
+if (isset($_POST['nombre'])) { // Verifica si viene desde el formulario o se carga la pagina por primera vez
+$to = 'info@polisso.com'; // Se envia al webmaster la primer copia
+$mensaje = 'El mensaje lo envia ' . $_POST['nombre'] . ' desde su email ' . $_POST['email'] . " \r \r" . $_POST['mensaje'];
+mail($to, $_POST['asunto'], $mensaje); // envio al webmaster
+
+
+$to = $_POST['email']; // SE envia al usuario la segunda copia
+$mensaje = "Mensaje enviado correctamente a Polisso. \r \r"  . $_POST['mensaje'];
+
+mail($to, $_POST['asunto'], $mensaje); // Envio al usuario 
+$enviado = 1; // Marca que se envio OK
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -8,30 +23,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
     <!-- HTML Meta Tags -->
     <title>Polissó</title>
-    <meta name="description" content="">
-
+    <meta name="description" content="Polissó, el teu concepte de gelat de qualitat.">
 
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="Polissó" content="">
-    <meta itemprop="description" content="">
+    <meta itemprop="Polissó" content="Polissó, el teu concepte de gelat de qualitat.">
+    <meta itemprop="description" content="Polissó, el teu concepte de gelat de qualitat.">
     <meta itemprop="image" content="http://">
 
-
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="http://">
+    <meta property="og:url" content="https://www.facebook.com/Polisso-nitroicecream-325464031341011/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Polisso">
+    <meta property="og:description" content="Polissó, el teu concepte de gelat de qualitat.">
     <meta property="og:image" content="http://">
 
-
     <!-- Twitter Meta Tags -->
+    <meta property="og:url" content="https://twitter.com/Polissonitroic1">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SEAT">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="Polissó, el teu concepte de gelat de qualitat.">
     <meta name="twitter:image" content="http://">
 
     <!-- FontAwesome -->
@@ -41,9 +53,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 
-    <!-- Para evitar que solo los rastreadores web de Google indexen una página -->
-    <meta name="robots" content="noindex">
-    <meta name="googlebot" content="noindex">
+    
 
 
 </head>
@@ -73,7 +83,7 @@
                         <a href="productes.html" class="menu__desplegable__lista__link__productos">products</a>
                     </li>
                     <li class="menu__desplegable__lista__link3">
-                        <a href="esdeveniments.html" class="menu__desplegable__lista__link__eventos">esdeveniments</a>
+                        <a href="esdeveniments.php" class="menu__desplegable__lista__link__eventos">esdeveniments</a>
                     </li>
                     <li class="menu__desplegable__lista__link4">
                         <a href="sobre_noltros.html" class="menu__desplegable__lista__link__nosotros">sobre noltros</a>
@@ -107,9 +117,16 @@
             </p>
         </div>
         <!-- Formulario de envio de sugerencias y  Contacto -->
+        <?php
+if ($enviado == 1) { // Se envio ??
+?>
+      Es missatge va esser enviat amb èxit !!.
+      <?php
+} else { // No es el envio es la primera vez y pide los datos
+?>
 
-        <form class="eventos__formulario" action='mensaje.php' method='post'>
 
+        <form class="eventos__formulario" action="" method="post" enctype="multipart/form-data" name="form1">
             <label class="eventos__formulario__label__nom" for='nombre'>Nom: *</label>
             <input class="eventos__formulario__input__nom" name='nombre' type='text' maxlength='50' placeholder='Nom *'
                 autofocus>
@@ -130,14 +147,17 @@
             </div>
 
         </form>
+        <?php
+}
+?>
 
         <!-- Apartado de info. de Contacto -->
         <div class="eventos__contacto">
             <h4>Info. contacte</h4>
             <ul>
                 <li class="eventos__contacto__dir">Direcció: (calle)</li>
-                <li class="eventos__contacto__email">Email: email.contacto@gmail.com</li>
-                <li class="eventos__contacto__telf">Telèfon: 68522321 | 971 22233</li>
+                <li class="eventos__contacto__email">Email: info@polisso.com</li>
+                <li class="eventos__contacto__telf">Telèfon: 6852xxx | 971 222xxx</li>
             </ul>
         </div>
 
@@ -160,10 +180,6 @@
 
 
     </section>
-
-
-
-
 
 
     <!--****************************************** 
@@ -214,7 +230,7 @@
             <div class="footer__enlaces__izquierda">
                 <ul>
                     <li>
-                        <a href="esdeveniments.html" class="footer__enlaces--about">Esdeveniments</a>
+                        <a href="esdeveniments.php" class="footer__enlaces--about">Esdeveniments</a>
                     </li>
                     <li class="footer__enlaces--blog">
                         <a href="sobre_noltros.html">Sobre noltros</a>
