@@ -156,8 +156,8 @@ if ($enviado == 1) { // Se envio ??
             <h4>Info. contacte</h4>
             <ul>
                 <li class="eventos__contacto__dir">Direcció: (calle)</li>
-                <li class="eventos__contacto__email">Email: email.contacto@gmail.com</li>
-                <li class="eventos__contacto__telf">Telèfon: 68522321 | 971 22233</li>
+                <li class="eventos__contacto__email">Email: info@polisso.com</li>
+                <li class="eventos__contacto__telf">Telèfon: 6852xxx | 971 222xxx</li>
             </ul>
         </div>
 
