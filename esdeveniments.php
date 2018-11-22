@@ -23,30 +23,27 @@ $enviado = 1; // Marca que se envio OK
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
     <!-- HTML Meta Tags -->
     <title>Polissó</title>
-    <meta name="description" content="">
-
+    <meta name="description" content="Polissó, el teu concepte de gelat de qualitat.">
 
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="Polissó" content="">
-    <meta itemprop="description" content="">
+    <meta itemprop="Polissó" content="Polissó, el teu concepte de gelat de qualitat.">
+    <meta itemprop="description" content="Polissó, el teu concepte de gelat de qualitat.">
     <meta itemprop="image" content="http://">
 
-
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="http://">
+    <meta property="og:url" content="https://www.facebook.com/Polisso-nitroicecream-325464031341011/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Polisso">
+    <meta property="og:description" content="Polissó, el teu concepte de gelat de qualitat.">
     <meta property="og:image" content="http://">
 
-
     <!-- Twitter Meta Tags -->
+    <meta property="og:url" content="https://twitter.com/Polissonitroic1">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SEAT">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="Polissó, el teu concepte de gelat de qualitat.">
     <meta name="twitter:image" content="http://">
 
     <!-- FontAwesome -->
@@ -125,7 +122,7 @@ $enviado = 1; // Marca que se envio OK
         <?php
 if ($enviado == 1) { // Se envio ??
 ?>
-      El mensaje fue enviado con exito !!.
+      Es missatge va esser enviat amb èxit !!.
       <?php
 } else { // No es el envio es la primera vez y pide los datos
 ?>
