@@ -53,6 +53,12 @@ video.video__banner__humo {
         overflow: hidden;
         width: 100%;
 
+        @include media(escritorio) {
+            height: 500px;
+
+            @include centrarCaja ($ancho: 80%, $mtop:0, $mbottom:0);
+        }
+
         /* esto al hacer click se abrir una imagen hermana de input que se ha clickeado  */
 
         &__diapostiva-open:checked+&__diapostiva-item {
@@ -63,7 +69,7 @@ video.video__banner__humo {
         &__diapostiva-item {
             position: absolute;
             opacity: 0;
-            transition: opacity 0.6s ease-out;
+    
 
             source,
             img {
@@ -120,6 +126,9 @@ video.video__banner__humo {
             right: 0;
             text-align: center;
             z-index: 10;
+            @include media(escritorio) {
+                bottom: 15%; 
+            }
 
             li {
                 display: inline-block;
