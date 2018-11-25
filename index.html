@@ -111,7 +111,6 @@
 
     <section>
 
-
         <div class="slider">
             <div class="slider__contenedor">
                 <!-- para cada imagen de las diapositivas tiene asignada un input -->
@@ -192,23 +191,23 @@
         </div>
 
     </section>
-
-
     <!-- FIN SLIDER -->
+
 
     <section class="contenido">
 
         <!--****************************************** 
         ********** Bloque Descubrenos*****************
         **********************************************-->
-        <section class="contenido__descubrenos">
+        <article class="contenido__descubrenos">
             <div class="contenido__descubrenos__caja">
                 <h4>Per qualsevol esdeveniment</h4>
-                <div class="descubrenos__evento">
-                    <div class="descubrenos__evento__pastel"></div>
-                    <div class="descubrenos__evento__boda"></div>
+                <div class="contenido__descubrenos__caja__evento">
+                    <div class="contenido__descubrenos__caja__evento__pastel"></div>
+                    <div class="contenido__descubrenos__caja__evento__boda"></div>
                 </div>
-                <p>Vols originalitat, espectacle, diversió i gust pes teu esdeveniment?</p>
+                <p class="contenido__descubrenos__caja__texto">Vols originalitat, espectacle, diversió i gust pes teu
+                    esdeveniment?</p>
             </div>
             <div>
                 <a href="esdeveniments.html" class="descubrenos__contacto_contacta">
@@ -216,28 +215,24 @@
                 </a>
             </div>
 
-        </section>
+        </article>
 
         <!--****************************************** 
             ********** Bloque SECCION QUIENES SOMOS*****************
             **********************************************-->
 
-        <section class="contenido__quienessomos">
+        <article class="contenido__quienessomos">
+            <figure class="contenido__quienessomos__caja">
+                <picture class="contenido__quienessomos__caja__foto">
+                    <!-- para moviles -->
+                    <source srcset='img/smartphone/@2x/pau_brazoscruzados@2x.jpg 2x,img/smartphone/@2x.jpg 3x' media='(min-width:0px) and (max-width:1200px)'>
+                    <!-- Para escritorio-->
+                    <source srcset='img/desktop/2@x/pau_brazoscruzados@2x.jpg' media='(min-width:1200px)'>
+                    <!-- Imagen de respaldo. -->
+                    <img src='img/smartphone/@1x/pau_brazoscruzados.jpg' alt='Pau Mateu'>
+                </picture>
 
-            <figure>
-                <a href="#">
-                    <picture>
-                        <!-- para moviles -->
-                        <source srcset='img/smartphone/@2x/pau_brazoscruzados@2x.jpg 2x,img/smartphone/@2x.jpg 3x'
-                            media='(min-width:0px) and (max-width:767px)'>
-                        <!-- Para escritorio-->
-                        <source srcset='img/desktop/2@x/pau_brazoscruzados@2x.jpg' media='(min-width:1200px)'>
-                        <!-- Imagen de respaldo. -->
-                        <img src='img/smartphone/@1x/pau_brazoscruzados.jpg' alt='Pau Mateu'>
-                    </picture>
-                </a>
-
-                <figcaption>
+                <figcaption class="contenido__quienessomos__caja__pie">
                     <h1>Polisso Nitro Ice Cream</h1>
                     <p>Polissó neix de la necessitat que té el nostre grup de treball de dur el concepte de la
                         gelateria un poc més envant. Volíem avançar dins aquest món mitjançant l’evolució , la
@@ -251,12 +246,14 @@
                         </a>
                     </div>
                 </figcaption>
-
-
             </figure>
+        </article>
 
 
-        </section>
+
+
+
+
         <div class="descubrenos__contacto_smarphone">
             <a href="sobre_noltros.html">
                 Descubreix-mos
@@ -268,28 +265,28 @@
         ********** Bloque SECCION MAPA*****************
         **********************************************-->
 
-        <section class="googlemaps__pequeno">
+        <article class="googlemaps__pequeno">
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.1144283190924!2d2.6500825153706433!3d39.579571379471226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129792563cfdc695%3A0x338f043e9b713070!2sIbecon+Centro+De+Formaci%C3%B3n.!5e0!3m2!1ses!2ses!4v1541620531166"
                 width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-        </section>
+        </article>
 
-        <section class="googlemaps__grande">
+        <article class="googlemaps__grande">
             <h3>Estam aquí </h3>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.1144283190906!2d2.650082515651367!3d39.57957137947126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129792563cfdc695%3A0x338f043e9b713070!2sIbecon+Centro+De+Formaci%C3%B3n.!5e0!3m2!1ses!2ses!4v1542131903809"
-                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </section>
+                 height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </article>
 
     </section>
 
-    </section>
+
 
     <!--****************************************** 
     ********** Bloque FOOTER *****************
     **********************************************-->
-    <footer> 
-       <div class="footer__cajaCentral">
+    <footer>
+        <div class="footer__cajaCentral">
             <div class="footer__cajaCentral__datos">
                 <!-- Copyright y localizacion del local -->
                 <h6> Ⓒ 2018 - NICTRO ICE CREAM</h6>
@@ -298,9 +295,9 @@
                     <li>Horario:</li>
                 </ul>
             </div>
-           
-           
-           
+
+
+
             <!-- redes sociales -->
             <div class="footer__cajaCentral__redessociales">
                 <h4>Segueix-mos:</h4>
@@ -316,7 +313,7 @@
                     </a>
                 </div>
             </div>
-           
+
             <!-- ENLACES -->
             <div class="footer__cajaCentral__enlaces">
                 <div class="footer__cajaCentral__enlaces__derecha">
@@ -341,8 +338,8 @@
                     </ul>
                 </div>
             </div>
-           
-       </ clas>
+
+            </ clas>
     </footer>
 
 </body>

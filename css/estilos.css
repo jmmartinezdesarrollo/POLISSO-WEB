@@ -420,7 +420,7 @@ section {
   -ms-flex-align: center;
   align-items: center; }
 
-.contenido__descubrenos__caja div.descubrenos__evento__pastel, .contenido__descubrenos__caja div.descubrenos__evento__boda, footer .footer__cajaCentral__redessociales__iconos__fb, footer .footer__cajaCentral__redessociales__iconos__tw, footer .footer__cajaCentral__redessociales__iconos__insta {
+.contenido__descubrenos__caja__evento__pastel, .contenido__descubrenos__caja__evento__boda, footer .footer__cajaCentral__redessociales__iconos__fb, footer .footer__cajaCentral__redessociales__iconos__tw, footer .footer__cajaCentral__redessociales__iconos__insta {
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1231,22 +1231,33 @@ video.video__banner__humo {
       padding-bottom: 25px; }
 
 section {
-  max-width: 1366px;
   margin: 0 auto; }
 
-section.contenido a {
-  text-decoration: none; }
-
-@media (min-width: 1200px) {
-  section.contenido {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    font-size: 1.2em;
-    height: 1100px; } }
+section.contenido {
+  margin-top: 50px; }
+  section.contenido a {
+    text-decoration: none; }
+  @media (min-width: 1200px) {
+    section.contenido {
+      padding-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 100px;
+      grid-row-gap: 50px;
+      font-size: 1.2rem;
+      width: 90%;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto; } }
 
 .contenido__descubrenos {
   margin-top: 40px; }
+  @media (min-width: 1200px) {
+    .contenido__descubrenos {
+      grid-column: 1/2;
+      grid-row: 1/2; } }
   .contenido__descubrenos__caja {
     width: 85%;
     margin-top: 0;
@@ -1254,7 +1265,33 @@ section.contenido a {
     margin-left: auto;
     margin-right: auto;
     background-color: #B7ADAB;
-    padding-top: 25px; }
+    padding-top: 20px; }
+    @media (min-width: 1200px) {
+      .contenido__descubrenos__caja {
+        padding-top: 0px;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 120px 60px;
+        grid-row-gap: 20px;
+        font-size: 1.2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
     .contenido__descubrenos__caja h4 {
       font-weight: bold;
       padding-top: 0px;
@@ -1263,34 +1300,7 @@ section.contenido a {
       @media (min-width: 1200px) {
         .contenido__descubrenos__caja h4 {
           display: none; } }
-    .contenido__descubrenos__caja p {
-      display: none; }
-      @media (min-width: 1200px) {
-        .contenido__descubrenos__caja p {
-          display: block;
-          margin-bottom: 25px;
-          color: black; } }
-    .contenido__descubrenos__caja a {
-      text-decoration: none;
-      color: white; }
-    @media (min-width: 1200px) {
-      .contenido__descubrenos__caja {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        margin: 80px;
-        text-align: center; } }
-    .contenido__descubrenos__caja div.descubrenos__evento {
+    .contenido__descubrenos__caja__evento {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1304,51 +1314,58 @@ section.contenido a {
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row; }
-      .contenido__descubrenos__caja div.descubrenos__evento__pastel {
+      @media (min-width: 1200px) {
+        .contenido__descubrenos__caja__evento {
+          grid-column: 1/2;
+          grid-row: 1/2; } }
+      .contenido__descubrenos__caja__evento__pastel {
         width: 120px;
         height: 120px;
         background-image: url("../fonts/iconos/pastel.svg"); }
         @media (min-width: 1200px) {
-          .contenido__descubrenos__caja div.descubrenos__evento__pastel {
+          .contenido__descubrenos__caja__evento__pastel {
             width: 150px;
             height: 150px; } }
-      .contenido__descubrenos__caja div.descubrenos__evento__boda {
+      .contenido__descubrenos__caja__evento__boda {
         width: 120px;
         height: 120px;
         background-image: url("../fonts/iconos/boda.svg"); }
         @media (min-width: 1200px) {
-          .contenido__descubrenos__caja div.descubrenos__evento__boda {
+          .contenido__descubrenos__caja__evento__boda {
             width: 150px;
             height: 150px; } }
-    .contenido__descubrenos__caja div.descubrenos__contacto {
-      width: 100%;
-      height: 0px;
-      background: black;
-      text-align: center;
-      padding: 20px;
-      margin-bottom: 40px; }
+    .contenido__descubrenos__caja__texto {
+      display: none; }
       @media (min-width: 1200px) {
-        .contenido__descubrenos__caja div.descubrenos__contacto {
-          width: 50%; } }
+        .contenido__descubrenos__caja__texto {
+          display: block;
+          margin-bottom: 50px;
+          color: black;
+          grid-column: 1/2;
+          grid-row: 2/3; } }
+    .contenido__descubrenos__caja a {
+      text-decoration: none;
+      color: #fff; }
+  .contenido__descubrenos div.descubrenos__contacto {
+    width: 100%;
+    height: 0px;
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px; }
+    @media (min-width: 1200px) {
+      .contenido__descubrenos div.descubrenos__contacto {
+        width: 100%; } }
 
-section.contenido__quienessomos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+.contenido__quienessomos {
+  margin-top: 50px;
+  margin-bottom: 50px; }
   @media (min-width: 1200px) {
-    section.contenido__quienessomos {
-      height: 400px; } }
-  section.contenido__quienessomos figure {
+    .contenido__quienessomos {
+      margin-top: 0px;
+      grid-column: 1/3;
+      grid-row: 2/3; } }
+  .contenido__quienessomos__caja {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1362,92 +1379,52 @@ section.contenido__quienessomos {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    text-align: center; }
-    section.contenido__quienessomos figure a {
-      text-decoration: none; }
-    section.contenido__quienessomos figure img {
-      border: 1px solid black;
-      height: 300px; }
-    section.contenido__quienessomos figure figcaption {
-      color: black;
-      margin-bottom: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
-      width: 100%; }
+    text-align: justify; }
+    @media (min-width: 1200px) {
+      .contenido__quienessomos__caja {
+        margin: 0px;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 100px;
+        grid-row-gap: 20px; } }
+    .contenido__quienessomos__caja__foto {
+      border: 1px solid black; }
+      .contenido__quienessomos__caja__foto source {
+        width: 100%; }
+      .contenido__quienessomos__caja__foto img {
+        width: 100%; }
+    .contenido__quienessomos__caja__pie {
+      width: 100%;
+      padding: 0px; }
+      .contenido__quienessomos__caja__pie h1 {
+        font-size: 1.5rem;
+        font-family: bold;
+        text-align: center; }
       @media (min-width: 1200px) {
-        section.contenido__quienessomos figure figcaption {
-          padding-left: 80px;
-          width: 100%; } }
-  @media (min-width: 1200px) {
-    section.contenido__quienessomos {
-      grid-column: 1/3;
-      grid: 1/3;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      width: 90%;
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: auto;
-      margin-right: auto; }
-      section.contenido__quienessomos h1 {
-        font-size: 30px;
-        font-family: bold; }
-      section.contenido__quienessomos figure {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row; }
-      section.contenido__quienessomos figcaption {
-        padding-left: 100px;
-        text-align: center;
-        color: black; }
-        section.contenido__quienessomos figcaption a.descubrenos__contacto {
-          margin-top: 40px;
-          margin-left: 120px;
-          margin-right: 120px;
-          width: 100%; }
-        section.contenido__quienessomos figcaption p {
-          padding: 0 50px; } }
+        .contenido__quienessomos__caja__pie {
+          width: 100%;
+          grid-column: 2/3;
+          grid-row: 1/2; } }
 
-section.googlemaps__grande {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+.googlemaps__grande {
+  display: none; }
   @media (min-width: 1200px) {
-    section.googlemaps__grande {
+    .googlemaps__grande {
+      display: block;
       grid-column: 2/3;
       grid-row: 1/2; }
-      section.googlemaps__grande h3 {
-        margin-bottom: 40px;
-        color: black;
+      .googlemaps__grande iframe {
+        height: 320px;
+        width: 100%; }
+      .googlemaps__grande h3 {
+        margin-bottom: 10px;
         font-weight: bold;
-        font-size: 1.2em; } }
+        font-size: 1.5rem;
+        text-align: center; } }
 
-section.googlemaps__pequeno {
+.googlemaps__pequeno {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1462,12 +1439,15 @@ section.googlemaps__pequeno {
   -ms-flex-direction: row;
   flex-direction: row;
   margin-top: 50px; }
-  section.googlemaps__pequeno iframe {
+  .googlemaps__pequeno iframe {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto; }
+  @media (min-width: 1200px) {
+    .googlemaps__pequeno {
+      display: none; } }
 
 .productos {
   width: 90%;

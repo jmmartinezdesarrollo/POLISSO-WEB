@@ -1,25 +1,30 @@
 // <!--****************************************** 
 // ********** INICIO SECTION INDEX.html*****************
 section {
-    max-width: 1366px;
+   // max-width: 1366px;
     margin: 0 auto;
 }
 
 //CAJA PRINCIPAL
 section.contenido {
+    margin-top: 50px;
+
     a {
         text-decoration: none;
     }
 
+    //pripiedades escritorio: grid 2 columns x 2 filas
     @include media(escritorio) {
+        padding-top: 50px;
+
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        font-size: 1.2em;
-        height: 1100px;
+        grid-column-gap: 100px;
+        grid-row-gap: 50px;
 
-        &__descubrenos {}
-
+        font-size: 1.2rem;
+        @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
     }
 
 }
@@ -31,10 +36,32 @@ section.contenido {
 .contenido__descubrenos {
     margin-top: 40px;
 
+    @include media(escritorio) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
     &__caja {
         @include centrarCaja ($ancho: 85%, $mtop:0, $mbottom:0);
         background-color: map-get($colores, gris_Info);
-        padding-top: 25px;
+        padding-top: 20px;
+
+        @include media(escritorio) {
+            padding-top: 0px;
+
+            @include centrarCaja ($ancho: 100%, $mtop:0, $mbottom:0);
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 120px 60px;
+            grid-row-gap: 20px;
+
+            font-size: 1.2rem;
+
+            @include flexbox($jc: end, $ai:center, $fd:column);
+
+        }
+
         h4 {
             font-weight: bold;
             padding-top: 0px;
@@ -44,36 +71,18 @@ section.contenido {
             @include media(escritorio) {
                 display: none;
             }
+
         }
 
-        p {
-            display: none;
+        &__evento {
+            @include flexbox($jc: center, $ai:center, $fd:row);
 
             @include media(escritorio) {
-                display: block;
-                margin-bottom: 25px;
-                color: black;
+                grid-column: 1/2;
+                grid-row: 1/2;
             }
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        @include media(escritorio) {
-            @include flexbox($jc: center, $ai:center, $fd:row);
-            margin: 80px;
-            text-align: center;
-        }
-
-
-        div.descubrenos__evento {
-
-            @include flexbox($jc: center, $ai:center, $fd:row);
 
             &__pastel {
-
                 width: 120px;
                 height: 120px;
                 background-image: url('../fonts/iconos/pastel.svg');
@@ -83,7 +92,6 @@ section.contenido {
                     width: 150px;
                     height: 150px;
                 }
-
             }
 
             &__boda {
@@ -101,70 +109,105 @@ section.contenido {
 
         }
 
-        div.descubrenos__contacto {
-            width: 100%;
-            height: 0px;
-            background: black;
-            text-align: center;
-            padding: 20px;
-            margin-bottom: 40px;
+        &__texto {
+            display: none;
 
             @include media(escritorio) {
-                width: 50%
+                display: block;
+                margin-bottom: 50px;
+                color: black;
+
+                grid-column: 1/2;
+                grid-row: 2/3;
             }
 
-            a.descubrenos__contacto {}
+        }
+
+        a {
+            text-decoration: none;
+            color: map-get($colores, blanco);
         }
 
     }
 
 
+
+
+
+    div.descubrenos__contacto {
+        width: 100%;
+        height: 0px;
+        background: map-get($colores, negro);
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 40px;
+
+        @include media(escritorio) {
+            width: 100%;
+        }
+    }
+
 }
+
 
 // ********** Bloque SECCION QUIENES SOMOS -INDEX-*****************
 
 
-section.contenido__quienessomos {
+.contenido__quienessomos {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
     @include media(escritorio) {
-        height: 400px;
-        // @include flexbox($jc: center, $ai:center, $fd:column);    
+        margin-top: 0px;
+        grid-column: 1/3;
+        grid-row: 2/3;
     }
 
-    @include flexbox($jc: center, $ai:center, $fd:column);
-
-    // width: 100%;
-
-    figure {
+    &__caja {
         @include flexbox($jc: center, $ai:center, $fd:column);
-        text-align: center;
+        text-align: justify;
 
-        a {
-            text-decoration: none;
+        @include media(escritorio) {
+            margin: 0px;
+            padding: 0px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows:  1fr;
+            grid-column-gap: 100px;
+            grid-row-gap: 20px;
+
         }
 
-        img {
-
+        &__foto {
             border: 1px solid black;
-            height: 300px;
+          & source  {
+              width: 100%; 
+          }
 
+          & img  {
+            width: 100%; 
         }
 
-        figcaption {
-            // @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
-            color: black;
-            // margin-bottom: 50px;
-            margin-bottom: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            //padding-bottom: 40px;
+  
+        }
+
+        &__pie {
             width: 100%;
+            padding: 0px;
+
+            h1 {
+                font-size: 1.5rem;
+                font-family: bold;
+                text-align: center;
+            }
 
             @include media(escritorio) {
-
-                padding-left: 80px;
-
                 width: 100%;
-                // @include flexbox($jc: center, $ai:center, $fd:column);    
+                // @include flexbox($jc: center, $ai:center, $fd:column);
+                
+                grid-column: 2/3;
+                grid-row: 1/2;
             }
 
         }
@@ -172,70 +215,43 @@ section.contenido__quienessomos {
 
     }
 
-    @include media(escritorio) {
-        grid-column: 1/3;
-        grid: 1/3;
-
-        h1 {
-            font-size: 30px;
-            font-family: bold;
-        }
-
-        @include flexbox;
-        @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
-
-        figure {
-            display: flex;
-            flex-direction: row;
-        }
-
-        figcaption {
-
-            padding-left: 100px;
-            text-align: center;
-            color: black;
-
-            a.descubrenos__contacto {
-                margin-top: 40px;
-                margin-left: 120px;
-                margin-right: 120px;
-                width: 100%;
-            }
-
-            p {
-                padding: 0 50px;
-            }
-
-        }
-    }
+    
 }
 
 // GOOGLE MAPS GRANDE
-section.googlemaps__grande {
-    @include flexbox($jc: center, $ai:center, $fd:column);
-
+.googlemaps__grande {
+    display: none;
     @include media(escritorio) {
+        display: block;
         grid-column: 2/3;
         grid-row: 1/2;
+        
+        iframe {
+            height: 320px;
+            width: 100%;
+        }
 
         h3 {
-            margin-bottom: 40px;
-            color: black;
+            margin-bottom: 10px;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.5rem;
+            text-align: center;
         }
     }
 }
 
 // GOOGLE MAPS PEQUEÑO
-section.googlemaps__pequeno {
-
+.googlemaps__pequeno {
     @include flexbox;
     margin-top: 50px;
 
     iframe {
         @include centrarCaja ($ancho: 100%, $mtop:0, $mbottom:0);
 
+    }
+
+    @include media(escritorio) {
+        display: none;
     }
 
 }
