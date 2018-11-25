@@ -10,17 +10,17 @@ $colores: (
         gris_oscuro:rgb(65, 65, 65),
         gris_Info: #B7ADAB,
         gris_redes: #aaaaaa,
-        redes_sociales: rgba(0, 205, 241, 0.356)
+        redes_sociales:  #428bca
 );
 
 // variable tamaño global de las letras.
 $hrem: 18px;
 //Tipografia , mediante un mapa
 $hs: (
-    h1: $hrem * 1, //Tamaño titulo:
+    h1: $hrem * 1, //Tamaño titulo/ eslogan
     h2: $hrem * 6, //Tamaño subtitulo 
     h3: $hrem * 1.7, //Tamaño --
-    h4: $hrem * 0.9, // 
+    h4: $hrem * 0.9, // botones
     h5: $hrem * 0.7, // 
     h6: $hrem * 2 // texto para ....
 );

@@ -28,95 +28,98 @@ section.contenido {
 // ********** Bloque DESCUBRENOS  -INDEX-*****************
 
 
-section.contenido__descubrenos {
+.contenido__descubrenos {
     margin-top: 40px;
 
-    a {
-        text-decoration: none;
-        color: white;
-    }
-
-    h3 {
-        font-weight: bold;
-        padding-top: 40px;
-        text-align: center;
-        color: black;
-        font-weight: bold;
-
-        @include media(escritorio) {
-            display: none;
-        }
-    }
-
-    p {
-        display: none;
-
-        @include media(escritorio) {
-            display: block;
-            margin-bottom: 25px;
+    &__caja {
+        @include centrarCaja ($ancho: 85%, $mtop:0, $mbottom:0);
+        background-color: map-get($colores, gris_Info);
+        padding-top: 25px;
+        h4 {
+            font-weight: bold;
+            padding-top: 0px;
+            text-align: center;
             color: black;
-        }
-    }
-
-    @include media(escritorio) {
-        @include flexbox($jc: center, $ai:center, $fd:row);
-        margin: 80px;
-        text-align: center;
-    }
-
-
-    div.descubrenos__evento {
-
-        @include flexbox($jc: center, $ai:center, $fd:row);
-
-        &__pastel {
-
-            width: 120px;
-            height: 120px;
-            background-image: url('../fonts/iconos/pastel.svg');
-            @extend %icon-background;
 
             @include media(escritorio) {
-                width: 150px;
-                height: 150px;
-            }
-
-        }
-
-        &__boda {
-            width: 120px;
-            height: 120px;
-            background-image: url('../fonts/iconos/boda.svg');
-            @extend %icon-background;
-
-            @include media(escritorio) {
-                width: 150px;
-                height: 150px;
+                display: none;
             }
         }
 
+        p {
+            display: none;
 
-    }
+            @include media(escritorio) {
+                display: block;
+                margin-bottom: 25px;
+                color: black;
+            }
+        }
 
-    div.descubrenos__contacto {
-        width: 100%;
-        height: 0px;
-        background: black;
-        text-align: center;
-        padding: 20px;
-        margin-bottom: 40px;
+        a {
+            text-decoration: none;
+            color: white;
+        }
 
         @include media(escritorio) {
-            width: 50%
+            @include flexbox($jc: center, $ai:center, $fd:row);
+            margin: 80px;
+            text-align: center;
         }
 
-        a.descubrenos__contacto {}
+
+        div.descubrenos__evento {
+
+            @include flexbox($jc: center, $ai:center, $fd:row);
+
+            &__pastel {
+
+                width: 120px;
+                height: 120px;
+                background-image: url('../fonts/iconos/pastel.svg');
+                @extend %icon-background;
+
+                @include media(escritorio) {
+                    width: 150px;
+                    height: 150px;
+                }
+
+            }
+
+            &__boda {
+                width: 120px;
+                height: 120px;
+                background-image: url('../fonts/iconos/boda.svg');
+                @extend %icon-background;
+
+                @include media(escritorio) {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+
+        }
+
+        div.descubrenos__contacto {
+            width: 100%;
+            height: 0px;
+            background: black;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 40px;
+
+            @include media(escritorio) {
+                width: 50%
+            }
+
+            a.descubrenos__contacto {}
+        }
+
     }
+
 
 }
-
-
-
 
 // ********** Bloque SECCION QUIENES SOMOS -INDEX-*****************
 
@@ -247,36 +250,313 @@ section.googlemaps__pequeno {
 // <!--****************************************** 
 // ********** Bloque SECTION PRODUCTOS*****************
 // **********************************************-->
-section.productos {
+.productos {
     @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
     color: black;
 
-    h2 {
-        text-align: center;
-        margin: 20px;
-        font-weight: bold;
-    }
-
-    figure {
-        text-align: center;
-    }
-
-    figcaption {
-        margin-top: 20px;
-        margin-bottom: 10px;
-
-    }
-
-    div.productos__producto {
-        padding: 20px;
-        background-color: #B7ADAB;
-    }
-
     @include media(escritorio) {
-        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:40px);
-
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 330px 330px 330px;
+        grid-row-gap: 80px;
+        //grid-column-gap: 100px;
     }
 
+    // ------ PRODUCTO 1  ------
+    &__p1 {
+        @include media(escritorio) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        &__caja {
+            text-align: center;
+
+            @include media(escritorio) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 100px;
+            }
+
+            &__foto {
+                width: 100%;
+
+                // height: 250px;
+                @include media(escritorio) {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    width: 100%;
+
+                    & source {
+                        width: 100%;
+                        height: 400px;
+                    }
+                }
+
+                & source {
+                    width: 100%;
+                    //height: 250px;
+                }
+
+                &img {
+                    width: 50%;
+                    //height: 250px;
+                }
+            }
+        }
+
+        &__pie {
+            @include flexbox($jc: space-between, $ai:center, $fd:column);
+            margin-bottom: 50px;
+
+            @include media(escritorio) {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                @include flexbox($jc: space-between, $ai:center, $fd:column);
+                margin: 0px;
+
+                &__decor_Arriba {
+                    background-image: url(../fonts/iconos/ornament2_arriba.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    height: 35px;
+                    width: 25%;
+                }
+            }
+
+            &__nom {
+                margin-top: 25px;
+                margin-bottom: 25px;
+                font-size: 25px;
+            }
+
+            &__texto {
+                text-align: justify;
+            }
+
+            &__decor_Abajo {
+                margin-top: 25px;
+                background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                height: 50px;
+                width: 100%;
+
+                @include media(escritorio) {
+                    margin-top: 25px;
+                    background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    height: 50px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+.productos {
+
+    // ------ PRODUCTO 1  ------
+    &__p2 {
+        @include media(escritorio) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        &__caja {
+            text-align: center;
+
+            @include media(escritorio) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 100px;
+            }
+
+            &__foto {
+                width: 100%;
+
+                // height: 250px;
+                @include media(escritorio) {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    width: 100%;
+
+                    & source {
+                        width: 100%;
+                        height: 400px;
+                    }
+                }
+
+                & source {
+                    width: 100%;
+                    //height: 250px;
+                }
+
+                &img {
+                    width: 50%;
+                    //height: 250px;
+                }
+            }
+        }
+
+        &__pie {
+            @include flexbox($jc: space-between, $ai:center, $fd:column);
+            margin-bottom: 50px;
+
+            @include media(escritorio) {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                @include flexbox($jc: space-between, $ai:center, $fd:column);
+                margin: 0px;
+
+                &__decor_Arriba {
+                    background-image: url(../fonts/iconos/ornament2_arriba.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    height: 35px;
+                    width: 25%;
+                }
+            }
+
+            &__nom {
+                margin-top: 25px;
+                margin-bottom: 25px;
+                font-size: 25px;
+            }
+
+            &__texto {
+                text-align: justify;
+            }
+
+            &__decor_Abajo {
+                margin-top: 25px;
+                background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                height: 50px;
+                width: 100%;
+
+                @include media(escritorio) {
+                    margin-top: 25px;
+                    background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    height: 50px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.productos {
+
+    // ------ PRODUCTO 3  ------
+    &__p3 {
+        @include media(escritorio) {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+
+        &__caja {
+            text-align: center;
+
+            @include media(escritorio) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 100px;
+            }
+
+            &__foto {
+                width: 100%;
+
+                // height: 250px;
+                @include media(escritorio) {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    width: 100%;
+
+                    & source {
+                        width: 100%;
+                        height: 400px;
+                    }
+                }
+
+                & source {
+                    width: 100%;
+                    //height: 250px;
+                }
+
+                &img {
+                    width: 50%;
+                    //height: 250px;
+                }
+            }
+        }
+
+        &__pie {
+            @include flexbox($jc: space-between, $ai:center, $fd:column);
+            margin-bottom: 50px;
+
+            @include media(escritorio) {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                @include flexbox($jc: space-between, $ai:center, $fd:column);
+                margin: 0px;
+
+                &__decor_Arriba {
+                    background-image: url(../fonts/iconos/ornament2_arriba.svg);
+                    background-color: red;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    height: 35px;
+                    width: 25%;
+                }
+            }
+
+            &__nom {
+                margin-top: 25px;
+                margin-bottom: 25px;
+                font-size: 25px;
+            }
+
+            &__texto {
+                text-align: justify;
+            }
+
+            &__decor_Abajo {
+                margin-top: 25px;
+                background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                height: 50px;
+                width: 100%;
+
+                @include media(escritorio) {
+                    margin-top: 25px;
+                    background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    height: 50px;
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 // ********** FIN  PRODUCTOS*****************
@@ -303,7 +583,7 @@ section.sobrenosotros {
     }
 
     .sobrenosotros--fondo {
-        background-color: #B7ADAB;
+        background-color: map-get($colores, gris_Info);
     }
 
     .sobrenosotros__pau {

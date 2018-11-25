@@ -4,115 +4,130 @@
 
 
 
-footer {
-  
-    //GENERAL
-    height: 380px;
+footer{
     background-color: black;
-    margin-top: 20px;
-
-    a{
-        text-decoration: none;
-        color: white;
-    }
-
-
-    // DIRECCION Y DATOS
-    div.footer__datos {
-        color: white;
-        @include centrarCaja ($ancho:90%, $mtop:0, $mbottom:0);
-        @include flexbox($jc: space-around, $ai:left, $fd:column);
-        h6{
-           
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        h4 {
-           
-            margin-top: 40px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-       
-    }
-
+    padding-top: 20px;
+    padding-bottom: 20px;
     
-    //REDES SOCIALES
-    div.footer__redessociales {
-        @extend %flexCentrar;
-        @include centrarCaja ($ancho:90%, $mtop:0, $mbottom:0);
-        
-        padding-bottom: 50px;
+    & .footer__cajaCentral {
+        @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
+        @include media(escritorio) {
+            @include flexbox($jc: space-between, $ai:start, $fd:row);
+        }
 
-        &__fb {
-            width: 50px;
-            height: 50px;
-            border: 1px solid white;
-            background-image: url('../fonts/iconos/facebook.svg');
-            background-size: 35%;
-            @extend %icon-background;
+        // DIRECCION Y DATOS
+        &__datos {
+            color: map-get($colores, blanco);
+            @include media(escritorio) {
+                width: 33%;
+            }
+            h6 {
+                text-align: center;
+                margin-bottom: 10px;
+                @include media(escritorio) {
+                    text-align: left;
+                }
+            }
+            ul li {
+                margin-bottom: 7px;
+            }
 
-            &:hover{
-            background-color: map-get($colores, redes_sociales);
+        }
+
+
+        //REDES SOCIALES
+        &__redessociales {
+            @include centrarCaja ($ancho: 100%, $mtop:35px, $mbottom:35px);
+            @include media(escritorio) {
+                width: 33%;
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+            h4 {
+                color: map-get($colores, blanco);
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            &__iconos {
+                @extend %flexCentrar;
+
+                &__fb {
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid map-get($colores, blanco);
+                    background-image: url('../fonts/iconos/facebook.svg');
+                    background-size: 35%;
+                    @extend %icon-background;
+
+                    &:hover {
+                        background-color: map-get($colores, redes_sociales);
+                    }
+                }
+
+                &__tw {
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid map-get($colores, blanco);
+                    background-image: url('../fonts/iconos/twitter.svg');
+                    @extend %icon-background;
+
+                    &:hover {
+                        background-color: map-get($colores, redes_sociales);
+                    }
+                }
+
+                &__insta {
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid map-get($colores, blanco);
+                    background-image: url('../fonts/iconos/instagram.svg');
+                    @extend %icon-background;
+
+                    &:hover {
+                        background-color: map-get($colores, redes_sociales);
+                    }
+                }
             }
         }
 
+        //ENLACES WEB
+        &__enlaces {
+            @include flexbox($jc: space-between, $ai:center, $fd:row);
+            @include media(escritorio) {
+                width: 33%;
+            }
 
-        &__tw {
-            width: 50px;
-            height: 50px;
-            border: 1px solid white;
-            background-image: url('../fonts/iconos/twitter.svg');
-            @extend %icon-background;
-            &:hover{
-                background-color: map-get($colores, redes_sociales);
-                }
+            li {
+                margin-bottom: 10px;
+            }
+
+            a{
+                text-decoration: none;
+                color: map-get($colores, blanco);
+
+            }
+
+           // @include media(escritorio) {
+           //     @include flexbox($jc: center, $ai:center, $fd:row);
+          //  }
         }
 
-        &__insta {
-            width: 50px;
-            height: 50px;
-            border: 1px solid white;
-            background-image: url('../fonts/iconos/instagram.svg');
-            @extend %icon-background;
-            &:hover{
-                background-color: map-get($colores, redes_sociales);
-                }
+        li.footer__cajaCentral__enlaces--blog {
+            text-align: right;
         }
 
-    }
-
-    //ENLACES WEB
-    div.footer__enlaces {
-        @include flexbox($jc: space-between, $ai:center, $fd:row);
-        @include centrarCaja ($ancho:90%, $mtop:0, $mbottom:0);
-
-        li {
-           
-            margin-top: 10px;
-        }
-        @include media(escritorio) {
-            @include flexbox($jc: center, $ai:center, $fd:row);
-            
-        }
-
-    }
-
-    li.footer__enlaces--blog{
-     text-align: right;
-    }
-
-    span.footer__linea {
-        width: 2px;
-        height: 60px;
-        background-color: white;
-        @include media(escritorio) {
+        span.footer__cajaCentral__linea {
             width: 2px;
             height: 60px;
-            margin: 0 50px;
-            
+            background-color: map-get($colores, blanco);
+
+            @include media(escritorio) {
+                width: 2px;
+                height: 60px;
+                margin: 0 50px;
+
+            }
         }
-     
     }
-    
 }
