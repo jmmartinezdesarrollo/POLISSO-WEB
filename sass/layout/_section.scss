@@ -315,63 +315,66 @@ section.contenido {
                     //height: 250px;
                 }
 
-                &img {
-                    width: 50%;
+                & img {
+                    width: 100%;
                     //height: 250px;
                 }
             }
-        }
 
-        &__pie {
-            @include flexbox($jc: space-between, $ai:center, $fd:column);
-            margin-bottom: 50px;
-
-            @include media(escritorio) {
-                grid-column: 2/3;
-                grid-row: 1/2;
+            &__pie {
                 @include flexbox($jc: space-between, $ai:center, $fd:column);
-                margin: 0px;
-
-                &__decor_Arriba {
-                    background-image: url(../fonts/iconos/ornament2_arriba.svg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 100%;
-                    height: 35px;
-                    width: 25%;
-                }
-            }
-
-            &__nom {
-                margin-top: 25px;
-                margin-bottom: 25px;
-                font-size: 25px;
-            }
-
-            &__texto {
-                text-align: justify;
-            }
-
-            &__decor_Abajo {
-                margin-top: 25px;
-                background-image: url(../fonts/iconos/ornament2_abajo.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 100%;
-                height: 50px;
-                width: 100%;
-
+                margin-bottom: 50px;
+    
                 @include media(escritorio) {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                    @include flexbox($jc: space-between, $ai:center, $fd:column);
+                    margin: 0px;
+    
+                    &__decor_Arriba {
+                        background-image: url(../fonts/iconos/decor_arriba.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        height: 35px;
+                        width: 50%;
+                    }
+                }
+    
+                &__nom {
                     margin-top: 25px;
-                    background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                    margin-bottom: 25px;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+    
+                &__texto {
+                    text-align: justify;
+                }
+    
+                &__decor_Abajo {
+                    margin-top: 25px;
+                    background-image: url(../fonts/iconos/decor_abajo.svg);
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: 100%;
                     height: 50px;
                     width: 100%;
+    
+                    @include media(escritorio) {
+                        margin-top: 25px;
+                        background-image: url(../fonts/iconos/decor_abajo.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        height: 50px;
+                        width: 100%;
+                    }
                 }
             }
         }
+
+        
     }
 }
 
@@ -415,63 +418,66 @@ section.contenido {
                     //height: 250px;
                 }
 
-                &img {
-                    width: 50%;
+                & img {
+                    width: 100%;
                     //height: 250px;
                 }
             }
-        }
 
-        &__pie {
-            @include flexbox($jc: space-between, $ai:center, $fd:column);
-            margin-bottom: 50px;
-
-            @include media(escritorio) {
-                grid-column: 2/3;
-                grid-row: 1/2;
+            &__pie {
                 @include flexbox($jc: space-between, $ai:center, $fd:column);
-                margin: 0px;
-
-                &__decor_Arriba {
-                    background-image: url(../fonts/iconos/ornament2_arriba.svg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 100%;
-                    height: 35px;
-                    width: 25%;
-                }
-            }
-
-            &__nom {
-                margin-top: 25px;
-                margin-bottom: 25px;
-                font-size: 25px;
-            }
-
-            &__texto {
-                text-align: justify;
-            }
-
-            &__decor_Abajo {
-                margin-top: 25px;
-                background-image: url(../fonts/iconos/ornament2_abajo.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 100%;
-                height: 50px;
-                width: 100%;
-
+                margin-bottom: 50px;
+    
                 @include media(escritorio) {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                    @include flexbox($jc: space-between, $ai:center, $fd:column);
+                    margin: 0px;
+    
+                    &__decor_Arriba {
+                        background-image: url(../fonts/iconos/decor_arriba.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        height: 35px;
+                        width: 50%;
+                    }
+                }
+    
+                &__nom {
                     margin-top: 25px;
-                    background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                    margin-bottom: 25px;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+    
+                &__texto {
+                    text-align: justify;
+                }
+    
+                &__decor_Abajo {
+                    margin-top: 25px;
+                    background-image: url(../fonts/iconos/decor_abajo.svg);
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: 100%;
                     height: 50px;
                     width: 100%;
+    
+                    @include media(escritorio) {
+                        margin-top: 25px;
+                        background-image: url(../fonts/iconos/decor_abajo.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        height: 50px;
+                        width: 100%;
+                    }
                 }
             }
         }
+
+        
     }
 }
 
@@ -514,64 +520,66 @@ section.contenido {
                     //height: 250px;
                 }
 
-                &img {
-                    width: 50%;
+                & img {
+                    width: 100%;
                     //height: 250px;
                 }
             }
-        }
 
-        &__pie {
-            @include flexbox($jc: space-between, $ai:center, $fd:column);
-            margin-bottom: 50px;
-
-            @include media(escritorio) {
-                grid-column: 2/3;
-                grid-row: 1/2;
+            &__pie {
                 @include flexbox($jc: space-between, $ai:center, $fd:column);
-                margin: 0px;
-
-                &__decor_Arriba {
-                    background-image: url(../fonts/iconos/ornament2_arriba.svg);
-                    background-color: red;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 100%;
-                    height: 35px;
-                    width: 25%;
-                }
-            }
-
-            &__nom {
-                margin-top: 25px;
-                margin-bottom: 25px;
-                font-size: 25px;
-            }
-
-            &__texto {
-                text-align: justify;
-            }
-
-            &__decor_Abajo {
-                margin-top: 25px;
-                background-image: url(../fonts/iconos/ornament2_abajo.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 100%;
-                height: 50px;
-                width: 100%;
-
+                margin-bottom: 50px;
+    
                 @include media(escritorio) {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                    @include flexbox($jc: space-between, $ai:center, $fd:column);
+                    margin: 0px;
+    
+                    &__decor_Arriba {
+                        background-image: url(../fonts/iconos/decor_arriba.svg);              
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        height: 35px;
+                        width: 50%;
+                    }
+                }
+    
+                &__nom {
                     margin-top: 25px;
-                    background-image: url(../fonts/iconos/ornament2_abajo.svg);
+                    margin-bottom: 25px;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+    
+                &__texto {
+                    text-align: justify;
+                }
+    
+                &__decor_Abajo {
+                    margin-top: 25px;
+                    background-image: url(../fonts/iconos/decor_abajo.svg);
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: 100%;
                     height: 50px;
                     width: 100%;
+    
+                    @include media(escritorio) {
+                        margin-top: 25px;
+                        background-image: url(../fonts/iconos/decor_abajo.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        height: 50px;
+                        width: 100%;
+                    }
                 }
             }
         }
+
+        
     }
 }
 

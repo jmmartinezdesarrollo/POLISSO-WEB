@@ -16,10 +16,6 @@ $enviado = 1; // Marca que se envio OK
 }
 ?>
 
-=======
->>>>>>> parent of adc80eb... seccion productos(+ grid) Youssef:esdeveniments.html
-=======
->>>>>>> parent of adc80eb... seccion productos(+ grid) Youssef:esdeveniments.html
 <!DOCTYPE html>
 <html>
 
@@ -194,61 +190,59 @@ if ($enviado == 1) { // Se envio ??
     ********** Bloque FOOTER *****************
     **********************************************-->
     <footer>
-        <div class="footer__datos">
-
-            <!-- h6 -->
-
-            <h6>NICTRO ICE CREAM @ 2018</h6>
-            <ul>
-                <li>direcion</li>
-                <li>horario</li>
-            </ul>
-            <h4>Segueix-mos:</h4>
-        </div>
-
-
-
-        <!-- redes sociales -->
-        <div class="footer__redessociales">
-
-            <a href="https://www.facebook.com/">
-                <div class="footer__redessociales__fb"> </div>
-            </a>
-            <a href="https://twitter.com/?lang=es">
-                <div class="footer__redessociales__tw"></div>
-            </a>
-            <a href="https://www.instagram.com/">
-                <div class="footer__redessociales__insta"></div>
-            </a>
-        </div>
-
-        <!-- ENLACES -->
-        <div class="footer__enlaces">
-            <div class="footer__enlaces__derecha">
+        <div class="footer__cajaCentral">
+            <!-- Copyright y localizacion del local -->
+            <div class="footer__cajaCentral__datos">
+                <h6> Ⓒ 2018 - NICTRO ICE CREAM</h6>
                 <ul>
-                    <li>
-                        <a href="index.html" class="footer__enlaces--inici">Inici</a>
-                    </li>
-                    <li>
-                        <a href="productes.html" class="footer__enlaces--servicios">Productes</a>
-                    </li>
+                    <li>Direcion:</li>
+                    <li>Horario:</li>
                 </ul>
             </div>
-            <span class="footer__linea"></span>
-            <div class="footer__enlaces__izquierda">
-                <ul>
-                    <li>
-                        <a href="esdeveniments.php" class="footer__enlaces--about">Esdeveniments</a>
-                    </li>
-                    <li class="footer__enlaces--blog">
-                        <a href="sobre_noltros.html">Sobre noltros</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
 
+            <!-- redes sociales -->
+            <div class="footer__cajaCentral__redessociales">
+                <h4>Segueix-mos:</h4>
+                <div class="footer__cajaCentral__redessociales__iconos">
+                    <a href="https://www.facebook.com/">
+                        <div class="footer__cajaCentral__redessociales__iconos__fb"> </div>
+                    </a>
+                    <a href="https://twitter.com/?lang=es">
+                        <div class="footer__cajaCentral__redessociales__iconos__tw"></div>
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <div class="footer__cajaCentral__redessociales__iconos__insta"></div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ENLACES -->
+            <div class="footer__cajaCentral__enlaces">
+                <div class="footer__cajaCentral__enlaces__derecha">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="footer__cajaCentral__enlaces--inici">Inici</a>
+                        </li>
+                        <li>
+                            <a href="productes.html" class="footer__cajaCentral__enlaces--servicios">Productes</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="footer__cajaCentral__linea"></span>
+                <div class="footer__cajaCentral__enlaces__izquierda">
+                    <ul>
+                        <li>
+                            <a href="esdeveniments.php" class="footer__cajaCentral__enlaces--about">Esdeveniments</a>
+                        </li>
+                        <li class="footer__cajaCentral__enlaces--blog">
+                            <a href="sobre_noltros.html">Sobre noltros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </footer>
-
 </body>
 
 </html>

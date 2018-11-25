@@ -1486,71 +1486,72 @@ section.contenido {
             height: 400px; } }
       .productos__p1__caja__foto source {
         width: 100%; }
-      .productos__p1__caja__fotoimg {
-        width: 50%; }
-  .productos__p1__pie {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-bottom: 50px; }
-    @media (min-width: 1200px) {
-      .productos__p1__pie {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin: 0px; }
-        .productos__p1__pie__decor_Arriba {
-          background-image: url(../fonts/iconos/ornament2_arriba.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: 100%;
-          height: 35px;
-          width: 25%; } }
-    .productos__p1__pie__nom {
-      margin-top: 25px;
-      margin-bottom: 25px;
-      font-size: 25px; }
-    .productos__p1__pie__texto {
-      text-align: justify; }
-    .productos__p1__pie__decor_Abajo {
-      margin-top: 25px;
-      background-image: url(../fonts/iconos/ornament2_abajo.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      height: 50px;
-      width: 100%; }
+      .productos__p1__caja__foto img {
+        width: 100%; }
+    .productos__p1__caja__pie {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 50px; }
       @media (min-width: 1200px) {
-        .productos__p1__pie__decor_Abajo {
-          margin-top: 25px;
-          background-image: url(../fonts/iconos/ornament2_abajo.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: 100%;
-          height: 50px;
-          width: 100%; } }
+        .productos__p1__caja__pie {
+          grid-column: 2/3;
+          grid-row: 1/2;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          margin: 0px; }
+          .productos__p1__caja__pie__decor_Arriba {
+            background-image: url(../fonts/iconos/decor_arriba.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 35px;
+            width: 50%; } }
+      .productos__p1__caja__pie__nom {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 25px;
+        font-weight: bold; }
+      .productos__p1__caja__pie__texto {
+        text-align: justify; }
+      .productos__p1__caja__pie__decor_Abajo {
+        margin-top: 25px;
+        background-image: url(../fonts/iconos/decor_abajo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 50px;
+        width: 100%; }
+        @media (min-width: 1200px) {
+          .productos__p1__caja__pie__decor_Abajo {
+            margin-top: 25px;
+            background-image: url(../fonts/iconos/decor_abajo.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 50px;
+            width: 100%; } }
 
 @media (min-width: 1200px) {
   .productos__p2 {
@@ -1577,72 +1578,72 @@ section.contenido {
           height: 400px; } }
     .productos__p2__caja__foto source {
       width: 100%; }
-    .productos__p2__caja__fotoimg {
-      width: 50%; }
-
-.productos__p2__pie {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 50px; }
-  @media (min-width: 1200px) {
-    .productos__p2__pie {
-      grid-column: 2/3;
-      grid-row: 1/2;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      margin: 0px; }
-      .productos__p2__pie__decor_Arriba {
-        background-image: url(../fonts/iconos/ornament2_arriba.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 35px;
-        width: 25%; } }
-  .productos__p2__pie__nom {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    font-size: 25px; }
-  .productos__p2__pie__texto {
-    text-align: justify; }
-  .productos__p2__pie__decor_Abajo {
-    margin-top: 25px;
-    background-image: url(../fonts/iconos/ornament2_abajo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 50px;
-    width: 100%; }
+    .productos__p2__caja__foto img {
+      width: 100%; }
+  .productos__p2__caja__pie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 50px; }
     @media (min-width: 1200px) {
-      .productos__p2__pie__decor_Abajo {
-        margin-top: 25px;
-        background-image: url(../fonts/iconos/ornament2_abajo.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 50px;
-        width: 100%; } }
+      .productos__p2__caja__pie {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0px; }
+        .productos__p2__caja__pie__decor_Arriba {
+          background-image: url(../fonts/iconos/decor_arriba.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          height: 35px;
+          width: 50%; } }
+    .productos__p2__caja__pie__nom {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-size: 25px;
+      font-weight: bold; }
+    .productos__p2__caja__pie__texto {
+      text-align: justify; }
+    .productos__p2__caja__pie__decor_Abajo {
+      margin-top: 25px;
+      background-image: url(../fonts/iconos/decor_abajo.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 50px;
+      width: 100%; }
+      @media (min-width: 1200px) {
+        .productos__p2__caja__pie__decor_Abajo {
+          margin-top: 25px;
+          background-image: url(../fonts/iconos/decor_abajo.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          height: 50px;
+          width: 100%; } }
 
 @media (min-width: 1200px) {
   .productos__p3 {
@@ -1669,73 +1670,72 @@ section.contenido {
           height: 400px; } }
     .productos__p3__caja__foto source {
       width: 100%; }
-    .productos__p3__caja__fotoimg {
-      width: 50%; }
-
-.productos__p3__pie {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 50px; }
-  @media (min-width: 1200px) {
-    .productos__p3__pie {
-      grid-column: 2/3;
-      grid-row: 1/2;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      margin: 0px; }
-      .productos__p3__pie__decor_Arriba {
-        background-image: url(../fonts/iconos/ornament2_arriba.svg);
-        background-color: red;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 35px;
-        width: 25%; } }
-  .productos__p3__pie__nom {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    font-size: 25px; }
-  .productos__p3__pie__texto {
-    text-align: justify; }
-  .productos__p3__pie__decor_Abajo {
-    margin-top: 25px;
-    background-image: url(../fonts/iconos/ornament2_abajo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 50px;
-    width: 100%; }
+    .productos__p3__caja__foto img {
+      width: 100%; }
+  .productos__p3__caja__pie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 50px; }
     @media (min-width: 1200px) {
-      .productos__p3__pie__decor_Abajo {
-        margin-top: 25px;
-        background-image: url(../fonts/iconos/ornament2_abajo.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 50px;
-        width: 100%; } }
+      .productos__p3__caja__pie {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0px; }
+        .productos__p3__caja__pie__decor_Arriba {
+          background-image: url(../fonts/iconos/decor_arriba.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          height: 35px;
+          width: 50%; } }
+    .productos__p3__caja__pie__nom {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-size: 25px;
+      font-weight: bold; }
+    .productos__p3__caja__pie__texto {
+      text-align: justify; }
+    .productos__p3__caja__pie__decor_Abajo {
+      margin-top: 25px;
+      background-image: url(../fonts/iconos/decor_abajo.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 50px;
+      width: 100%; }
+      @media (min-width: 1200px) {
+        .productos__p3__caja__pie__decor_Abajo {
+          margin-top: 25px;
+          background-image: url(../fonts/iconos/decor_abajo.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          height: 50px;
+          width: 100%; } }
 
 section.sobrenosotros {
   color: #000;
