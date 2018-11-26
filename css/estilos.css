@@ -1745,49 +1745,114 @@ section.contenido {
           height: 50px;
           width: 100%; } }
 
-section.sobrenosotros {
+.sobrenosotros {
   color: #000;
   text-align: center; }
-  section.sobrenosotros h2 {
-    margin: 20px 0;
-    font-weight: bold; }
-  section.sobrenosotros figcaption {
-    margin: 20px;
-    text-align: center;
-    color: black;
-    padding: 20px 0; }
-  section.sobrenosotros .sobrenosotros--fondo {
-    background-color: #B7ADAB; }
-  section.sobrenosotros .sobrenosotros__pau {
-    width: 80%;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  .sobrenosotros__cajaSomos {
+    width: 90%;
+    margin-top: 0px;
+    margin-bottom: 0px;
     margin-left: auto;
-    margin-right: auto; }
-    section.sobrenosotros .sobrenosotros__pau img {
+    margin-right: auto;
+    background-color: #B7ADAB;
+    padding: 0 15px; }
+    @media (min-width: 1200px) {
+      .sobrenosotros__cajaSomos figure {
+        padding: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+    .sobrenosotros__cajaSomos figure img {
+      height: 225px;
       margin-top: 40px;
-      border: 1px solid black;
+      border: 2px solid black;
       margin-top: 20px; }
-  @media (min-width: 1200px) {
-    section.sobrenosotros .sobrenosotros__cocina {
-      border: 2px solid black; } }
-  @media (min-width: 1200px) {
-    section.sobrenosotros figure {
-      width: 80%;
+      @media (min-width: 1200px) {
+        .sobrenosotros__cajaSomos figure img {
+          width: 375px; } }
+    .sobrenosotros__cajaSomos figcaption {
+      margin: 20px 0px;
+      text-align: justify;
+      color: black;
+      padding: 20px 0; }
+      @media (min-width: 1200px) {
+        .sobrenosotros__cajaSomos figcaption {
+          padding-left: 100px; } }
+      .sobrenosotros__cajaSomos figcaption h6 {
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center; }
+  .sobrenosotros__cajaHacemos {
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px; }
+    @media (min-width: 1200px) {
+      .sobrenosotros__cajaHacemos {
+        border: 2px solid #000; } }
+    @media (min-width: 1200px) {
+      .sobrenosotros__cajaHacemos figure {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding: 40px; } }
+    .sobrenosotros__cajaHacemos figure img {
+      width: 225px;
       margin-top: 40px;
-      margin-bottom: 40px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 40px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-    section.sobrenosotros figcaption {
-      text-align: left;
-      padding: 0 40px; } }
+      border: 2px solid black;
+      margin-top: 20px; }
+      @media (min-width: 1200px) {
+        .sobrenosotros__cajaHacemos figure img {
+          width: 375px; } }
+    .sobrenosotros__cajaHacemos figcaption {
+      margin: 20px 0px;
+      text-align: justify; }
+      @media (min-width: 1200px) {
+        .sobrenosotros__cajaHacemos figcaption {
+          padding-left: 100px; } }
+      .sobrenosotros__cajaHacemos figcaption h6 {
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center; }
+    @media (min-width: 1200px) {
+      .sobrenosotros__cajaHacemos .sobrenosotros__cocina {
+        border: 2px solid black; } }
 
 section.googlemaps__pequeno {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  section.googlemaps__pequeno h6 {
+    color: #000;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 15px; }
   @media (min-width: 1200px) {
     section.googlemaps__pequeno {
       display: none; } }
@@ -1799,13 +1864,29 @@ section.googlemaps__pequeno {
 @media (min-width: 1200px) {
   section.googlemaps__grande {
     width: 90%;
-    margin-top: 40px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    section.googlemaps__grande h6 {
+      color: #000;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      padding-bottom: 15px; } }
 
 footer {
   background-color: black;

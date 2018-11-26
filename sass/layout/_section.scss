@@ -1,7 +1,7 @@
 // <!--****************************************** 
 // ********** INICIO SECTION INDEX.html*****************
 section {
-   // max-width: 1366px;
+    // max-width: 1366px;
     margin: 0 auto;
 }
 
@@ -173,7 +173,7 @@ section.contenido {
 
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows:  1fr;
+            grid-template-rows: 1fr;
             grid-column-gap: 100px;
             grid-row-gap: 20px;
 
@@ -181,15 +181,16 @@ section.contenido {
 
         &__foto {
             border: 1px solid black;
-          & source  {
-              width: 100%; 
-          }
 
-          & img  {
-            width: 100%; 
-        }
+            & source {
+                width: 100%;
+            }
 
-  
+            & img {
+                width: 100%;
+            }
+
+
         }
 
         &__pie {
@@ -205,7 +206,7 @@ section.contenido {
             @include media(escritorio) {
                 width: 100%;
                 // @include flexbox($jc: center, $ai:center, $fd:column);
-                
+
                 grid-column: 2/3;
                 grid-row: 1/2;
             }
@@ -215,17 +216,18 @@ section.contenido {
 
     }
 
-    
+
 }
 
 // GOOGLE MAPS GRANDE
 .googlemaps__grande {
     display: none;
+
     @include media(escritorio) {
         display: block;
         grid-column: 2/3;
         grid-row: 1/2;
-        
+
         iframe {
             height: 320px;
             width: 100%;
@@ -276,7 +278,7 @@ section.contenido {
         grid-template-rows: 330px 330px 330px;
         grid-row-gap: 80px;
         //grid-column-gap: 100px;
-       // height: 2100px;
+        // height: 2100px;
     }
 
     // ------ PRODUCTO 1  ------
@@ -325,13 +327,13 @@ section.contenido {
             &__pie {
                 @include flexbox($jc: space-between, $ai:center, $fd:column);
                 margin-bottom: 50px;
-    
+
                 @include media(escritorio) {
                     grid-column: 2/3;
                     grid-row: 1/2;
                     @include flexbox($jc: space-between, $ai:center, $fd:column);
                     margin: 0px;
-    
+
                     &__decor_Arriba {
                         background-image: url(../fonts/iconos/decor_arriba.svg);
                         background-position: center;
@@ -341,18 +343,18 @@ section.contenido {
                         width: 50%;
                     }
                 }
-    
+
                 &__nom {
                     margin-top: 25px;
                     margin-bottom: 25px;
                     font-size: 25px;
                     font-weight: bold;
                 }
-    
+
                 &__texto {
                     text-align: justify;
                 }
-    
+
                 &__decor_Abajo {
                     margin-top: 25px;
                     background-image: url(../fonts/iconos/decor_abajo.svg);
@@ -361,7 +363,7 @@ section.contenido {
                     background-size: 100%;
                     height: 50px;
                     width: 100%;
-    
+
                     @include media(escritorio) {
                         margin-top: 25px;
                         background-image: url(../fonts/iconos/decor_abajo.svg);
@@ -375,7 +377,7 @@ section.contenido {
             }
         }
 
-        
+
     }
 }
 
@@ -428,13 +430,13 @@ section.contenido {
             &__pie {
                 @include flexbox($jc: space-between, $ai:center, $fd:column);
                 margin-bottom: 50px;
-    
+
                 @include media(escritorio) {
                     grid-column: 1/2;
                     grid-row: 1/2;
                     @include flexbox($jc: space-between, $ai:center, $fd:column);
                     margin: 0px;
-    
+
                     &__decor_Arriba {
                         background-image: url(../fonts/iconos/decor_arriba.svg);
                         background-position: center;
@@ -444,18 +446,18 @@ section.contenido {
                         width: 50%;
                     }
                 }
-    
+
                 &__nom {
                     margin-top: 25px;
                     margin-bottom: 25px;
                     font-size: 25px;
                     font-weight: bold;
                 }
-    
+
                 &__texto {
                     text-align: justify;
                 }
-    
+
                 &__decor_Abajo {
                     margin-top: 25px;
                     background-image: url(../fonts/iconos/decor_abajo.svg);
@@ -464,7 +466,7 @@ section.contenido {
                     background-size: 100%;
                     height: 50px;
                     width: 100%;
-    
+
                     @include media(escritorio) {
                         margin-top: 25px;
                         background-image: url(../fonts/iconos/decor_abajo.svg);
@@ -478,7 +480,7 @@ section.contenido {
             }
         }
 
-        
+
     }
 }
 
@@ -530,15 +532,15 @@ section.contenido {
             &__pie {
                 @include flexbox($jc: space-between, $ai:center, $fd:column);
                 margin-bottom: 50px;
-    
+
                 @include media(escritorio) {
                     grid-column: 2/3;
                     grid-row: 1/2;
                     @include flexbox($jc: space-between, $ai:center, $fd:column);
                     margin: 0px;
-    
+
                     &__decor_Arriba {
-                        background-image: url(../fonts/iconos/decor_arriba.svg);              
+                        background-image: url(../fonts/iconos/decor_arriba.svg);
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: 100%;
@@ -546,18 +548,18 @@ section.contenido {
                         width: 50%;
                     }
                 }
-    
+
                 &__nom {
                     margin-top: 25px;
                     margin-bottom: 25px;
                     font-size: 25px;
                     font-weight: bold;
                 }
-    
+
                 &__texto {
                     text-align: justify;
                 }
-    
+
                 &__decor_Abajo {
                     margin-top: 25px;
                     background-image: url(../fonts/iconos/decor_abajo.svg);
@@ -566,7 +568,7 @@ section.contenido {
                     background-size: 100%;
                     height: 50px;
                     width: 100%;
-    
+
                     @include media(escritorio) {
                         margin-top: 25px;
                         background-image: url(../fonts/iconos/decor_abajo.svg);
@@ -580,7 +582,7 @@ section.contenido {
             }
         }
 
-        
+
     }
 }
 
@@ -590,67 +592,119 @@ section.contenido {
 // <!--****************************************** 
 // ********** Bloque SECTION SOBRE NOSOTROS*****************
 // **********************************************-->
-section.sobrenosotros {
-    color: #000;
+.sobrenosotros {
+    color: map-get($colores, negro);
     text-align: center;
 
-    h2 {
-        margin: 20px 0;
-        font-weight: bold;
-    }
-
-    figcaption {
-        margin: 20px;
-        text-align: center;
-        color: black;
-        padding: 20px 0;
-
-    }
-
-    .sobrenosotros--fondo {
+    &__cajaSomos {
+        @include centrarCaja ($ancho: 90%, $mtop:0px, $mbottom:0px);
         background-color: map-get($colores, gris_Info);
-    }
+        padding: 0 15px;
 
-    .sobrenosotros__pau {
-        @include centrarCaja ($ancho: 80%, $mtop:40px, $mbottom:40px);
-
-        img {
-            margin-top: 40px;
-            border: 1px solid black;
-            margin-top: 20px;
-        }
-    }
-
-    .sobrenosotros__cocina {
-        @include media(escritorio) {
-            border: 2px solid black;
-        }
-    }
-
-
-
-    //Version escritorio
-    @include media(escritorio) {
         figure {
-            @include centrarCaja ($ancho: 80%, $mtop:40px, $mbottom:40px);
-            padding: 40px;
-            display: flex;
+            @include media(escritorio) {
+                    padding: 40px;
+                    display: flex;
+                }
+
+            img {
+                height: 225px;
+                margin-top: 40px;
+                border: 2px solid black;
+                margin-top: 20px;
+
+                @include media(escritorio) {
+                    width: 375px;
+                }
+            }
         }
 
         figcaption {
-            text-align: left;
-            padding: 0 40px;
+            margin: 20px 0px;
+            text-align: justify;
+            color: black;
+            padding: 20px 0;
+
+            @include media(escritorio) {
+                padding-left: 100px;
+                }
+
+            h6 {
+                margin-bottom: 15px;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+            }
         }
+    }
+
+    &__cajaHacemos {
+        @include centrarCaja ($ancho: 90%, $mtop:50px, $mbottom:0px);
+        padding: 0 15px;
+
+        @include media(escritorio) {
+            border: 2px solid map-get($colores, negro)
 
     }
 
-    // SECTION GOOGLE MAPS
+        figure {
+            @include media(escritorio) {
+                    @include flexbox($jc:space-between, $ai:center, $fd:row);
+                    padding: 40px;
+     
+            }
+
+            img {
+                width: 225px;
+                margin-top: 40px;
+                border: 2px solid black;
+                margin-top: 20px;
+
+                @include media(escritorio) {
+                    width: 375px;
+                }
+            }
+        }
+
+        figcaption {
+            margin: 20px 0px;
+            text-align: justify;
+            @include media(escritorio) {
+            padding-left: 100px;
+            }
+
+            h6 {
+                margin-bottom: 15px;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+
+        .sobrenosotros__cocina {
+            @include media(escritorio) {
+                border: 2px solid black;
+            }
+        }
+    }
+
+
+
+
+   
 }
-
+ // SECTION GOOGLE MAPS
 section.googlemaps__pequeno {
-
     margin-bottom: 40px;
+    @include flexbox($jc:space-between, $ai:center, $fd:column);
+    h6{
+        color: map-get($colores, negro);
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        padding-bottom: 15px;
 
+    }
     @include media(escritorio) {
         display: none;
     }
@@ -663,8 +717,16 @@ section.googlemaps__grande {
     }
 
     @include media(escritorio) {
-        @include centrarCaja ($ancho: 90%, $mtop:40px, $mbottom:100px);
-        display: flex;
+        @include centrarCaja ($ancho: 90%, $mtop:50px, $mbottom:50px);
+        @include flexbox($jc:space-between, $ai:center, $fd:column);
+        h6{
+            color: map-get($colores, negro);
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            padding-bottom: 15px;
+    
+        }
     }
 }
 
