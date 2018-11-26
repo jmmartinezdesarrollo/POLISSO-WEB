@@ -479,7 +479,20 @@ section {
   @media (min-width: 1200px) {
     .descubrenos__contacto_movil {
       display: block;
-      background-color: black; }
+      margin-top: 30px;
+      background-color: black;
+      text-decoration: none;
+      text-align: center;
+      color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa, redes_sociales: #428bca), negro);
+      padding: 1rem 0.5rem;
+      background-color: get-map((blanco: #fff, negro: #000, gris: #DBDBDB, gris_oscuro: #414141, gris_Info: #B7ADAB, gris_redes: #aaaaaa, redes_sociales: #428bca), negro);
+      border-radius: 0px; }
+      .descubrenos__contacto_movil:hover {
+        background-color: #414141;
+        color: #fff;
+        font-weight: bold; }
+      .descubrenos__contacto_movil:visited {
+        color: #fff; }
       .descubrenos__contacto_movil a {
         text-decoration: none;
         color: white; }

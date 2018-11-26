@@ -69,9 +69,26 @@
 
     @include media(escritorio) {
         display: block;
-       
-        @extend %btn;
+        margin-top: 30px;
         background-color: black;
+
+        text-decoration: none;
+        text-align: center;
+        color: get-map($colores, negro);
+        padding: 1rem 0.5rem;
+        background-color: get-map($colores, negro);
+        //border: 2px solid map-get($colores, blanco);
+        border-radius: 0px;
+    
+        &:hover {
+            background-color: map-get($colores, gris_oscuro);
+            color: map-get($colores, blanco);
+            font-weight: bold;
+        }
+    
+        &:visited {
+            color: map-get($colores, blanco);
+        }
 
         //margin-bottom: 20px;
         a {
