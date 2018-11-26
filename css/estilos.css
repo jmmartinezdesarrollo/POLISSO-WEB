@@ -559,7 +559,7 @@ header {
         border: solid 2px #fff;
         border-bottom: none;
         height: 50px;
-        width: 250px;
+        width: 225px;
         background-color: #414141;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -588,7 +588,7 @@ header {
           text-transform: uppercase; }
           @media (min-width: 1200px) {
             .menu__desplegable__lista__link1 a, .menu__desplegable__lista__link2 a, .menu__desplegable__lista__link3 a, .menu__desplegable__lista__link4 a {
-              font-size: 0.9em; } }
+              font-size: 1.2rem; } }
       .menu__desplegable__lista li:nth-last-child(1) {
         border-bottom: solid 2px #fff; }
         @media (min-width: 1200px) {
@@ -856,6 +856,10 @@ header {
 
 body {
   background-color: #DBDBDB; }
+  body a {
+    color: #fff; }
+    body a :visited {
+      color: #fff; }
 
 div.fondo__humo {
   height: 100vh; }
@@ -953,7 +957,7 @@ video.video__banner__humo {
       /*  color por defecto de indicadores */ }
       @media (min-width: 1200px) {
         .slider__contenedor__diapostiva-indicatores {
-          bottom: 15%; } }
+          bottom: 30px; } }
       .slider__contenedor__diapostiva-indicatores li {
         display: inline-block;
         margin: 0 5px; }
@@ -1498,7 +1502,11 @@ section.contenido {
       .productos__p1__caja__foto source {
         width: 80%; }
       .productos__p1__caja__foto img {
-        height: 335px; }
+        width: 100%; }
+        @media (min-width: 1200px) {
+          .productos__p1__caja__foto img {
+            height: 335px;
+            width: auto; } }
     .productos__p1__caja__pie {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1590,7 +1598,11 @@ section.contenido {
     .productos__p2__caja__foto source {
       width: 80%; }
     .productos__p2__caja__foto img {
-      height: 335px; }
+      width: 100%; }
+      @media (min-width: 1200px) {
+        .productos__p2__caja__foto img {
+          height: 335px;
+          width: auto; } }
   .productos__p2__caja__pie {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1682,7 +1694,11 @@ section.contenido {
     .productos__p3__caja__foto source {
       width: 80%; }
     .productos__p3__caja__foto img {
-      height: 335px; }
+      width: 100%; }
+      @media (min-width: 1200px) {
+        .productos__p3__caja__foto img {
+          height: 335px;
+          width: auto; } }
   .productos__p3__caja__pie {
     display: -webkit-box;
     display: -ms-flexbox;

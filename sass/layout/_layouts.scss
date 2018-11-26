@@ -4,6 +4,14 @@
 body {
     background-color: map-get($colores, gris);
 
+    a{
+
+    color: map-get($colores, blanco);
+    & :visited{
+        color: map-get($colores, blanco)
+    }
+}
+
 }
 
 
@@ -127,7 +135,7 @@ video.video__banner__humo {
             text-align: center;
             z-index: 10;
             @include media(escritorio) {
-                bottom: 15%; 
+                bottom: 30px; 
             }
 
             li {

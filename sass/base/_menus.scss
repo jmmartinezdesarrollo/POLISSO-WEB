@@ -103,7 +103,7 @@ header {
                 border: solid 2px map-get($colores, blanco);
                 border-bottom: none;
                 height: 50px;
-                width: 250px;
+                width: 225px;
                 background-color: map-get($colores, gris_oscuro);
 
 
@@ -127,7 +127,7 @@ header {
                     text-transform: uppercase;
 
                     @include media(escritorio) {
-                        font-size: 0.9em;
+                        font-size: 1.2rem;
                     }
 
                 }
