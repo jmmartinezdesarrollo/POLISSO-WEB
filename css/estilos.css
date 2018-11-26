@@ -438,6 +438,14 @@ section {
   .boton .boton__icon {
     font-size: 3rem; }
 
+@media (min-width: 1200px) {
+  .btn_productos {
+    width: 80%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; } }
+
 .btn_productos,
 .descubrenos__contacto,
 .descubrenos__contacto_smarphone,
@@ -461,10 +469,22 @@ section {
     display: none; } }
 
 .descubrenos__contacto {
-  display: none; }
+  margin-bottom: 50px; }
   @media (min-width: 1200px) {
     .descubrenos__contacto {
-      display: block; } }
+      display: none; } }
+
+.descubrenos__contacto_movil {
+  display: none; }
+  @media (min-width: 1200px) {
+    .descubrenos__contacto_movil {
+      display: block;
+      background-color: black; }
+      .descubrenos__contacto_movil a {
+        text-decoration: none;
+        color: white; }
+        .descubrenos__contacto_movil a:visited {
+          color: white; } }
 
 header {
   background-color: #000; }
@@ -894,7 +914,17 @@ video.video__banner__humo {
       height: 50vh; } }
 
 .slider {
-  position: relative; }
+  position: relative;
+  margin-top: 50px; }
+  .slider__decor {
+    background-image: url(../fonts/iconos/decor_arriba.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px; }
   .slider__contenedor {
     position: relative;
     overflow: hidden;
@@ -1038,7 +1068,17 @@ video.video__banner__humo {
         padding-top: 0px;
         background-position: 80% 10%;
         background-repeat: no-repeat;
-        background-size: 60%; } }
+        background-size: 60%;
+        display: block;
+        grid-row: 2/3;
+        grid-column: 1/3;
+        width: 50%;
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px; } }
 
 .eventos__info,
 .contenido__descubrenos__info {
@@ -1254,25 +1294,31 @@ section.contenido {
     text-decoration: none; }
   @media (min-width: 1200px) {
     section.contenido {
-      padding-top: 50px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-column-gap: 100px;
-      grid-row-gap: 50px;
       font-size: 1.2rem;
       width: 90%;
       margin-top: 0;
       margin-bottom: 0;
       margin-left: auto;
-      margin-right: auto; } }
+      margin-right: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
 
 .contenido__descubrenos {
   margin-top: 40px; }
   @media (min-width: 1200px) {
     .contenido__descubrenos {
-      grid-column: 1/2;
-      grid-row: 1/2; } }
+      width: 45%; } }
   .contenido__descubrenos__caja {
     width: 85%;
     margin-top: 0;
@@ -1280,19 +1326,16 @@ section.contenido {
     margin-left: auto;
     margin-right: auto;
     background-color: #B7ADAB;
-    padding-top: 20px; }
+    padding: 20px; }
     @media (min-width: 1200px) {
       .contenido__descubrenos__caja {
         padding-top: 0px;
+        padding: 0 20px;
         width: 100%;
         margin-top: 0;
         margin-bottom: 0;
         margin-left: auto;
         margin-right: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 120px 60px;
-        grid-row-gap: 20px;
         font-size: 1.2rem;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1361,67 +1404,38 @@ section.contenido {
     .contenido__descubrenos__caja a {
       text-decoration: none;
       color: #fff; }
-  .contenido__descubrenos div.descubrenos__contacto {
-    width: 100%;
-    height: 0px;
-    background: #000;
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 40px; }
-    @media (min-width: 1200px) {
-      .contenido__descubrenos div.descubrenos__contacto {
-        width: 100%; } }
 
 .contenido__quienessomos {
+  width: 90%;
   margin-top: 50px;
-  margin-bottom: 50px; }
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto; }
   @media (min-width: 1200px) {
     .contenido__quienessomos {
-      margin-top: 0px;
-      grid-column: 1/3;
-      grid-row: 2/3; } }
-  .contenido__quienessomos__caja {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+      width: 45%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+      align-items: space-between;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+  .contenido__quienessomos h1 {
+    font-size: 1.5rem;
+    font-family: bold;
+    text-align: center; }
+  .contenido__quienessomos p {
     text-align: justify; }
     @media (min-width: 1200px) {
-      .contenido__quienessomos__caja {
-        margin: 0px;
-        padding: 0px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 100px;
-        grid-row-gap: 20px; } }
-    .contenido__quienessomos__caja__foto {
-      border: 1px solid black; }
-      .contenido__quienessomos__caja__foto source {
-        width: 100%; }
-      .contenido__quienessomos__caja__foto img {
-        width: 100%; }
-    .contenido__quienessomos__caja__pie {
-      width: 100%;
-      padding: 0px; }
-      .contenido__quienessomos__caja__pie h1 {
-        font-size: 1.5rem;
-        font-family: bold;
-        text-align: center; }
-      @media (min-width: 1200px) {
-        .contenido__quienessomos__caja__pie {
-          width: 100%;
-          grid-column: 2/3;
-          grid-row: 1/2; } }
+      .contenido__quienessomos p {
+        padding-bottom: 60px; } }
 
 .googlemaps__grande {
   display: none; }
@@ -1967,21 +1981,21 @@ footer {
         background-image: url("../fonts/iconos/facebook.svg");
         background-size: 35%; }
         footer .footer__cajaCentral__redessociales__iconos__fb:hover {
-          background-color: #428bca; }
+          background-color: #aaaaaa; }
       footer .footer__cajaCentral__redessociales__iconos__tw {
         width: 50px;
         height: 50px;
         border: 2px solid #fff;
         background-image: url("../fonts/iconos/twitter.svg"); }
         footer .footer__cajaCentral__redessociales__iconos__tw:hover {
-          background-color: #428bca; }
+          background-color: #aaaaaa; }
       footer .footer__cajaCentral__redessociales__iconos__insta {
         width: 50px;
         height: 50px;
         border: 2px solid #fff;
         background-image: url("../fonts/iconos/instagram.svg"); }
         footer .footer__cajaCentral__redessociales__iconos__insta:hover {
-          background-color: #428bca; }
+          background-color: #aaaaaa; }
     footer .footer__cajaCentral__enlaces {
       display: -webkit-box;
       display: -ms-flexbox;

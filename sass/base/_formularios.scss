@@ -14,12 +14,8 @@
 
         display: grid;
         //se empieza con filas rows: asignando los anchos de cada fila
-        grid-template-rows: 50px 50px 50px 50px 1fr 50px; //100px 50px 100px;
-        //grid-template-columns: 50px 50px 50px;
-
-        // tambien se puede meter fraccions_ 1fr = 1 fraccion
-        //grid-template-columns: 1fr 1fr 1fr;
-        grid-template-columns: 100px 1fr; // te  crea 3veces de 1 fr
+        grid-template-rows: 50px 50px 50px 50px 1fr 50px;
+        grid-template-columns: 100px 1fr; // 
 
         //espacios entre columnas
         grid-column-gap: 30px;

@@ -22,19 +22,28 @@
 
 }
 
+.btn_productos {
+    @include media(escritorio) {
+        @include centrarCaja ($ancho: 80%, $mtop:0, $mbottom:0);
+
+    }
+}
+
 .btn_productos,
 .descubrenos__contacto,
 .descubrenos__contacto_smarphone,
 .descubrenos__contacto_contacta {
     display: block;
     @extend %btn;
-    background-color: black;
-    //margin-bottom: 20px;
 
+    background-color: black;
+
+    //margin-bottom: 20px;
     a {
         text-decoration: none;
         color: white;
-        &:visited{
+
+        &:visited {
             color: white;
         }
     }
@@ -48,9 +57,30 @@
 }
 
 .descubrenos__contacto {
+    margin-bottom: 50px;
+
+    @include media(escritorio) {
+        display: none;
+    }
+}
+
+.descubrenos__contacto_movil {
     display: none;
 
     @include media(escritorio) {
         display: block;
+       
+        @extend %btn;
+        background-color: black;
+
+        //margin-bottom: 20px;
+        a {
+            text-decoration: none;
+            color: white;
+            &:visited {
+                color: white;
+            }
+        }
     }
+
 }

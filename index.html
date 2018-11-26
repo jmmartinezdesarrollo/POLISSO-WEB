@@ -68,7 +68,7 @@
                             <a href="productes.html" class="menu__desplegable__lista__link__productos">products</a>
                         </li>
                         <li class="menu__desplegable__lista__link3">
-                            <a href="esdeveniments.php" class="menu__desplegable__lista__link__eventos">esdeveniments</a>
+                            <a href="esdeveniments.html" class="menu__desplegable__lista__link__eventos">esdeveniments</a>
                         </li>
                         <li class="menu__desplegable__lista__link4">
                             <a href="sobre_noltros.html" class="menu__desplegable__lista__link__nosotros">sobre noltros</a>
@@ -97,13 +97,6 @@
 
     <!-- SLIDER -->
 
-    <!-- Boton descubre productos -->
-    <div class="btn_productos">
-        <a href="productes.html" class="">
-            Descobreix es nostros productes
-        </a>
-    </div>
-
 
     <!--****************************************** 
         ********** Bloque SECCION PRODUCTOS********
@@ -112,6 +105,8 @@
     <section>
 
         <div class="slider">
+            <div class="slider__decor">
+            </div>
             <div class="slider__contenedor">
                 <!-- para cada imagen de las diapositivas tiene asignada un input -->
 
@@ -175,6 +170,7 @@
                 <label for="diapostiva-2" class="slider__contenedor__diapostiva-control prev control-3">‹</label>
                 <label for="diapostiva-1" class="slider__contenedor__diapostiva-control next control-3">›</label>
 
+
                 <!-- asignacion de indicadores circulares, para la posicion actual -->
                 <ol class="slider__contenedor__diapostiva-indicatores">
                     <li>
@@ -189,6 +185,13 @@
                 </ol>
             </div>
         </div>
+        <!-- Boton descubre productos -->
+        <div class="btn_productos">
+            <a href="productes.html" class="">
+                Descobreix es nostros productes
+            </a>
+        </div>
+
 
     </section>
     <!-- FIN SLIDER -->
@@ -209,12 +212,12 @@
                 <p class="contenido__descubrenos__caja__texto">Vols originalitat, espectacle, diversió i gust pes teu
                     esdeveniment?</p>
             </div>
-            <div>
-                <a href="esdeveniments.html" class="descubrenos__contacto_contacta">
-                    Contacta amb noltros
-                </a>
-            </div>
 
+            <div>
+                    <a href="esdeveniments.html" class="descubrenos__contacto_contacta">
+                        Contacta amb noltros
+                    </a>
+                </div>
         </article>
 
         <!--****************************************** 
@@ -222,63 +225,24 @@
             **********************************************-->
 
         <article class="contenido__quienessomos">
-            <figure class="contenido__quienessomos__caja">
-                <picture class="contenido__quienessomos__caja__foto">
-                    <!-- para moviles -->
-                    <source srcset='img/smartphone/@1x/PauMateu_Gastro.jpg 1x,img/smartphone/@2x/PauMateu_Gastro@2x.jpg 3x' media='(min-width:0px) and (max-width:1200px)'>
-                    <!-- Para escritorio-->
-                    <source srcset='img/desktop/@1x/PauMateu_Gastro.jpg 1x, img/desktop/2@x/PauMateu_Gastro@2x.jpg' media='(min-width:1200px)'>
-                    <!-- Imagen de respaldo. -->
-                    <img src='img/smartphone/@1x/PauMateu_Gastro.jpg' alt='Pau Mateu'>
-                </picture>
+            <h1>Polisso Nitro Ice Cream</h1>
+            <p>Polissó neix de la necessitat que té el nostre grup de treball de dur el concepte de la gelateria un poc
+                més envant. Volíem avançar dins aquest món mitjançant l’evolució , la potenciació del gusts i
+                l’elaboració de les tècniques més avançades al món dels gelats i poder dur-ho així a un altre nivell...</p>
 
-                <figcaption class="contenido__quienessomos__caja__pie">
-                    <h1>Polisso Nitro Ice Cream</h1>
-                    <p>Polissó neix de la necessitat que té el nostre grup de treball de dur el concepte de la
-                        gelateria un poc més envant. Volíem avançar dins aquest món mitjançant l’evolució , la
-                        potenciació del gusts i l’elaboració de les tècniques més avançades al món dels gelats i poder
-                        dur-ho així a un altre nivell...</p>
-
-                    <br>
-                    <div class="descubrenos__contacto">
+                <div class="descubrenos__contacto_movil">
                         <a href="sobre_noltros.html">
                             Descubreix-mos
                         </a>
                     </div>
-                </figcaption>
-            </figure>
         </article>
 
-
-
-
-
-
-        <div class="descubrenos__contacto_smarphone">
+    </section>
+    <div class="descubrenos__contacto">
             <a href="sobre_noltros.html">
                 Descubreix-mos
             </a>
         </div>
-
-
-        <!--****************************************** 
-        ********** Bloque SECCION MAPA*****************
-        **********************************************-->
-
-        <article class="googlemaps__pequeno">
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.1144283190924!2d2.6500825153706433!3d39.579571379471226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129792563cfdc695%3A0x338f043e9b713070!2sIbecon+Centro+De+Formaci%C3%B3n.!5e0!3m2!1ses!2ses!4v1541620531166"
-                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-        </article>
-
-        <article class="googlemaps__grande">
-            <h3>Estam aquí </h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.1144283190906!2d2.650082515651367!3d39.57957137947126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129792563cfdc695%3A0x338f043e9b713070!2sIbecon+Centro+De+Formaci%C3%B3n.!5e0!3m2!1ses!2ses!4v1542131903809"
-                height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </article>
-
-    </section>
 
 
 
@@ -289,7 +253,7 @@
         <div class="footer__cajaCentral">
             <!-- Copyright y localizacion del local -->
             <div class="footer__cajaCentral__datos">
-                <h6> Ⓒ 2018 - NICTRO ICE CREAM</h6>
+                <h6> &copy; 2018 - NICTRO ICE CREAM</h6>
                 <ul>
                     <li>Direcion:</li>
                     <li>Horario:</li>

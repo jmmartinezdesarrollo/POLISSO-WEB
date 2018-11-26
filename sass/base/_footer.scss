@@ -61,7 +61,7 @@ footer{
                     @extend %icon-background;
 
                     &:hover {
-                        background-color: map-get($colores, redes_sociales);
+                        background-color: map-get($colores, gris_redes);
                     }
                 }
 
@@ -73,7 +73,7 @@ footer{
                     @extend %icon-background;
 
                     &:hover {
-                        background-color: map-get($colores, redes_sociales);
+                        background-color: map-get($colores, gris_redes);
                     }
                 }
 
@@ -85,7 +85,7 @@ footer{
                     @extend %icon-background;
 
                     &:hover {
-                        background-color: map-get($colores, redes_sociales);
+                        background-color: map-get($colores, gris_redes);
                     }
                 }
             }

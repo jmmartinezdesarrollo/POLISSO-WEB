@@ -4,13 +4,14 @@
 body {
     background-color: map-get($colores, gris);
 
-    a{
+    a {
 
-    color: map-get($colores, blanco);
-    & :visited{
-        color: map-get($colores, blanco)
+        color: map-get($colores, blanco);
+
+        & :visited {
+            color: map-get($colores, blanco)
+        }
     }
-}
 
 }
 
@@ -55,6 +56,19 @@ video.video__banner__humo {
 
 .slider {
     position: relative;
+    margin-top: 50px;
+
+    &__decor {
+        background-image: url(../fonts/iconos/decor_arriba.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: center;
+        height: 35px;
+        width: 100%;
+
+        text-align: center;
+        margin-bottom: 25px;
+    }
 
     &__contenedor {
         position: relative;
@@ -77,7 +91,7 @@ video.video__banner__humo {
         &__diapostiva-item {
             position: absolute;
             opacity: 0;
-    
+
 
             source,
             img {
@@ -134,8 +148,9 @@ video.video__banner__humo {
             right: 0;
             text-align: center;
             z-index: 10;
+
             @include media(escritorio) {
-                bottom: 30px; 
+                bottom: 30px;
             }
 
             li {
@@ -196,7 +211,7 @@ video.video__banner__humo {
     @include centrarCaja ($ancho: 80%, $mtop:0, $mbottom:0);
 
     &__info {
-       margin-bottom: 50px;
+        margin-bottom: 50px;
 
     }
 
@@ -210,11 +225,8 @@ video.video__banner__humo {
         margin-top: 80px;
         display: grid;
         //se empieza con filas rows: asignando los anchos de cada fila
-        grid-template-rows: repeat(2, 1fr); //100px 50px 100px;
-        //grid-template-columns: 50px 50px 50px;
+        grid-template-rows: repeat(2, 1fr);
 
-        // tambien se puede meter fraccions_ 1fr = 1 fraccion
-        //grid-template-columns: 1fr 1fr 1fr;
         grid-template-columns: repeat(2, 1fr); // te  crea 3veces de 1 fr
 
         //espacios entre columnas
@@ -240,43 +252,53 @@ video.video__banner__humo {
 
     }
 
-    
-&__contacto {
-    padding-top:50px;
-    background-image: url(../fonts/iconos/contact.svg);
-    background-position: 100% 60%; //right;
-    background-repeat: no-repeat;
-    background-size: 30%;
 
-    //height: auto;
-    //width: 100%;
-    h4 {
-        font-size: 25px;
-        font-weight: bold;
-        padding-bottom: 15px;
-    }
-
-    ul {
-        // @include flexbox($jc: left, $ai:center, $fd:column);
-        padding-bottom: 50px;
-        li {
-            list-style-type: square;
-            max-width: 500px;
-            padding-top: 15px;
-
-        }     
-    }
-
-
-
-    @include media(escritorio) {
-        padding-top:0px;
-        background-position: 80% 10%; //right;
+    &__contacto {
+        padding-top: 50px;
+        background-image: url(../fonts/iconos/contact.svg);
+        background-position: 100% 60%; //right;
         background-repeat: no-repeat;
-        background-size: 60%;
+        background-size: 30%;
 
+        //height: auto;
+        //width: 100%;
+        h4 {
+            font-size: 25px;
+            font-weight: bold;
+            padding-bottom: 15px;
+        }
+
+        ul {
+            // @include flexbox($jc: left, $ai:center, $fd:column);
+            padding-bottom: 50px;
+
+            li {
+                list-style-type: square;
+                max-width: 500px;
+                padding-top: 15px;
+
+            }
+        }
+
+
+
+        @include media(escritorio) {
+            padding-top: 0px;
+            background-position: 80% 10%; //right;
+            background-repeat: no-repeat;
+            background-size: 60%;
+
+            display: block;
+            grid-row: 2/3;
+            grid-column: 1/3;
+            width: 50%;
+
+            @include centrarCaja ($ancho:50%, $mtop:0, $mbottom:0);
+
+            margin-bottom: 0px;
+
+        }
     }
-}
 }
 
 
