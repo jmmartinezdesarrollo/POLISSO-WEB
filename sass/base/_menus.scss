@@ -7,7 +7,7 @@
 header {
 
     background-color: map-get($colores, negro);
-    
+
 }
 
 .menu {
@@ -15,7 +15,7 @@ header {
     z-index: 10;
     @include flexbox($jc: space-between, $ai:null, $fd:row);
     padding: 30px;
-  
+
     //position: absolute;
 
     //------logo-------
@@ -28,7 +28,7 @@ header {
         color: map-get($colores, blanco);
         width: 80px;
         height: 80px;
-       
+
     }
 
     &__desplegable {
@@ -79,19 +79,19 @@ header {
                 & li:nth-child(1) {
                     width: 100px;
                 }
-    
+
                 & li:nth-child(2) {
                     width: 180px;
                 }
-    
+
                 & li:nth-child(3) {
                     width: 220px;
                 }
-    
+
                 & li:nth-child(4) {
                     width: 220px;
                 }
-    
+
             }
 
             /* --- */
@@ -105,7 +105,7 @@ header {
                 height: 50px;
                 width: 250px;
                 background-color: map-get($colores, gris_oscuro);
-               
+
 
                 @include flexbox($jc: center, $ai:center, $fd:row);
 
@@ -149,10 +149,10 @@ header {
 
 }
 
-a.menu__desplegable__lista__link1__inicio{
+a.menu__desplegable__lista__link1__inicio {
     @include media(escritorio) {
         display: none;
-}
+    }
 }
 
 // desactivar el icono checkbox
@@ -179,26 +179,29 @@ a.menu__desplegable__lista__link1__inicio{
     //font-family: 'CourierNewBold';
     font-weight: bold;
     color: white;
+    font-size: 1.5rem;
     background-color: black;
     margin: 0px 0;
-    padding-bottom: 50px
+    //padding-bottom: 50px ;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 175px;
+    @extend %flexCentrar;
     //background-color: ;
-    // @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
-    // height: 200px;
-    // font-size: 22px;
-    // line-height: 35px;
-    // text-align: center;
+        // @include centrarCaja ($ancho: 90%, $mtop:0, $mbottom:0);
+        // height: 200px;
+        // font-size: 22px;
+        // line-height: 35px;
+        // text-align: center;
 
-    // @extend %flexCentrar;
+        // @extend %flexCentrar;
 
 
 
-    // @include media(escritorio) {
-    //     //flex-wrap: wrap;
-    //     width: 100%;
+        // @include media(escritorio) {
+        //     //flex-wrap: wrap;
+        //     width: 100%;
 
-    //     font-size: 30px;
-    // }
+        //     font-size: 30px;
+        // }
 }
-
- 

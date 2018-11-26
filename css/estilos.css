@@ -409,7 +409,7 @@ section {
   .descubrenos__contacto_contacta:visited {
     color: #fff; }
 
-.contenido__descubrenos__info h4, footer .footer__cajaCentral__redessociales__iconos {
+.eslogan, .contenido__descubrenos__info h4, footer .footer__cajaCentral__redessociales__iconos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -623,9 +623,12 @@ header {
   text-align: center;
   font-weight: bold;
   color: white;
+  font-size: 1.5rem;
   background-color: black;
   margin: 0px 0;
-  padding-bottom: 50px; }
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 175px; }
 
 .eventos__formulario {
   display: -webkit-box;
